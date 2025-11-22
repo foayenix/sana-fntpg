@@ -2,6 +2,18 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import {
+  BadgeCheck,
+  BarChart3,
+  ShoppingCart,
+  Smartphone,
+  Rocket,
+  Bot,
+  Pill,
+  Calendar,
+  ClipboardList,
+  Shield,
+} from 'lucide-react';
 
 const CheckIcon = () => (
   <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -166,13 +178,15 @@ export default function PractitionerPage() {
           </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { icon: '✅', label: 'Verification', desc: 'Who\'s qualified?' },
-              { icon: '📊', label: 'Evidence', desc: 'What actually works?' },
-              { icon: '🛒', label: 'Supply Chain', desc: 'Connected commerce' },
-              { icon: '📱', label: 'Ecosystem', desc: 'All pieces linked' }
+              { icon: <BadgeCheck className="w-8 h-8" />, label: 'Verification', desc: 'Who\'s qualified?', gradient: 'from-emerald-400 to-teal-500' },
+              { icon: <BarChart3 className="w-8 h-8" />, label: 'Evidence', desc: 'What actually works?', gradient: 'from-purple-400 to-indigo-500' },
+              { icon: <ShoppingCart className="w-8 h-8" />, label: 'Supply Chain', desc: 'Connected commerce', gradient: 'from-amber-400 to-orange-500' },
+              { icon: <Smartphone className="w-8 h-8" />, label: 'Ecosystem', desc: 'All pieces linked', gradient: 'from-blue-400 to-cyan-500' }
             ].map((item, i) => (
-              <div key={i} className="bg-white/10 backdrop-blur-sm rounded-xl p-5">
-                <div className="text-3xl mb-2">{item.icon}</div>
+              <div key={i} className="bg-white/10 backdrop-blur-sm rounded-xl p-5 hover:bg-white/20 transition-all group">
+                <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${item.gradient} flex items-center justify-center mb-3 text-white shadow-lg group-hover:scale-110 transition-transform`}>
+                  {item.icon}
+                </div>
                 <div className="text-white font-semibold">{item.label}</div>
                 <div className="text-white/60 text-sm">{item.desc}</div>
               </div>
@@ -206,35 +220,40 @@ export default function PractitionerPage() {
                   step: '1',
                   title: 'Sign Up Free',
                   description: 'Get instant access to your AI clinical assistant. No credit card needed.',
-                  icon: '🚀'
+                  icon: <Rocket className="w-7 h-7" />,
+                  gradient: 'from-violet-500 to-purple-600'
                 },
                 {
                   step: '2',
                   title: 'Get Verified',
                   description: 'Earn your SANA Verified badge. Stand out from unqualified competitors.',
-                  icon: '✅'
+                  icon: <BadgeCheck className="w-7 h-7" />,
+                  gradient: 'from-emerald-500 to-teal-600'
                 },
                 {
                   step: '3',
                   title: 'See Clients',
                   description: 'AI writes your SOAP notes in 30 seconds. Focus on healing, not typing.',
-                  icon: '🤖'
+                  icon: <Bot className="w-7 h-7" />,
+                  gradient: 'from-blue-500 to-indigo-600'
                 },
                 {
                   step: '4',
                   title: 'Prescribe & Earn',
                   description: 'Recommend products through SANA. Clients buy, you earn commission.',
-                  icon: '💊'
+                  icon: <Pill className="w-7 h-7" />,
+                  gradient: 'from-rose-500 to-pink-600'
                 },
                 {
                   step: '5',
                   title: 'Build Evidence',
                   description: 'Track outcomes automatically. Get featured in practitioner rankings.',
-                  icon: '📊'
+                  icon: <BarChart3 className="w-7 h-7" />,
+                  gradient: 'from-amber-500 to-orange-600'
                 }
               ].map((journey, i) => (
-                <div key={i} className="relative text-center">
-                  <div className="relative z-10 w-16 h-16 mx-auto rounded-full bg-white shadow-lg flex items-center justify-center text-3xl mb-4 border-4 border-[#6B9080]">
+                <div key={i} className="relative text-center group">
+                  <div className={`relative z-10 w-16 h-16 mx-auto rounded-full bg-gradient-to-br ${journey.gradient} shadow-lg flex items-center justify-center text-white mb-4 border-4 border-white group-hover:scale-110 transition-transform`}>
                     {journey.icon}
                   </div>
                   <div className="bg-white rounded-2xl p-5 shadow-sm border border-[#EAE7DC]">
@@ -270,50 +289,58 @@ export default function PractitionerPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                icon: '🤖',
+                icon: <Bot className="w-7 h-7" />,
                 title: 'AI Clinical Assistant',
                 description: 'Generate professional SOAP notes in 30 seconds. Our AI learns your style, your terminology, your approach.',
                 highlight: 'Save 15+ hours/week',
-                color: '#6B9080'
+                color: '#6B9080',
+                gradient: 'from-[#6B9080] to-[#4A90A4]'
               },
               {
-                icon: '📅',
+                icon: <Calendar className="w-7 h-7" />,
                 title: 'Smart Booking System',
                 description: 'Online scheduling with automated reminders, intake forms, and telehealth built in.',
                 highlight: 'Reduce no-shows 80%',
-                color: '#4A90A4'
+                color: '#4A90A4',
+                gradient: 'from-[#4A90A4] to-blue-600'
               },
               {
-                icon: '📊',
+                icon: <BarChart3 className="w-7 h-7" />,
                 title: 'Evidence Engine',
                 description: 'Automatically capture every treatment and outcome. Build your personal evidence database.',
                 highlight: 'First in CAM',
-                color: '#6B9080'
+                color: '#6B9080',
+                gradient: 'from-purple-500 to-indigo-600'
               },
               {
-                icon: '💊',
+                icon: <Pill className="w-7 h-7" />,
                 title: 'Integrated Dispensary',
                 description: 'Prescribe products through SANA. Clients purchase seamlessly. You earn commission on every sale.',
                 highlight: 'New revenue stream',
-                color: '#4A90A4'
+                color: '#4A90A4',
+                gradient: 'from-rose-500 to-pink-600'
               },
               {
-                icon: '✅',
+                icon: <BadgeCheck className="w-7 h-7" />,
                 title: 'SANA Verified Badge',
                 description: 'Credential verification that clients trust. Stand out from unqualified competitors in your area.',
                 highlight: 'Boost credibility',
-                color: '#6B9080'
+                color: '#6B9080',
+                gradient: 'from-emerald-500 to-teal-600'
               },
               {
-                icon: '📋',
+                icon: <Shield className="w-7 h-7" />,
                 title: 'Secure Records',
                 description: 'GDPR-compliant, ISO 27001 certified client records. Access anywhere, encrypted everywhere.',
                 highlight: 'Enterprise security',
-                color: '#4A90A4'
+                color: '#4A90A4',
+                gradient: 'from-slate-600 to-slate-700'
               }
             ].map((feature, i) => (
               <div key={i} className="bg-[#FAF9F6] rounded-2xl p-6 border border-[#EAE7DC] hover:shadow-lg transition-all group">
-                <div className="text-4xl mb-4">{feature.icon}</div>
+                <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${feature.gradient} flex items-center justify-center text-white mb-4 shadow-lg group-hover:scale-110 transition-transform`}>
+                  {feature.icon}
+                </div>
                 <h3 className="text-xl font-semibold text-[#2C3333] mb-2">{feature.title}</h3>
                 <p className="text-[#5F6368] mb-4">{feature.description}</p>
                 <span

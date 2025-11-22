@@ -2,6 +2,20 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import {
+  Smartphone,
+  Search,
+  UserCheck,
+  Calendar,
+  BarChart3,
+  Target,
+  BookOpen,
+  AlertTriangle,
+  Lightbulb,
+  BadgeCheck,
+  TrendingUp,
+  Shield,
+} from 'lucide-react';
 
 const ArrowLeftIcon = () => (
   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -167,35 +181,40 @@ export default function WellnessPage() {
                   step: '1',
                   title: 'Download Free',
                   description: 'Get the SANA app and set up your health profile in 2 minutes.',
-                  icon: '📱'
+                  icon: <Smartphone className="w-7 h-7" />,
+                  gradient: 'from-violet-500 to-purple-600'
                 },
                 {
                   step: '2',
                   title: 'Scan Products',
                   description: '"This magnesium is safe for YOUR anxiety, but conflicts with your medication"',
-                  icon: '🔍'
+                  icon: <Search className="w-7 h-7" />,
+                  gradient: 'from-[#4A90A4] to-cyan-600'
                 },
                 {
                   step: '3',
                   title: 'Find Practitioners',
                   description: '"Dr. Sarah - 87% success rate, 234 verified treatments, 4.9★"',
-                  icon: '👨‍⚕️'
+                  icon: <UserCheck className="w-7 h-7" />,
+                  gradient: 'from-emerald-500 to-teal-600'
                 },
                 {
                   step: '4',
                   title: 'Book & Track',
                   description: 'Book appointments, receive treatments, log your progress.',
-                  icon: '📅'
+                  icon: <Calendar className="w-7 h-7" />,
+                  gradient: 'from-rose-500 to-pink-600'
                 },
                 {
                   step: '5',
                   title: 'See Results',
                   description: 'Evidence-based insights on what\'s working for YOU.',
-                  icon: '📊'
+                  icon: <TrendingUp className="w-7 h-7" />,
+                  gradient: 'from-amber-500 to-orange-600'
                 }
               ].map((journey, i) => (
-                <div key={i} className="relative text-center">
-                  <div className="relative z-10 w-16 h-16 mx-auto rounded-full bg-white shadow-lg flex items-center justify-center text-3xl mb-4 border-4 border-[#4A90A4]">
+                <div key={i} className="relative text-center group">
+                  <div className={`relative z-10 w-16 h-16 mx-auto rounded-full bg-gradient-to-br ${journey.gradient} shadow-lg flex items-center justify-center text-white mb-4 border-4 border-white group-hover:scale-110 transition-transform`}>
                     {journey.icon}
                   </div>
                   <div className="bg-white rounded-2xl p-5 shadow-sm border border-[#EAE7DC]">
@@ -300,28 +319,34 @@ export default function WellnessPage() {
               <div className="space-y-6">
                 {[
                   {
-                    icon: '🎯',
+                    icon: <Target className="w-6 h-6" />,
                     title: 'Personalized to Your Profile',
-                    description: 'Your conditions, medications, pregnancy status—all factored into every scan.'
+                    description: 'Your conditions, medications, pregnancy status—all factored into every scan.',
+                    gradient: 'from-rose-500 to-pink-600'
                   },
                   {
-                    icon: '📚',
+                    icon: <BookOpen className="w-6 h-6" />,
                     title: '100,000+ Studies Analyzed',
-                    description: 'Every rating backed by peer-reviewed research. Not opinions—evidence.'
+                    description: 'Every rating backed by peer-reviewed research. Not opinions—evidence.',
+                    gradient: 'from-purple-500 to-indigo-600'
                   },
                   {
-                    icon: '⚠️',
+                    icon: <AlertTriangle className="w-6 h-6" />,
                     title: 'Interaction Warnings',
-                    description: '87% of users avoided harmful interactions thanks to real-time alerts.'
+                    description: '87% of users avoided harmful interactions thanks to real-time alerts.',
+                    gradient: 'from-amber-500 to-orange-600'
                   },
                   {
-                    icon: '💡',
+                    icon: <Lightbulb className="w-6 h-6" />,
                     title: 'Smart Alternatives',
-                    description: 'If something isn\'t safe for you, we\'ll suggest what is.'
+                    description: 'If something isn\'t safe for you, we\'ll suggest what is.',
+                    gradient: 'from-emerald-500 to-teal-600'
                   }
                 ].map((feature, i) => (
-                  <div key={i} className="flex gap-4">
-                    <div className="text-3xl">{feature.icon}</div>
+                  <div key={i} className="flex gap-4 group">
+                    <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${feature.gradient} flex items-center justify-center text-white shadow-lg flex-shrink-0 group-hover:scale-110 transition-transform`}>
+                      {feature.icon}
+                    </div>
                     <div>
                       <h3 className="font-semibold text-[#2C3333] mb-1">{feature.title}</h3>
                       <p className="text-[#5F6368]">{feature.description}</p>
@@ -485,12 +510,14 @@ export default function WellnessPage() {
           </p>
           <div className="grid sm:grid-cols-3 gap-6">
             {[
-              { icon: '✅', label: 'Verification', desc: 'Know who\'s qualified' },
-              { icon: '📊', label: 'Evidence', desc: 'See what works' },
-              { icon: '🎯', label: 'Personalization', desc: 'Safe for YOU' }
+              { icon: <BadgeCheck className="w-8 h-8" />, label: 'Verification', desc: 'Know who\'s qualified', gradient: 'from-emerald-400 to-teal-500' },
+              { icon: <BarChart3 className="w-8 h-8" />, label: 'Evidence', desc: 'See what works', gradient: 'from-purple-400 to-indigo-500' },
+              { icon: <Target className="w-8 h-8" />, label: 'Personalization', desc: 'Safe for YOU', gradient: 'from-rose-400 to-pink-500' }
             ].map((item, i) => (
-              <div key={i} className="bg-white/10 backdrop-blur-sm rounded-xl p-5">
-                <div className="text-3xl mb-2">{item.icon}</div>
+              <div key={i} className="bg-white/10 backdrop-blur-sm rounded-xl p-5 hover:bg-white/20 transition-all group">
+                <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${item.gradient} flex items-center justify-center mb-3 text-white shadow-lg mx-auto group-hover:scale-110 transition-transform`}>
+                  {item.icon}
+                </div>
                 <div className="text-white font-semibold">{item.label}</div>
                 <div className="text-white/60 text-sm">{item.desc}</div>
               </div>

@@ -3,6 +3,27 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
+import {
+  BarChart3,
+  Calendar,
+  Users,
+  Pill,
+  FileText,
+  Settings,
+  Sparkles,
+  CheckCircle2,
+  Scan,
+  Target,
+  BookOpen,
+  AlertTriangle,
+  Lightbulb,
+  BadgeCheck,
+  Smartphone,
+  Search,
+  UserCheck,
+  TrendingUp,
+  Zap,
+} from 'lucide-react';
 
 // Icon Components
 const StethoscopeIcon = () => (
@@ -1065,17 +1086,17 @@ function DashboardPreviewSection() {
               {/* Sidebar */}
               <div className="hidden md:block w-16 space-y-4">
                 {[
-                  { icon: '📊', active: false },
-                  { icon: '📅', active: true },
-                  { icon: '👥', active: false },
-                  { icon: '💊', active: false },
-                  { icon: '📝', active: false },
-                  { icon: '⚙️', active: false },
+                  { icon: <BarChart3 className="w-5 h-5" />, active: false, color: 'text-purple-500' },
+                  { icon: <Calendar className="w-5 h-5" />, active: true, color: 'text-[#4A90A4]' },
+                  { icon: <Users className="w-5 h-5" />, active: false, color: 'text-emerald-500' },
+                  { icon: <Pill className="w-5 h-5" />, active: false, color: 'text-rose-500' },
+                  { icon: <FileText className="w-5 h-5" />, active: false, color: 'text-amber-500' },
+                  { icon: <Settings className="w-5 h-5" />, active: false, color: 'text-slate-500' },
                 ].map((item, i) => (
                   <div
                     key={i}
-                    className={`w-12 h-12 rounded-xl flex items-center justify-center text-lg cursor-pointer transition-all ${
-                      item.active ? 'bg-[#4A90A4]/10 shadow-sm' : 'hover:bg-[#FAF9F6]'
+                    className={`w-12 h-12 rounded-xl flex items-center justify-center cursor-pointer transition-all ${
+                      item.active ? 'bg-[#4A90A4]/10 shadow-sm ' + item.color : 'hover:bg-[#FAF9F6] text-[#5F6368] hover:' + item.color
                     }`}
                   >
                     {item.icon}
