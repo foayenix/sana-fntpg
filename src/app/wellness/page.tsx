@@ -26,6 +26,10 @@ import {
   Scan,
   Activity,
   Brain,
+  // Pain point icons for client page
+  HelpCircle,
+  Pill,
+  Building2,
 } from 'lucide-react';
 import { FAQAccordion } from '@/components/FAQAccordion';
 
@@ -113,58 +117,78 @@ export default function WellnessPage() {
         </div>
       </section>
 
-      {/* Pain Points Section */}
-      <section className="py-12 md:py-20 px-4 bg-white">
+      {/* Pain Points Section - Premium Design */}
+      <section className="py-16 md:py-24 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-[#2C3333] mb-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight mb-4">
               Sound familiar?
             </h2>
-            <p className="text-lg text-[#5F6368] max-w-2xl mx-auto">
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
               Millions of people are frustrated navigating natural health. You&apos;re not alone.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            {[
-              {
-                emoji: '😰',
-                question: 'How do I find a qualified herbalist vs. a charlatan?',
-                answer: 'With no verification system, it\'s impossible to know who\'s genuinely trained vs. who watched a YouTube video.'
-              },
-              {
-                emoji: '💊',
-                question: 'Which of these 10,000 supplements is right for ME?',
-                answer: 'Shelves full of products, but no way to know what\'s safe for your specific conditions, medications, or circumstances.'
-              },
-              {
-                emoji: '📊',
-                question: 'Does acupuncture really work for my chronic pain?',
-                answer: 'No evidence infrastructure means you\'re relying on anecdotes, not data. You deserve to see real outcomes.'
-              },
-              {
-                emoji: '🏥',
-                question: 'My GP dismisses CAM, but pharmaceuticals aren\'t working',
-                answer: 'Caught between conventional medicine that doesn\'t help and alternative medicine you can\'t verify. There has to be a better way.'
-              }
-            ].map((pain, i) => (
-              <div key={i} className="bg-[#FAF9F6] rounded-2xl p-6 border border-[#EAE7DC]">
-                <div className="flex items-start gap-4">
-                  <div className="text-4xl">{pain.emoji}</div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-[#2C3333] mb-2">&ldquo;{pain.question}&rdquo;</h3>
-                    <p className="text-[#5F6368] text-sm">{pain.answer}</p>
-                  </div>
+            {/* Pain Point 1 */}
+            <div className="group bg-white rounded-2xl p-6 border-2 border-gray-200 hover:border-gray-300 hover:shadow-lg transition-all duration-300">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300">
+                  <HelpCircle className="w-7 h-7 text-white" strokeWidth={2} />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">&ldquo;How do I find a qualified herbalist vs. a charlatan?&rdquo;</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">With no verification system, it&apos;s impossible to know who&apos;s genuinely trained vs. who watched a YouTube video.</p>
                 </div>
               </div>
-            ))}
+            </div>
+
+            {/* Pain Point 2 */}
+            <div className="group bg-white rounded-2xl p-6 border-2 border-gray-200 hover:border-gray-300 hover:shadow-lg transition-all duration-300">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-gradient-to-br from-rose-500 to-pink-600 flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300">
+                  <Pill className="w-7 h-7 text-white" strokeWidth={2} />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">&ldquo;Which of these 10,000 supplements is right for ME?&rdquo;</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">Shelves full of products, but no way to know what&apos;s safe for your specific conditions, medications, or circumstances.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Pain Point 3 */}
+            <div className="group bg-white rounded-2xl p-6 border-2 border-gray-200 hover:border-gray-300 hover:shadow-lg transition-all duration-300">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-gradient-to-br from-purple-500 to-indigo-600 flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300">
+                  <BarChart3 className="w-7 h-7 text-white" strokeWidth={2} />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">&ldquo;Does acupuncture really work for my chronic pain?&rdquo;</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">No evidence infrastructure means you&apos;re relying on anecdotes, not data. You deserve to see real outcomes.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Pain Point 4 */}
+            <div className="group bg-white rounded-2xl p-6 border-2 border-gray-200 hover:border-gray-300 hover:shadow-lg transition-all duration-300">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-gradient-to-br from-sky-500 to-blue-600 flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300">
+                  <Building2 className="w-7 h-7 text-white" strokeWidth={2} />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">&ldquo;My GP dismisses CAM, but pharmaceuticals aren&apos;t working&rdquo;</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">Caught between conventional medicine that doesn&apos;t help and alternative medicine you can&apos;t verify. There has to be a better way.</p>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div className="mt-12 bg-gradient-to-r from-[#4A90A4]/10 to-[#6B9080]/10 rounded-2xl p-8 text-center border border-[#4A90A4]/20 max-w-3xl mx-auto">
-            <p className="text-2xl text-[#2C3333] font-medium mb-2">
+          {/* Stats Banner */}
+          <div className="mt-16 bg-gradient-to-r from-slate-900 to-slate-800 rounded-2xl p-8 md:p-10 text-center max-w-3xl mx-auto shadow-xl">
+            <p className="text-3xl md:text-4xl text-white font-bold mb-3 tracking-tight">
               £8.7 billion spent on CAM annually
             </p>
-            <p className="text-[#5F6368]">
+            <p className="text-slate-300 text-lg">
               With no safety oversight. No interaction checking. No way to find qualified practitioners.
             </p>
           </div>
@@ -302,7 +326,7 @@ export default function WellnessPage() {
 
                       {/* Warning */}
                       <div className="bg-amber-50 border border-amber-200 rounded-xl p-3 flex items-start gap-2">
-                        <span className="text-amber-500 text-lg">⚠️</span>
+                        <AlertTriangle className="w-5 h-5 text-amber-500 flex-shrink-0" />
                         <div className="text-sm text-amber-700">May interact with blood pressure medication</div>
                       </div>
                     </div>
