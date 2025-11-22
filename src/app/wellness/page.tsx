@@ -16,6 +16,7 @@ import {
   TrendingUp,
   Shield,
 } from 'lucide-react';
+import { FAQAccordion } from '@/components/FAQAccordion';
 
 const ArrowLeftIcon = () => (
   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -230,7 +231,7 @@ export default function WellnessPage() {
       </section>
 
       {/* Scanner Feature */}
-      <section className="py-12 md:py-20 px-4 bg-white">
+      <section id="features" className="py-12 md:py-20 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Phone Mockup */}
@@ -529,12 +530,9 @@ export default function WellnessPage() {
       {/* FAQ Section */}
       <section className="py-12 md:py-20 px-4 bg-white">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-2xl lg:text-3xl font-bold text-[#2C3333] mb-8 text-center">
-            Frequently asked questions
-          </h2>
-
-          <div className="space-y-4">
-            {[
+          <FAQAccordion
+            title="Frequently asked questions"
+            items={[
               {
                 q: 'What is SANA and how does it work?',
                 a: 'SANA is a wellness platform that connects you with verified complementary and alternative medicine practitioners, provides personalized safety checks for supplements and herbs, and helps you track your wellness journey. Download the app, create your profile, and get personalized recommendations.'
@@ -544,7 +542,11 @@ export default function WellnessPage() {
                 a: 'Yes—SANA is completely free for wellness seekers. You can access the practitioner directory, Product Scanner, health tracking, and educational content at no cost. You only pay when you book consultations with practitioners.'
               },
               {
-                q: 'How do I find the right practitioner for my needs?',
+                q: 'How does the Product Scanner work?',
+                a: 'Simply scan a supplement or herbal product barcode using the SANA app. You\'ll instantly see ingredient analysis, quality ratings, potential interactions with your medications or conditions, evidence ratings, and personalized safety alerts.'
+              },
+              {
+                q: 'How do I find the right practitioner?',
                 a: 'SANA\'s smart matching considers your health concerns, location, budget, preferred consultation type (in-person/online), and modality preferences. You can also browse verified practitioners, view their success rates, read reviews, and compare specializations.'
               },
               {
@@ -552,85 +554,32 @@ export default function WellnessPage() {
                 a: 'All SANA practitioners are verified with credential checks, professional body memberships, and insurance verification. They also have transparent success rates through the SANA Index, so you can see actual outcomes—not just marketing claims.'
               },
               {
-                q: 'Can I trust the practitioner reviews on SANA?',
-                a: 'Yes—only clients who\'ve completed verified consultations can leave reviews. We don\'t allow purchased reviews or unverified testimonials. Reviews are linked to real treatment outcomes, giving you honest feedback.'
-              },
-              {
-                q: 'How does the Product Scanner work?',
-                a: 'Simply scan a supplement or herbal product barcode using the SANA app. You\'ll instantly see ingredient analysis, quality ratings, potential interactions with your medications or conditions, evidence ratings, and personalized safety alerts.'
-              },
-              {
-                q: 'Is the Product Scanner accurate?',
-                a: 'The Product Scanner draws from peer-reviewed research, traditional medicine databases, and clinical evidence. While no system is perfect, we\'re constantly updating our database and clearly indicate confidence levels for each recommendation.'
-              },
-              {
-                q: 'How do I book a consultation with a practitioner?',
+                q: 'How do I book a consultation?',
                 a: 'Find a practitioner you like, view their availability, choose your consultation type (video, phone, in-person, or messaging), and book directly through the app. You\'ll receive confirmation and reminders automatically.'
-              },
-              {
-                q: 'What types of consultations are available?',
-                a: 'Depending on the practitioner, you can book video consultations (through our secure platform), phone consultations, in-person appointments at their clinic or your location, and asynchronous messaging consultations.'
-              },
-              {
-                q: 'How do payments work?',
-                a: 'Pay securely through the SANA app when you book. We accept all major cards. Prices are set by individual practitioners and clearly displayed before booking. Receipts are automatically generated for your records.'
-              },
-              {
-                q: 'What if I need to cancel or reschedule?',
-                a: 'Each practitioner sets their own cancellation policy, which you\'ll see before booking. Most allow free cancellation with 24-48 hours notice. Reschedule directly through the app.'
               },
               {
                 q: 'Is my health data private and secure?',
                 a: 'Absolutely. SANA uses bank-level encryption, stores data on UK servers compliant with GDPR and healthcare regulations, and never sells your information. You control who sees your health data and can revoke access anytime.'
               },
               {
-                q: 'Can I share my health records with practitioners?',
-                a: 'Yes—you can choose to share relevant health information, symptom tracking, and Product Scanner history with practitioners you book with. This helps them provide better, more personalized care. Sharing is always optional and controlled by you.'
-              },
-              {
-                q: 'What modalities/therapies can I find on SANA?',
-                a: 'SANA includes practitioners from herbal medicine, acupuncture & TCM, naturopathy, homeopathy, nutritional therapy, osteopathy, chiropractic, Ayurveda, energy healing, massage therapy, reflexology, aromatherapy, and many more.'
-              },
-              {
-                q: 'How do I know if a therapy is right for me?',
-                a: 'SANA provides educational content about different modalities, evidence summaries, and condition-specific guides. You can also use our AI-powered recommendations or book an initial consultation to discuss your needs with a practitioner.'
-              },
-              {
                 q: 'Does SANA replace medical care?',
                 a: 'No—SANA complements conventional medicine, it doesn\'t replace it. Always consult your GP for medical conditions. SANA helps you safely explore complementary approaches and find qualified practitioners for integrative wellness.'
               },
               {
-                q: 'What if I have a bad experience with a practitioner?',
-                a: 'You can report concerns directly through the app. We take complaints seriously, investigate thoroughly, and take action when appropriate—including removing practitioners who violate our standards. Your feedback helps maintain marketplace quality.'
-              },
-              {
-                q: 'How do wellness tracking features work?',
-                a: 'Log symptoms, moods, energy levels, sleep, and other wellness metrics. SANA helps you spot patterns, correlate with treatments, and share progress with practitioners. It\'s your personal wellness journal with smart insights.'
-              },
-              {
-                q: 'Can I use SANA if I\'m taking prescription medications?',
+                q: 'Can I use SANA if I\'m taking medications?',
                 a: 'Yes—in fact, the Product Scanner is especially useful if you take medications, as it flags potential herb-drug interactions. Always inform both your GP and complementary practitioner about all treatments you\'re using.'
-              },
-              {
-                q: 'Is SANA available in my area?',
-                a: 'SANA is currently launching across the UK, with practitioner availability varying by location. Enter your postcode in the app to see practitioners near you. We\'re expanding rapidly—join the early access list to be notified when we reach your area.'
               },
               {
                 q: 'How do I get the SANA app?',
                 a: 'SANA will be available on both iOS (App Store) and Android (Google Play). Join our early access list to be notified the moment we launch and get priority access to new features.'
               }
-            ].map((faq, i) => (
-              <div key={i} className="bg-[#FAF9F6] rounded-xl p-5 border border-[#EAE7DC]">
-                <h3 className="font-semibold text-[#2C3333] mb-2">{faq.q}</h3>
-                <p className="text-sm text-[#5F6368]">{faq.a}</p>
-              </div>
-            ))}
-          </div>
+            ]}
+          />
         </div>
       </section>
 
       {/* Final CTA */}
-      <section className="py-12 md:py-20 px-4 bg-gradient-to-r from-[#4A90A4] to-[#6B9080]">
+      <section id="early-access" className="py-12 md:py-20 px-4 bg-gradient-to-r from-[#4A90A4] to-[#6B9080]">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
             Take control of your wellness journey.
@@ -702,15 +651,15 @@ export default function WellnessPage() {
       {/* Mobile Sticky CTA */}
       <div className="fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-lg border-t border-[#EAE7DC] p-3 md:hidden z-50 shadow-[0_-4px_20px_rgba(0,0,0,0.1)]">
         <div className="flex gap-2 max-w-md mx-auto">
-          <button className="flex-1 bg-[#4A90A4] text-white py-4 rounded-2xl font-semibold shadow-lg text-sm min-h-[52px] flex items-center justify-center gap-2">
+          <a href="#early-access" className="flex-1 bg-[#4A90A4] text-white py-4 rounded-2xl font-semibold shadow-lg text-sm min-h-[52px] flex items-center justify-center gap-2">
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
               <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
             </svg>
-            Download App
-          </button>
-          <button className="flex-1 bg-[#6B9080] text-white py-4 rounded-2xl font-semibold shadow-lg text-sm min-h-[52px]">
-            Find Practitioner
-          </button>
+            Get Early Access
+          </a>
+          <a href="#features" className="flex-1 bg-[#6B9080] text-white py-4 rounded-2xl font-semibold shadow-lg text-sm min-h-[52px] flex items-center justify-center">
+            Explore Features
+          </a>
         </div>
       </div>
     </main>

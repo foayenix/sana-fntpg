@@ -24,6 +24,7 @@ import {
   TrendingUp,
   Zap,
 } from 'lucide-react';
+import { FAQAccordion } from '@/components/FAQAccordion';
 
 // Icon Components
 const StethoscopeIcon = () => (
@@ -1482,17 +1483,12 @@ function FinalCTASection() {
 // FAQ Section
 function FAQSection() {
   return (
-    <section className="py-24 bg-white">
+    <section className="py-16 md:py-24 bg-white">
       <div className="max-w-3xl mx-auto px-4">
-        <h2 className="text-3xl lg:text-4xl font-bold text-[#2C3333] mb-4 text-center">
-          Frequently asked questions
-        </h2>
-        <p className="text-lg text-[#5F6368] mb-12 text-center">
-          Everything you need to know about SANA
-        </p>
-
-        <div className="space-y-4">
-          {[
+        <FAQAccordion
+          title="Frequently asked questions"
+          subtitle="Everything you need to know about SANA"
+          items={[
             {
               q: 'What is SANA?',
               a: 'SANA is a comprehensive wellness platform that connects clients with verified complementary and alternative medicine (CAM) practitioners, provides evidence-based tools for practitioners, and offers personalized safety checks and health tracking for wellness seekers. Think of it as the operating system for natural healing.'
@@ -1510,8 +1506,8 @@ function FAQSection() {
               a: 'SANA is evidence-first. We verify practitioner credentials, track real treatment outcomes, and provide transparent success rates through the SANA Index. Unlike directories that just list practitioners, we help you understand who actually gets results—backed by data, not marketing.'
             },
             {
-              q: 'What modalities/therapies does SANA support?',
-              a: 'SANA supports virtually all CAM modalities including herbal medicine, Traditional Chinese Medicine, naturopathy, homeopathy, nutritional therapy, osteopathy, Ayurveda, energy healing, massage therapy, reflexology, aromatherapy, functional medicine, and many more. If your modality isn\'t listed, contact us—we\'re continuously expanding.'
+              q: 'What modalities does SANA support?',
+              a: 'SANA supports virtually all CAM modalities including herbal medicine, Traditional Chinese Medicine, naturopathy, homeopathy, nutritional therapy, osteopathy, Ayurveda, energy healing, massage therapy, reflexology, aromatherapy, functional medicine, and many more.'
             },
             {
               q: 'How does SANA verify practitioners?',
@@ -1519,19 +1515,14 @@ function FAQSection() {
             },
             {
               q: 'Is my data safe with SANA?',
-              a: 'Absolutely. SANA uses bank-level encryption, stores data on UK servers compliant with GDPR and healthcare regulations, and never sells your information. Clients control who sees their health data and can revoke access anytime. Practitioners\' client data is protected to healthcare industry standards.'
+              a: 'Absolutely. SANA uses bank-level encryption, stores data on UK servers compliant with GDPR and healthcare regulations, and never sells your information. Clients control who sees their health data and can revoke access anytime.'
             },
             {
               q: 'How do I get started?',
               a: 'For practitioners: Sign up for a free account, complete verification, and start building your evidence-based profile. For wellness seekers: Download the SANA app (coming soon to iOS and Android), create your profile, and start exploring verified practitioners and scanning products.'
             }
-          ].map((faq, i) => (
-            <div key={i} className="bg-[#FAF9F6] rounded-xl p-6 border border-[#EAE7DC]">
-              <h3 className="font-semibold text-[#2C3333] mb-2 text-lg">{faq.q}</h3>
-              <p className="text-[#5F6368]">{faq.a}</p>
-            </div>
-          ))}
-        </div>
+          ]}
+        />
       </div>
     </section>
   );
@@ -1585,10 +1576,10 @@ function Footer() {
           <div>
             <h4 className="font-semibold mb-4">Product</h4>
             <ul className="space-y-3 text-white/60 text-sm">
-              <li><a href="#" className="hover:text-white transition-colors">Features</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Pricing</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Mobile App</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Integrations</a></li>
+              <li><a href="#features" className="hover:text-white transition-colors">Features</a></li>
+              <li><Link href="/practitioner#pricing" className="hover:text-white transition-colors">Pricing</Link></li>
+              <li><Link href="/wellness" className="hover:text-white transition-colors">Mobile App</Link></li>
+              <li><a href="#features" className="hover:text-white transition-colors">Integrations</a></li>
             </ul>
           </div>
 
@@ -1596,10 +1587,10 @@ function Footer() {
           <div>
             <h4 className="font-semibold mb-4">Company</h4>
             <ul className="space-y-3 text-white/60 text-sm">
-              <li><a href="#" className="hover:text-white transition-colors">About</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Blog</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Careers</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Press</a></li>
+              <li><Link href="/about" className="hover:text-white transition-colors">About</Link></li>
+              <li><Link href="/practitioner" className="hover:text-white transition-colors">For Practitioners</Link></li>
+              <li><Link href="/wellness" className="hover:text-white transition-colors">For Wellness Seekers</Link></li>
+              <li><a href="mailto:press@sana.health" className="hover:text-white transition-colors">Press</a></li>
             </ul>
           </div>
 
@@ -1619,9 +1610,9 @@ function Footer() {
 
             <h4 className="font-semibold mb-4">Resources</h4>
             <ul className="space-y-3 text-white/60 text-sm">
-              <li><a href="#" className="hover:text-white transition-colors">Help Center</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">API Docs</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Community</a></li>
+              <li><a href="mailto:support@sana.health" className="hover:text-white transition-colors">Help Center</a></li>
+              <li><Link href="/about" className="hover:text-white transition-colors">FAQ</Link></li>
+              <li><a href="mailto:support@sana.health" className="hover:text-white transition-colors">Contact</a></li>
             </ul>
           </div>
         </div>
@@ -1631,11 +1622,11 @@ function Footer() {
           <p className="text-white/40 text-sm">
             © 2024 SANA Technologies Ltd. Building the future of CAM.
           </p>
-          <div className="flex gap-6 text-white/40 text-sm">
+          <div className="flex flex-wrap justify-center gap-4 md:gap-6 text-white/40 text-sm">
             <a href="#" className="hover:text-white transition-colors">Privacy</a>
             <a href="#" className="hover:text-white transition-colors">Terms</a>
             <a href="#" className="hover:text-white transition-colors">GDPR</a>
-            <a href="#" className="hover:text-white transition-colors">support@sanatech.com</a>
+            <a href="mailto:support@sana.health" className="hover:text-white transition-colors">support@sana.health</a>
           </div>
         </div>
       </div>
