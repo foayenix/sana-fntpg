@@ -1220,9 +1220,9 @@ function PricingSection() {
               Practice
             </div>
             <div className="mb-6">
-              <span className="text-5xl font-bold text-[#2C3333]">£69</span>
-              <span className="text-[#5F6368]">/month</span>
-            </div>
+                <span className="text-5xl font-bold text-[#2C3333]">£99</span>
+                <span className="text-[#5F6368]">/month</span>
+              </div>
 
             <ul className="space-y-4 mb-8">
               {[
