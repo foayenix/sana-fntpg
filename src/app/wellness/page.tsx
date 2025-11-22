@@ -15,6 +15,17 @@ import {
   BadgeCheck,
   TrendingUp,
   Shield,
+  Heart,
+  MessageCircle,
+  Sparkles,
+  CheckCircle2,
+  Star,
+  Award,
+  Users,
+  ShieldCheck,
+  Scan,
+  Activity,
+  Brain,
 } from 'lucide-react';
 import { FAQAccordion } from '@/components/FAQAccordion';
 
@@ -365,20 +376,278 @@ export default function WellnessPage() {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 text-center">
             <div>
+              <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-white/20 mb-3">
+                <Scan className="w-6 h-6 text-white" />
+              </div>
               <div className="text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-1 md:mb-2">2M+</div>
               <div className="text-white/80 text-xs md:text-base">Products Scanned</div>
             </div>
             <div>
+              <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-white/20 mb-3">
+                <ShieldCheck className="w-6 h-6 text-white" />
+              </div>
               <div className="text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-1 md:mb-2">87%</div>
               <div className="text-white/80 text-xs md:text-base">Avoided Interactions</div>
             </div>
             <div>
+              <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-white/20 mb-3">
+                <Users className="w-6 h-6 text-white" />
+              </div>
               <div className="text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-1 md:mb-2">50K+</div>
               <div className="text-white/80 text-xs md:text-base">Active Users</div>
             </div>
             <div>
+              <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-white/20 mb-3">
+                <Star className="w-6 h-6 text-white" />
+              </div>
               <div className="text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-1 md:mb-2">4.8★</div>
               <div className="text-white/80 text-xs md:text-base">App Store Rating</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Value Proposition Section - LIKE PRICING ON PRACTITIONER PAGE */}
+      <section id="value" className="py-12 md:py-20 px-4 bg-gradient-to-b from-[#FAF9F6] to-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12 md:mb-16">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-100 text-emerald-700 rounded-full text-sm font-semibold mb-6">
+              <Sparkles className="w-4 h-4" />
+              100% Free Forever for Clients
+            </div>
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#2C3333] mb-4">
+              Everything you need to find healing
+            </h2>
+            <p className="text-lg text-[#5F6368] max-w-2xl mx-auto">
+              SANA gives you the tools to discover qualified practitioners,
+              book appointments, and track your progress—all in one place.
+            </p>
+          </div>
+
+          {/* Value Cards Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            {/* Card 1 - Find Practitioners */}
+            <div className="group relative bg-white rounded-2xl p-6 lg:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100">
+              <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-5 bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-600 transition-opacity duration-300" />
+              <div className="relative">
+                <div className="w-14 h-14 lg:w-16 lg:h-16 rounded-2xl mb-6 bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-600 flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                  <Search className="w-7 h-7 lg:w-8 lg:h-8 text-white" />
+                </div>
+                <h3 className="text-xl lg:text-2xl font-bold text-[#2C3333] mb-3">Find Qualified Practitioners</h3>
+                <p className="text-[#5F6368] mb-6 leading-relaxed">Search 500+ SANA-verified practitioners across all CAM modalities</p>
+                <ul className="space-y-3">
+                  {[
+                    'Every practitioner credential-verified by our SCVM algorithm',
+                    'Filter by modality, location, specialty, and reviews',
+                    'See SANA Index score (outcomes-based credibility)',
+                    'Direct messaging before booking',
+                    'Authentic reviews from verified clients'
+                  ].map((benefit, idx) => (
+                    <li key={idx} className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" />
+                      <span className="text-[#5F6368] text-sm">{benefit}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            {/* Card 2 - Book Instantly */}
+            <div className="group relative bg-white rounded-2xl p-6 lg:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100">
+              <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-5 bg-gradient-to-br from-pink-500 via-rose-500 to-red-600 transition-opacity duration-300" />
+              <div className="relative">
+                <div className="w-14 h-14 lg:w-16 lg:h-16 rounded-2xl mb-6 bg-gradient-to-br from-pink-500 via-rose-500 to-red-600 flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                  <Calendar className="w-7 h-7 lg:w-8 lg:h-8 text-white" />
+                </div>
+                <h3 className="text-xl lg:text-2xl font-bold text-[#2C3333] mb-3">Book Instantly, Anytime</h3>
+                <p className="text-[#5F6368] mb-6 leading-relaxed">Schedule appointments 24/7 with real-time availability</p>
+                <ul className="space-y-3">
+                  {[
+                    'See live practitioner calendars and book in seconds',
+                    'Automatic confirmations via email and SMS',
+                    'Easy rescheduling and cancellation (no phone calls)',
+                    'Sync to Google/Apple calendar',
+                    'Choose in-person or online consultations'
+                  ].map((benefit, idx) => (
+                    <li key={idx} className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" />
+                      <span className="text-[#5F6368] text-sm">{benefit}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            {/* Card 3 - Track Health */}
+            <div className="group relative bg-white rounded-2xl p-6 lg:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100">
+              <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-5 bg-gradient-to-br from-red-500 via-rose-500 to-pink-600 transition-opacity duration-300" />
+              <div className="relative">
+                <div className="w-14 h-14 lg:w-16 lg:h-16 rounded-2xl mb-6 bg-gradient-to-br from-red-500 via-rose-500 to-pink-600 flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                  <Heart className="w-7 h-7 lg:w-8 lg:h-8 text-white" />
+                </div>
+                <h3 className="text-xl lg:text-2xl font-bold text-[#2C3333] mb-3">Track Your Health Journey</h3>
+                <p className="text-[#5F6368] mb-6 leading-relaxed">See your progress with science-backed health scoring</p>
+                <ul className="space-y-3">
+                  {[
+                    'SISM health score tracks 6 dimensions of wellbeing',
+                    'Visualize improvements with beautiful charts',
+                    'Complete WHO-5, DASS-21, and CAM-specific measures',
+                    'Share progress with your practitioner (optional)',
+                    'Export health data anytime (you own your data)'
+                  ].map((benefit, idx) => (
+                    <li key={idx} className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" />
+                      <span className="text-[#5F6368] text-sm">{benefit}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            {/* Card 4 - AI Wellness Tools */}
+            <div className="group relative bg-white rounded-2xl p-6 lg:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100">
+              <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-5 bg-gradient-to-br from-emerald-500 via-teal-500 to-cyan-600 transition-opacity duration-300" />
+              <div className="relative">
+                <div className="w-14 h-14 lg:w-16 lg:h-16 rounded-2xl mb-6 bg-gradient-to-br from-emerald-500 via-teal-500 to-cyan-600 flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                  <Sparkles className="w-7 h-7 lg:w-8 lg:h-8 text-white" />
+                </div>
+                <h3 className="text-xl lg:text-2xl font-bold text-[#2C3333] mb-3">AI-Powered Wellness Tools</h3>
+                <p className="text-[#5F6368] mb-6 leading-relaxed">Your personal health companion, completely free</p>
+                <ul className="space-y-3">
+                  {[
+                    'Journal with AI personas (Therapist, Nutritionist, Herbalist)',
+                    'Scan supplements for safety checks and interactions',
+                    'Connect Apple Health, Fitbit, Oura, WHOOP',
+                    'Get personalized recommendations based on your data',
+                    'Track sleep, activity, stress, and mood patterns'
+                  ].map((benefit, idx) => (
+                    <li key={idx} className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" />
+                      <span className="text-[#5F6368] text-sm">{benefit}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            {/* Card 5 - Secure Communication */}
+            <div className="group relative bg-white rounded-2xl p-6 lg:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100">
+              <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-5 bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-600 transition-opacity duration-300" />
+              <div className="relative">
+                <div className="w-14 h-14 lg:w-16 lg:h-16 rounded-2xl mb-6 bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-600 flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                  <MessageCircle className="w-7 h-7 lg:w-8 lg:h-8 text-white" />
+                </div>
+                <h3 className="text-xl lg:text-2xl font-bold text-[#2C3333] mb-3">Secure Communication</h3>
+                <p className="text-[#5F6368] mb-6 leading-relaxed">Message your practitioners with complete privacy</p>
+                <ul className="space-y-3">
+                  {[
+                    'GDPR-compliant encrypted messaging',
+                    'Share photos, documents, and health updates',
+                    'Get quick answers between appointments',
+                    'All conversations stored securely',
+                    'No phone tag or missed calls'
+                  ].map((benefit, idx) => (
+                    <li key={idx} className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" />
+                      <span className="text-[#5F6368] text-sm">{benefit}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            {/* Card 6 - Safety & Trust */}
+            <div className="group relative bg-white rounded-2xl p-6 lg:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100">
+              <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-5 bg-gradient-to-br from-violet-500 via-purple-500 to-fuchsia-600 transition-opacity duration-300" />
+              <div className="relative">
+                <div className="w-14 h-14 lg:w-16 lg:h-16 rounded-2xl mb-6 bg-gradient-to-br from-violet-500 via-purple-500 to-fuchsia-600 flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                  <ShieldCheck className="w-7 h-7 lg:w-8 lg:h-8 text-white" />
+                </div>
+                <h3 className="text-xl lg:text-2xl font-bold text-[#2C3333] mb-3">Safety & Trust Guaranteed</h3>
+                <p className="text-[#5F6368] mb-6 leading-relaxed">Every practitioner meets our rigorous standards</p>
+                <ul className="space-y-3">
+                  {[
+                    'Verified credentials from CPP, NIMH, UKCP, CNHC',
+                    'Professional indemnity insurance required',
+                    'Continuous monitoring of practitioner performance',
+                    'Report system for any concerns or complaints',
+                    'NHS-grade data security and privacy protection'
+                  ].map((benefit, idx) => (
+                    <li key={idx} className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" />
+                      <span className="text-[#5F6368] text-sm">{benefit}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Clients Choose SANA Section */}
+      <section className="py-12 md:py-20 px-4 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#2C3333] mb-4">
+              Why clients choose SANA
+            </h2>
+            <p className="text-lg text-[#5F6368]">
+              We&apos;re not just a booking platform—we&apos;re your wellness partner
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
+            <div className="bg-[#FAF9F6] rounded-2xl p-6 lg:p-8 shadow-lg border border-[#EAE7DC] hover:shadow-xl transition-all">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center mb-4 shadow-lg">
+                <ShieldCheck className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-[#2C3333] mb-3">
+                Only Verified Practitioners
+              </h3>
+              <p className="text-[#5F6368] leading-relaxed">
+                Every practitioner on SANA has been credential-verified by our SCVM algorithm
+                against official registries (CPP, NIMH, UKCP, CNHC). No fake qualifications, ever.
+              </p>
+            </div>
+
+            <div className="bg-[#FAF9F6] rounded-2xl p-6 lg:p-8 shadow-lg border border-[#EAE7DC] hover:shadow-xl transition-all">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-indigo-600 flex items-center justify-center mb-4 shadow-lg">
+                <BarChart3 className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-[#2C3333] mb-3">
+                Outcomes-Based Rankings
+              </h3>
+              <p className="text-[#5F6368] leading-relaxed">
+                Our SANA Index scores practitioners primarily on client outcomes (40% weight),
+                not marketing spend. Find practitioners who actually deliver results.
+              </p>
+            </div>
+
+            <div className="bg-[#FAF9F6] rounded-2xl p-6 lg:p-8 shadow-lg border border-[#EAE7DC] hover:shadow-xl transition-all">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-pink-500 to-rose-600 flex items-center justify-center mb-4 shadow-lg">
+                <Heart className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-[#2C3333] mb-3">
+                Holistic Health Tracking
+              </h3>
+              <p className="text-[#5F6368] leading-relaxed">
+                SISM health score tracks physical, mental, energetic, digestive, sleep,
+                and social dimensions—because healing is more than just symptom relief.
+              </p>
+            </div>
+
+            <div className="bg-[#FAF9F6] rounded-2xl p-6 lg:p-8 shadow-lg border border-[#EAE7DC] hover:shadow-xl transition-all">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center mb-4 shadow-lg">
+                <Brain className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-[#2C3333] mb-3">
+                AI Wellness Companion
+              </h3>
+              <p className="text-[#5F6368] leading-relaxed">
+                Journal with 8 AI personas, scan supplements for safety, track wearable data,
+                and get personalized insights—all free, forever.
+              </p>
             </div>
           </div>
         </div>
