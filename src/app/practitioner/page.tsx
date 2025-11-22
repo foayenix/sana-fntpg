@@ -51,6 +51,7 @@ import {
   LineChart,
   FileSpreadsheet,
   Heart,
+  Clock,
 } from 'lucide-react';
 import { FAQAccordion } from '@/components/FAQAccordion';
 
@@ -474,15 +475,15 @@ export default function PractitionerPage() {
             </div>
 
             {/* Professional Plan - Premium subtle gradient */}
-            <div className="relative bg-gradient-to-br from-slate-50 to-blue-50 border-2 border-blue-200 rounded-2xl p-8 shadow-xl overflow-hidden">
+            <div className="relative bg-gradient-to-br from-slate-50 to-blue-50 border-2 border-blue-200 rounded-2xl p-8 shadow-xl">
               {/* Subtle animated gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-teal-500/5" />
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-teal-500/5 rounded-2xl" />
 
-              {/* Most Popular Badge - Sophisticated */}
-              <div className="absolute -top-0.5 left-1/2 -translate-x-1/2 -translate-y-1/2">
+              {/* Limited Time Badge - Sophisticated */}
+              <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
                 <div className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-gradient-to-r from-blue-600 to-teal-600 text-white text-xs font-semibold shadow-lg shadow-blue-500/25">
-                  <Sparkles className="w-3.5 h-3.5" />
-                  Most Popular
+                  <Clock className="w-3.5 h-3.5" />
+                  Limited Time Offer
                 </div>
               </div>
 
