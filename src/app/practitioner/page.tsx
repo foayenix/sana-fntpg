@@ -22,13 +22,13 @@ const ArrowRightIcon = () => (
 
 export default function PractitionerPage() {
   return (
-    <main className="min-h-screen bg-[#FAF9F6]">
+    <main className="min-h-screen bg-[#FAF9F6] pb-20 md:pb-0">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-xl border-b border-[#EAE7DC]">
-        <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2 text-[#5F6368] hover:text-[#2C3333] transition-colors">
+        <div className="max-w-6xl mx-auto px-4 h-14 md:h-16 flex items-center justify-between">
+          <Link href="/" className="flex items-center gap-2 text-[#5F6368] hover:text-[#2C3333] transition-colors min-h-[44px]">
             <ArrowLeftIcon />
-            <span className="text-sm font-medium">Back to Home</span>
+            <span className="text-sm font-medium hidden sm:inline">Back to Home</span>
           </Link>
           <div className="flex items-center gap-2">
             <div className="w-8 h-8 rounded-lg bg-[#6B9080] flex items-center justify-center">
@@ -41,37 +41,37 @@ export default function PractitionerPage() {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4" style={{ background: 'linear-gradient(180deg, #6B9080 0%, #8FB3A3 50%, #FAF9F6 100%)' }}>
+      <section className="pt-20 md:pt-32 pb-12 md:pb-20 px-4" style={{ background: 'linear-gradient(180deg, #6B9080 0%, #8FB3A3 50%, #FAF9F6 100%)' }}>
         <div className="max-w-4xl mx-auto text-center">
-          <div className="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
+          <div className="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-4 md:mb-6">
             <span className="text-white text-sm font-medium">For CAM Practitioners</span>
           </div>
 
-          <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+          <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold text-white mb-4 md:mb-6 leading-tight">
             You&apos;re not &ldquo;alternative&rdquo;.<br />You&apos;re essential.
           </h1>
 
-          <p className="text-xl text-white/90 mb-10 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-white/90 mb-8 md:mb-10 max-w-2xl mx-auto">
             After years of training, you deserve infrastructure that proves your work, grows your practice, and positions CAM as the evidence-based medicine it truly is.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <button className="bg-white text-[#6B9080] px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover:bg-white/90 transition-all transform hover:scale-105">
+          <div className="flex flex-col sm:flex-row gap-3 justify-center mb-6 md:mb-8">
+            <button className="bg-white text-[#6B9080] px-6 md:px-8 py-4 rounded-full text-base md:text-lg font-semibold shadow-lg hover:bg-white/90 transition-all transform hover:scale-105 min-h-[52px]">
               Start Your Free Practice
             </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/10 transition-all">
+            <button className="border-2 border-white text-white px-6 md:px-8 py-4 rounded-full text-base md:text-lg font-semibold hover:bg-white/10 transition-all min-h-[52px]">
               Book a Demo
             </button>
           </div>
 
           <p className="text-white/70 text-sm">
-            Free forever plan • No credit card required • Setup in 5 minutes
+            Free forever plan • No credit card required
           </p>
         </div>
       </section>
 
       {/* Pain Points Section */}
-      <section className="py-20 px-4 bg-white">
+      <section className="py-12 md:py-20 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-[#2C3333] mb-4">
@@ -135,7 +135,7 @@ export default function PractitionerPage() {
       </section>
 
       {/* The Insight Section */}
-      <section className="py-20 px-4 bg-[#2C3333]">
+      <section className="py-12 md:py-20 px-4 bg-[#2C3333]">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
             CAM doesn&apos;t need fixing.<br />It needs infrastructure.
@@ -164,7 +164,7 @@ export default function PractitionerPage() {
       </section>
 
       {/* Your Journey Section */}
-      <section className="py-20 px-4 bg-[#FAF9F6]">
+      <section className="py-12 md:py-20 px-4 bg-[#FAF9F6]">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-[#2C3333] mb-4">
@@ -235,7 +235,7 @@ export default function PractitionerPage() {
       </section>
 
       {/* Platform Features */}
-      <section className="py-20 px-4 bg-white">
+      <section className="py-12 md:py-20 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-[#2C3333] mb-4">
@@ -308,7 +308,7 @@ export default function PractitionerPage() {
       </section>
 
       {/* Social Proof */}
-      <section className="py-20 px-4 bg-[#EAE7DC]">
+      <section className="py-12 md:py-20 px-4 bg-[#EAE7DC]">
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -419,7 +419,7 @@ export default function PractitionerPage() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 px-4 bg-gradient-to-r from-[#6B9080] to-[#4A90A4]">
+      <section className="py-12 md:py-20 px-4 bg-gradient-to-r from-[#6B9080] to-[#4A90A4]">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
             Ready to build the practice you deserve?
@@ -437,6 +437,18 @@ export default function PractitionerPage() {
       <footer className="py-8 px-4 bg-[#2C3333] text-white/60 text-center text-sm">
         <p>© 2024 SANA Technologies Ltd. Building the infrastructure for natural healing.</p>
       </footer>
+
+      {/* Mobile Sticky CTA */}
+      <div className="fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-lg border-t border-[#EAE7DC] p-3 md:hidden z-50 shadow-[0_-4px_20px_rgba(0,0,0,0.1)]">
+        <div className="flex gap-2 max-w-md mx-auto">
+          <button className="flex-1 bg-[#6B9080] text-white py-4 rounded-2xl font-semibold shadow-lg text-sm min-h-[52px]">
+            Start Free Practice
+          </button>
+          <button className="flex-1 bg-[#4A90A4] text-white py-4 rounded-2xl font-semibold shadow-lg text-sm min-h-[52px]">
+            Book a Demo
+          </button>
+        </div>
+      </div>
     </main>
   );
 }

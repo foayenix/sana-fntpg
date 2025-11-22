@@ -154,18 +154,63 @@ function HeroSection() {
 
   return (
     <section className="relative min-h-screen pt-16 overflow-hidden">
-      <div className="flex flex-col lg:flex-row min-h-[calc(100vh-4rem)]">
+      {/* Mobile Toggle - Shows above content on mobile */}
+      <div className="lg:hidden bg-gradient-to-r from-[#6B9080] to-[#4A90A4] px-4 py-6">
+        <div className="text-center mb-4">
+          <div className="w-10 h-10 mx-auto rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center mb-2">
+            <span className="text-white font-bold text-lg">S</span>
+          </div>
+          <p className="text-white/80 text-sm">Choose your path</p>
+        </div>
+        <div className="flex gap-2 max-w-md mx-auto">
+          <button
+            onClick={handlePractitionerClick}
+            className={`flex-1 flex items-center justify-center gap-2 px-4 py-4 rounded-2xl transition-all ${
+              activeRole === 'practitioner'
+                ? 'bg-white text-[#6B9080] shadow-lg'
+                : 'bg-white/20 text-white'
+            }`}
+          >
+            <StethoscopeIcon />
+            <span className="text-sm font-medium">Practitioner</span>
+            {activeRole === 'practitioner' && (
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            )}
+          </button>
+          <button
+            onClick={handleClientClick}
+            className={`flex-1 flex items-center justify-center gap-2 px-4 py-4 rounded-2xl transition-all ${
+              activeRole === 'client'
+                ? 'bg-white text-[#4A90A4] shadow-lg'
+                : 'bg-white/20 text-white'
+            }`}
+          >
+            <LeafIcon />
+            <span className="text-sm font-medium">Wellness</span>
+            {activeRole === 'client' && (
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            )}
+          </button>
+        </div>
+        <p className="text-center text-white/60 text-xs mt-3">Tap again to explore →</p>
+      </div>
+
+      <div className="flex flex-col lg:flex-row min-h-[60vh] lg:min-h-[calc(100vh-4rem)]">
         {/* Left Side - Practitioner */}
         <div
-          className={`flex-1 relative p-8 lg:p-16 flex flex-col justify-center transition-all duration-500 ${
-            activeRole === 'practitioner' ? 'opacity-100' : 'opacity-70'
+          className={`flex-1 relative p-6 lg:p-16 flex flex-col justify-center transition-all duration-500 ${
+            activeRole === 'practitioner' ? 'opacity-100' : 'opacity-70 hidden lg:flex'
           }`}
           style={{ background: 'linear-gradient(145deg, #6B9080 0%, #8FB3A3 50%, #A4AC96 100%)' }}
           onMouseEnter={() => setActiveRole('practitioner')}
         >
           {/* Badge */}
-          <div className="absolute top-8 left-8 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
-            <span className="text-white text-sm font-medium">For Practitioners</span>
+          <div className="absolute top-4 left-4 lg:top-8 lg:left-8 bg-white/20 backdrop-blur-sm px-3 py-1.5 lg:px-4 lg:py-2 rounded-full">
+            <span className="text-white text-xs lg:text-sm font-medium">For Practitioners</span>
           </div>
 
           {/* Dashboard Mockup */}
@@ -291,22 +336,22 @@ function HeroSection() {
 
         {/* Right Side - Client */}
         <div
-          className={`flex-1 relative p-8 lg:p-16 flex flex-col justify-center transition-all duration-500 ${
-            activeRole === 'client' ? 'opacity-100' : 'opacity-70'
+          className={`flex-1 relative p-6 lg:p-16 flex flex-col justify-center transition-all duration-500 ${
+            activeRole === 'client' ? 'opacity-100' : 'opacity-70 hidden lg:flex'
           }`}
           style={{ background: 'linear-gradient(145deg, #EAE7DC 0%, #F5F3EE 50%, #6AACBE 100%)' }}
           onMouseEnter={() => setActiveRole('client')}
         >
           {/* Badge */}
-          <div className="absolute top-8 right-8 bg-white/40 backdrop-blur-sm px-4 py-2 rounded-full">
-            <span className="text-[#2C3333] text-sm font-medium">For Clients</span>
+          <div className="absolute top-4 right-4 lg:top-8 lg:right-8 bg-white/40 backdrop-blur-sm px-3 py-1.5 lg:px-4 lg:py-2 rounded-full">
+            <span className="text-[#2C3333] text-xs lg:text-sm font-medium">For Clients</span>
           </div>
 
           {/* iPhone Mockup */}
           <div className={`relative mx-auto transition-all duration-300 ${
             activeRole === 'client' ? 'shadow-glow-teal scale-[1.02]' : ''
           }`}>
-            <div className="w-[280px] h-[560px] bg-[#1a1a1a] rounded-[3rem] p-3 shadow-elevated">
+            <div className="w-[220px] h-[440px] lg:w-[280px] lg:h-[560px] bg-[#1a1a1a] rounded-[2.5rem] lg:rounded-[3rem] p-2 lg:p-3 shadow-elevated">
               <div className="w-full h-full bg-white rounded-[2.25rem] overflow-hidden">
                 {/* Phone Header */}
                 <div className="bg-[#FAF9F6] px-6 pt-10 pb-4">
@@ -481,20 +526,23 @@ function ProblemSolutionSection() {
               >
                 {/* Front */}
                 <div
-                  className="card-front absolute inset-0 bg-white rounded-2xl shadow-soft p-8 flex flex-col items-center justify-center text-center"
+                  className="card-front absolute inset-0 bg-white rounded-2xl shadow-soft p-6 lg:p-8 flex flex-col items-center justify-center text-center"
                   style={{
                     backfaceVisibility: 'hidden',
                     borderLeft: `4px solid ${card.color}`
                   }}
                 >
-                  <div className="mb-6" style={{ color: card.color }}>
+                  <div className="mb-4 lg:mb-6" style={{ color: card.color }}>
                     {card.icon}
                   </div>
-                  <h3 className="text-xl font-semibold text-[#2C3333] mb-4">
+                  <h3 className="text-lg lg:text-xl font-semibold text-[#2C3333] mb-4">
                     {card.problem}
                   </h3>
-                  <div className="text-sm text-[#5F6368] flex items-center gap-1">
-                    <span>Tap to explore</span>
+                  <div
+                    className="text-sm text-white px-4 py-2 rounded-full flex items-center gap-1"
+                    style={{ backgroundColor: card.color }}
+                  >
+                    <span>Tap to see solution</span>
                     <ChevronRightIcon />
                   </div>
                 </div>
@@ -704,21 +752,21 @@ function EvidenceEngineSection() {
         </div>
 
         {/* Controls */}
-        <div className="flex flex-wrap items-center justify-center gap-4 mb-8">
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl px-4 py-2 flex items-center gap-2">
-            <span className="text-white/70 text-sm">Select Condition:</span>
-            <select className="bg-transparent text-white font-medium border-none focus:outline-none">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl px-4 py-3 flex items-center gap-2">
+            <span className="text-white/70 text-sm">Condition:</span>
+            <select className="bg-transparent text-white font-medium border-none focus:outline-none min-h-[44px]">
               <option>IBS</option>
               <option>Anxiety</option>
               <option>Chronic Pain</option>
               <option>Insomnia</option>
             </select>
           </div>
-          <div className="flex gap-2">
-            {['All Treatments', 'Herbal', 'Acupuncture', 'Nutrition'].map((filter, i) => (
+          <div className="flex gap-2 overflow-x-auto pb-2 sm:pb-0 w-full sm:w-auto justify-start sm:justify-center px-4 sm:px-0 -mx-4 sm:mx-0">
+            {['All', 'Herbal', 'Acupuncture', 'Nutrition'].map((filter, i) => (
               <button
                 key={filter}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+                className={`px-4 py-3 rounded-full text-sm font-medium transition-all whitespace-nowrap min-h-[44px] ${
                   i === 0
                     ? 'bg-white text-[#2C5F7B]'
                     : 'bg-white/10 text-white hover:bg-white/20'
@@ -1163,7 +1211,7 @@ function PricingSection() {
           </div>
 
           {/* Professional Plan - Featured */}
-          <div className="relative bg-white rounded-2xl shadow-elevated p-8 ring-2 ring-[#4A90A4] transform lg:scale-105">
+          <div className="relative bg-white rounded-2xl shadow-elevated p-6 lg:p-8 ring-2 ring-[#4A90A4] md:transform md:scale-105 order-first md:order-none">
             <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#4A90A4] text-white px-4 py-1 rounded-full text-sm font-medium flex items-center gap-1">
               <span>⭐</span> MOST POPULAR
             </div>
@@ -1367,32 +1415,33 @@ function TestimonialSection() {
             </div>
           </div>
 
-          {/* Navigation */}
+          {/* Navigation - Hidden on mobile */}
           <button
             onClick={() => setActiveSlide(Math.max(0, activeSlide - 1))}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center hover:bg-[#FAF9F6] transition-colors"
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-12 h-12 rounded-full bg-white shadow-lg items-center justify-center hover:bg-[#FAF9F6] transition-colors hidden md:flex"
           >
             <ChevronLeftIcon />
           </button>
           <button
             onClick={() => setActiveSlide(Math.min(testimonials.length - 1, activeSlide + 1))}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center hover:bg-[#FAF9F6] transition-colors"
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-12 h-12 rounded-full bg-white shadow-lg items-center justify-center hover:bg-[#FAF9F6] transition-colors hidden md:flex"
           >
             <ChevronRightIcon />
           </button>
 
-          {/* Dots */}
-          <div className="flex justify-center gap-2 mt-6">
+          {/* Dots - Larger on mobile for touch */}
+          <div className="flex justify-center gap-3 mt-6">
             {testimonials.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setActiveSlide(index)}
-                className={`w-2 h-2 rounded-full transition-all ${
-                  activeSlide === index ? 'bg-[#4A90A4] w-8' : 'bg-[#EAE7DC]'
+                className={`h-3 rounded-full transition-all min-w-[44px] ${
+                  activeSlide === index ? 'bg-[#4A90A4] w-12' : 'bg-[#EAE7DC] w-3'
                 }`}
               />
             ))}
           </div>
+          <p className="text-center text-xs text-[#5F6368] mt-3 md:hidden">Swipe or tap to navigate</p>
         </div>
       </div>
     </section>
@@ -1559,10 +1608,18 @@ function Footer() {
 // Mobile Sticky CTA
 function MobileStickyCTA() {
   return (
-    <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-[#EAE7DC] p-4 md:hidden z-50 shadow-lg">
-      <button className="w-full bg-[#4A90A4] text-white py-3 rounded-full font-semibold shadow-lg">
-        Start Your Free Practice
-      </button>
+    <div className="fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-lg border-t border-[#EAE7DC] p-3 md:hidden z-50 shadow-[0_-4px_20px_rgba(0,0,0,0.1)]">
+      <div className="flex gap-2 max-w-md mx-auto">
+        <button className="flex-1 bg-[#4A90A4] text-white py-4 rounded-2xl font-semibold shadow-lg text-sm min-h-[52px]">
+          Start Free Practice
+        </button>
+        <button className="flex-1 bg-[#6B9080] text-white py-4 rounded-2xl font-semibold shadow-lg text-sm min-h-[52px]">
+          Download App
+        </button>
+      </div>
+      <div className="text-center mt-2">
+        <span className="text-xs text-[#5F6368]">No credit card required</span>
+      </div>
     </div>
   );
 }
@@ -1570,7 +1627,7 @@ function MobileStickyCTA() {
 // Main Page Component
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen pb-24 md:pb-0">
       <Navigation />
       <HeroSection />
       <ProblemSolutionSection />
