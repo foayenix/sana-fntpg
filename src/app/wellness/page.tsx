@@ -82,29 +82,29 @@ export default function WellnessPage() {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-20 md:pt-32 pb-12 md:pb-20 px-4" style={{ background: 'linear-gradient(180deg, #4A90A4 0%, #6AACBE 50%, #FAF9F6 100%)' }}>
+      <section className="pt-24 md:pt-32 pb-16 md:pb-20 px-4" style={{ background: 'linear-gradient(180deg, #4A90A4 0%, #6AACBE 50%, #FAF9F6 100%)' }}>
         <div className="max-w-4xl mx-auto text-center">
-          <div className="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-4 md:mb-6">
+          <div className="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
             <span className="text-white text-sm font-medium">For Your Wellness Journey</span>
           </div>
 
-          <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold text-white mb-4 md:mb-6 leading-tight">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight tracking-tight px-2">
             Natural health, finally navigable.
           </h1>
 
-          <p className="text-lg md:text-xl text-white/90 mb-8 md:mb-10 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-white/90 mb-10 max-w-2xl mx-auto px-2 leading-relaxed">
             Know what&apos;s safe for YOU. Find practitioners you can trust. Take control of your wellness journey with evidence, not guesswork.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-3 justify-center mb-6 md:mb-8">
+          <div className="flex flex-col sm:flex-row gap-3 justify-center mb-8 px-2">
             <button className="bg-white text-[#4A90A4] px-6 md:px-8 py-4 rounded-full text-base md:text-lg font-semibold shadow-lg hover:bg-white/90 transition-all transform hover:scale-105 flex items-center justify-center gap-2 min-h-[52px]">
-              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
               </svg>
               Download for iOS
             </button>
             <button className="bg-white text-[#4A90A4] px-6 md:px-8 py-4 rounded-full text-base md:text-lg font-semibold shadow-lg hover:bg-white/90 transition-all transform hover:scale-105 flex items-center justify-center gap-2 min-h-[52px]">
-              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 010 1.73l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/>
               </svg>
               Download for Android
@@ -118,13 +118,13 @@ export default function WellnessPage() {
       </section>
 
       {/* Pain Points Section - Premium Design */}
-      <section className="py-16 md:py-24 px-4 bg-white">
+      <section className="py-12 md:py-24 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight mb-4">
+          <div className="text-center mb-10 md:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 tracking-tight mb-4">
               Sound familiar?
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed px-2">
               Millions of people are frustrated navigating natural health. You&apos;re not alone.
             </p>
           </div>
@@ -184,11 +184,11 @@ export default function WellnessPage() {
           </div>
 
           {/* Stats Banner */}
-          <div className="mt-16 bg-gradient-to-r from-slate-900 to-slate-800 rounded-2xl p-8 md:p-10 text-center max-w-3xl mx-auto shadow-xl">
-            <p className="text-3xl md:text-4xl text-white font-bold mb-3 tracking-tight">
+          <div className="mt-10 md:mt-16 bg-gradient-to-r from-slate-900 to-slate-800 rounded-2xl p-6 md:p-10 text-center max-w-3xl mx-auto shadow-xl">
+            <p className="text-2xl sm:text-3xl md:text-4xl text-white font-bold mb-3 tracking-tight">
               £8.7 billion spent on CAM annually
             </p>
-            <p className="text-slate-300 text-lg">
+            <p className="text-slate-300 text-sm sm:text-base md:text-lg px-2">
               With no safety oversight. No interaction checking. No way to find qualified practitioners.
             </p>
           </div>
@@ -432,30 +432,30 @@ export default function WellnessPage() {
       </section>
 
       {/* Value Proposition Section - Premium Apple/Stripe-level Design */}
-      <section id="value" className="py-16 md:py-24 px-4 bg-gradient-to-b from-slate-50 to-white">
+      <section id="value" className="py-12 md:py-24 px-4 bg-gradient-to-b from-slate-50 to-white">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-10 md:mb-16">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-100 text-emerald-700 rounded-full text-sm font-semibold mb-6">
               <Sparkles className="w-4 h-4" />
               100% Free Forever for Clients
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight mb-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 tracking-tight mb-4 px-2">
               Everything you need to find healing
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed px-2">
               SANA gives you the tools to discover qualified practitioners,
               book appointments, and track your progress—all in one place.
             </p>
           </div>
 
           {/* Value Cards Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
             {/* Card 1 - Find Practitioners */}
-            <div className="group bg-white rounded-2xl p-8 border-2 border-gray-200 hover:border-gray-300 hover:shadow-lg transition-all duration-300">
-              <div className="w-14 h-14 rounded-xl mb-6 bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-600 flex items-center justify-center shadow-lg group-hover:scale-105 transition-all duration-300">
-                <Search className="w-7 h-7 text-white" strokeWidth={2} />
+            <div className="group bg-white rounded-2xl p-5 sm:p-8 border-2 border-gray-200 hover:border-gray-300 hover:shadow-lg transition-all duration-300">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl mb-4 sm:mb-6 bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-600 flex items-center justify-center shadow-lg group-hover:scale-105 transition-all duration-300">
+                <Search className="w-6 h-6 sm:w-7 sm:h-7 text-white" strokeWidth={2} />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Find Qualified Practitioners</h3>
+              <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3">Find Qualified Practitioners</h3>
               <p className="text-gray-600 mb-6 leading-relaxed">Search 500+ SANA-verified practitioners across all CAM modalities</p>
               <ul className="space-y-3">
                 {[
@@ -474,7 +474,7 @@ export default function WellnessPage() {
             </div>
 
             {/* Card 2 - Book Instantly */}
-            <div className="group bg-white rounded-2xl p-8 border-2 border-gray-200 hover:border-gray-300 hover:shadow-lg transition-all duration-300">
+            <div className="group bg-white rounded-2xl p-5 sm:p-8 border-2 border-gray-200 hover:border-gray-300 hover:shadow-lg transition-all duration-300">
               <div className="w-14 h-14 rounded-xl mb-6 bg-gradient-to-br from-pink-500 via-rose-500 to-red-600 flex items-center justify-center shadow-lg group-hover:scale-105 transition-all duration-300">
                 <Calendar className="w-7 h-7 text-white" strokeWidth={2} />
               </div>
@@ -497,7 +497,7 @@ export default function WellnessPage() {
             </div>
 
             {/* Card 3 - Track Health */}
-            <div className="group bg-white rounded-2xl p-8 border-2 border-gray-200 hover:border-gray-300 hover:shadow-lg transition-all duration-300">
+            <div className="group bg-white rounded-2xl p-5 sm:p-8 border-2 border-gray-200 hover:border-gray-300 hover:shadow-lg transition-all duration-300">
               <div className="w-14 h-14 rounded-xl mb-6 bg-gradient-to-br from-red-500 via-rose-500 to-pink-600 flex items-center justify-center shadow-lg group-hover:scale-105 transition-all duration-300">
                 <Heart className="w-7 h-7 text-white" strokeWidth={2} />
               </div>
@@ -520,7 +520,7 @@ export default function WellnessPage() {
             </div>
 
             {/* Card 4 - AI Wellness Tools */}
-            <div className="group bg-white rounded-2xl p-8 border-2 border-gray-200 hover:border-gray-300 hover:shadow-lg transition-all duration-300">
+            <div className="group bg-white rounded-2xl p-5 sm:p-8 border-2 border-gray-200 hover:border-gray-300 hover:shadow-lg transition-all duration-300">
               <div className="w-14 h-14 rounded-xl mb-6 bg-gradient-to-br from-emerald-500 via-teal-500 to-cyan-600 flex items-center justify-center shadow-lg group-hover:scale-105 transition-all duration-300">
                 <Sparkles className="w-7 h-7 text-white" strokeWidth={2} />
               </div>
@@ -543,7 +543,7 @@ export default function WellnessPage() {
             </div>
 
             {/* Card 5 - Secure Communication */}
-            <div className="group bg-white rounded-2xl p-8 border-2 border-gray-200 hover:border-gray-300 hover:shadow-lg transition-all duration-300">
+            <div className="group bg-white rounded-2xl p-5 sm:p-8 border-2 border-gray-200 hover:border-gray-300 hover:shadow-lg transition-all duration-300">
               <div className="w-14 h-14 rounded-xl mb-6 bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-600 flex items-center justify-center shadow-lg group-hover:scale-105 transition-all duration-300">
                 <MessageCircle className="w-7 h-7 text-white" strokeWidth={2} />
               </div>
@@ -566,7 +566,7 @@ export default function WellnessPage() {
             </div>
 
             {/* Card 6 - Safety & Trust */}
-            <div className="group bg-white rounded-2xl p-8 border-2 border-gray-200 hover:border-gray-300 hover:shadow-lg transition-all duration-300">
+            <div className="group bg-white rounded-2xl p-5 sm:p-8 border-2 border-gray-200 hover:border-gray-300 hover:shadow-lg transition-all duration-300">
               <div className="w-14 h-14 rounded-xl mb-6 bg-gradient-to-br from-violet-500 via-purple-500 to-fuchsia-600 flex items-center justify-center shadow-lg group-hover:scale-105 transition-all duration-300">
                 <ShieldCheck className="w-7 h-7 text-white" strokeWidth={2} />
               </div>
@@ -592,19 +592,19 @@ export default function WellnessPage() {
       </section>
 
       {/* Why Clients Choose SANA Section - Premium Design */}
-      <section className="py-16 md:py-24 px-4 bg-white">
+      <section className="py-12 md:py-24 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight mb-4">
+          <div className="text-center mb-10 md:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 tracking-tight mb-4 px-2">
               Why clients choose SANA
             </h2>
-            <p className="text-lg text-gray-600 leading-relaxed">
+            <p className="text-base sm:text-lg text-gray-600 leading-relaxed px-2">
               We&apos;re not just a booking platform—we&apos;re your wellness partner
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
-            <div className="group bg-white rounded-2xl p-8 border-2 border-gray-200 hover:border-gray-300 hover:shadow-lg transition-all duration-300">
+          <div className="grid md:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
+            <div className="group bg-white rounded-2xl p-5 sm:p-8 border-2 border-gray-200 hover:border-gray-300 hover:shadow-lg transition-all duration-300">
               <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center mb-5 shadow-lg group-hover:scale-105 transition-transform duration-300">
                 <ShieldCheck className="w-7 h-7 text-white" strokeWidth={2} />
               </div>
@@ -617,7 +617,7 @@ export default function WellnessPage() {
               </p>
             </div>
 
-            <div className="group bg-white rounded-2xl p-8 border-2 border-gray-200 hover:border-gray-300 hover:shadow-lg transition-all duration-300">
+            <div className="group bg-white rounded-2xl p-5 sm:p-8 border-2 border-gray-200 hover:border-gray-300 hover:shadow-lg transition-all duration-300">
               <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-purple-500 to-indigo-600 flex items-center justify-center mb-5 shadow-lg group-hover:scale-105 transition-transform duration-300">
                 <BarChart3 className="w-7 h-7 text-white" strokeWidth={2} />
               </div>
@@ -630,7 +630,7 @@ export default function WellnessPage() {
               </p>
             </div>
 
-            <div className="group bg-white rounded-2xl p-8 border-2 border-gray-200 hover:border-gray-300 hover:shadow-lg transition-all duration-300">
+            <div className="group bg-white rounded-2xl p-5 sm:p-8 border-2 border-gray-200 hover:border-gray-300 hover:shadow-lg transition-all duration-300">
               <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-pink-500 to-rose-600 flex items-center justify-center mb-5 shadow-lg group-hover:scale-105 transition-transform duration-300">
                 <Heart className="w-7 h-7 text-white" strokeWidth={2} />
               </div>
@@ -643,7 +643,7 @@ export default function WellnessPage() {
               </p>
             </div>
 
-            <div className="group bg-white rounded-2xl p-8 border-2 border-gray-200 hover:border-gray-300 hover:shadow-lg transition-all duration-300">
+            <div className="group bg-white rounded-2xl p-5 sm:p-8 border-2 border-gray-200 hover:border-gray-300 hover:shadow-lg transition-all duration-300">
               <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center mb-5 shadow-lg group-hover:scale-105 transition-transform duration-300">
                 <Brain className="w-7 h-7 text-white" strokeWidth={2} />
               </div>
