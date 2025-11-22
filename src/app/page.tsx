@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 // Icon Components
 const StethoscopeIcon = () => (
@@ -133,6 +134,23 @@ function Navigation() {
 // Hero Section Component
 function HeroSection() {
   const [activeRole, setActiveRole] = useState<'practitioner' | 'client'>('practitioner');
+  const router = useRouter();
+
+  const handlePractitionerClick = () => {
+    if (activeRole === 'practitioner') {
+      router.push('/practitioner');
+    } else {
+      setActiveRole('practitioner');
+    }
+  };
+
+  const handleClientClick = () => {
+    if (activeRole === 'client') {
+      router.push('/wellness');
+    } else {
+      setActiveRole('client');
+    }
+  };
 
   return (
     <section className="relative min-h-screen pt-16 overflow-hidden">
@@ -234,7 +252,7 @@ function HeroSection() {
           {/* Toggle Switch */}
           <div className="bg-white/90 backdrop-blur-xl rounded-full p-1.5 shadow-elevated flex items-center">
             <button
-              onClick={() => setActiveRole('practitioner')}
+              onClick={handlePractitionerClick}
               className={`flex items-center gap-2 px-4 py-2.5 rounded-full transition-all ${
                 activeRole === 'practitioner'
                   ? 'bg-[#6B9080] text-white'
@@ -243,9 +261,14 @@ function HeroSection() {
             >
               <StethoscopeIcon />
               <span className="text-sm font-medium">I&apos;m a Practitioner</span>
+              {activeRole === 'practitioner' && (
+                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              )}
             </button>
             <button
-              onClick={() => setActiveRole('client')}
+              onClick={handleClientClick}
               className={`flex items-center gap-2 px-4 py-2.5 rounded-full transition-all ${
                 activeRole === 'client'
                   ? 'bg-[#4A90A4] text-white'
@@ -254,6 +277,11 @@ function HeroSection() {
             >
               <LeafIcon />
               <span className="text-sm font-medium">I&apos;m Seeking Wellness</span>
+              {activeRole === 'client' && (
+                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              )}
             </button>
           </div>
 
