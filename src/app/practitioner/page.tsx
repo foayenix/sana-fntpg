@@ -635,28 +635,84 @@ export default function PractitionerPage() {
           <div className="space-y-4">
             {[
               {
-                q: 'What happens when 1,000 founding members are claimed?',
-                a: 'Professional tier increases to £49/month for new sign-ups. Your £19/month rate is locked in for life if you claim it now.'
+                q: 'What qualifications do I need to join SANA as a practitioner?',
+                a: 'SANA welcomes all qualified complementary and alternative medicine practitioners. You\'ll need recognized professional qualifications in your modality (e.g., diploma, degree, or certification), current membership with a relevant professional body, and valid professional indemnity insurance. We verify credentials to maintain marketplace quality and client trust.'
               },
               {
-                q: 'Can I upgrade or downgrade anytime?',
-                a: 'Yes, change plans anytime. Upgrades are immediate, downgrades take effect at next billing cycle.'
+                q: 'How are my credentials verified?',
+                a: 'During onboarding, you\'ll upload qualification certificates, professional body membership details, and insurance documents. Our team verifies these with issuing organizations. Verified practitioners receive a trust badge on their profile, and verification typically takes 2-5 business days.'
               },
               {
-                q: 'Do I need to enter credit card details for Free plan?',
-                a: 'No, start completely free. Only add payment when you upgrade.'
+                q: 'What is the SANA Index and how does it work?',
+                a: 'The SANA Index is our proprietary credibility scoring system that helps clients find the most suitable practitioners. It\'s calculated from verified credentials (20%), treatment volume (20%), anonymised client outcomes (40%), profile completeness (10%), and client satisfaction ratings (10%). Higher scores improve your marketplace visibility and build client confidence.'
               },
               {
-                q: 'What happens to my data if I cancel?',
-                a: 'Export all your data anytime. We keep it for 90 days after cancellation, then permanently delete per GDPR.'
+                q: 'Is the SANA Index mandatory?',
+                a: 'No—participation is optional. However, practitioners who opt in typically see significantly higher engagement and booking rates because clients appreciate the transparency and evidence-based approach.'
               },
               {
-                q: 'Is SANA suitable for my modality?',
-                a: 'Yes! SANA supports all CAM modalities. Our AI Clinical Assistant knows 8+ traditions, and our evidence base covers herbs, supplements, bodywork, energy medicine, and mind-body practices.'
+                q: 'How does the AI Clinical Assistant work?',
+                a: 'Our AI Clinical Assistant is trained on extensive CAM literature, traditional medicine texts, and clinical evidence. It provides protocol suggestions, identifies herb-drug interactions, recommends evidence-based approaches, and helps with treatment planning—all while respecting your clinical autonomy. It\'s a decision-support tool that enhances, never replaces, your expertise.'
               },
               {
-                q: 'How does the SANA Index work?',
-                a: 'It\'s an algorithmic credibility score: 20% credentials, 20% treatment volume, 40% client outcomes, 10% profile completeness, 10% client satisfaction. Higher scores mean better marketplace visibility.'
+                q: 'Which modalities does SANA support?',
+                a: 'SANA supports virtually all CAM modalities including herbal medicine, Traditional Chinese Medicine (acupuncture, herbs, cupping), naturopathy, homeopathy, nutritional therapy, osteopathy, chiropractic, Ayurveda, energy healing (Reiki, healing touch), massage therapy, reflexology, aromatherapy, functional medicine, integrative medicine, and many more. If your modality isn\'t listed, contact us—we\'re continuously expanding.'
+              },
+              {
+                q: 'Does the AI replace my clinical judgement?',
+                a: 'Absolutely not. SANA\'s AI Clinical Assistant is a decision-support tool designed to enhance your practice, not direct it. All clinical decisions remain entirely yours. The AI provides suggestions, flags potential interactions, and offers evidence summaries—you decide what\'s appropriate for each client.'
+              },
+              {
+                q: 'How do online bookings work?',
+                a: 'Clients can book directly through your SANA profile or the marketplace. You set your availability, consultation types, and prices. The system handles scheduling, reminders, payments, and cancellations. You can also share your booking link on your website and social media.'
+              },
+              {
+                q: 'How is client health data handled?',
+                a: 'SANA is built with privacy-first architecture. All health data is encrypted at rest and in transit, stored on UK-based servers compliant with GDPR and healthcare data regulations. Clients control their data and can grant or revoke access to practitioners. We never sell data or use it for advertising.'
+              },
+              {
+                q: 'What types of consultations can I offer?',
+                a: 'SANA supports in-person consultations (at your clinic or client\'s location), video consultations via our integrated telehealth platform, phone consultations, and messaging/asynchronous consultations. You choose which formats to offer and set different prices for each.'
+              },
+              {
+                q: 'How do client payments work?',
+                a: 'SANA handles all payment processing securely. Clients pay at booking or after consultation (your choice). Funds are transferred to your account within 3-5 business days. We accept all major cards and handle invoicing, receipts, and payment disputes.'
+              },
+              {
+                q: 'Can I use my existing practice management tools with SANA?',
+                a: 'Yes—SANA integrates with popular calendar applications (Google Calendar, Outlook, Apple Calendar) and we\'re building integrations with common practice management systems. You can also export data for use in other tools.'
+              },
+              {
+                q: 'How does the Product Scanner work?',
+                a: 'The Product Scanner lets you or your clients scan supplement/product barcodes to access quality analysis, ingredient verification, evidence ratings, and practitioner notes. It helps ensure clients are using high-quality products and provides another touchpoint for your expertise.'
+              },
+              {
+                q: 'Can I customize intake forms for my practice?',
+                a: 'Yes—SANA provides modality-specific intake form templates that you can customize. Create different forms for different consultation types, add your own questions, and collect the information you need before appointments. Forms are stored securely with client records.'
+              },
+              {
+                q: 'How do outcome measures work?',
+                a: 'SANA includes standardized wellness outcome measures that track client progress over time. These contribute to your SANA Index and help demonstrate the effectiveness of your treatments. You can also add custom outcome measures relevant to your modality.'
+              },
+              {
+                q: 'Is there a mobile app for practitioners?',
+                a: 'Yes—the SANA practitioner app (iOS and Android) lets you manage bookings, communicate with clients, access the AI Clinical Assistant, view schedules, and receive notifications on the go. It\'s designed for practitioners who need flexibility.'
+              },
+              {
+                q: 'How does SANA support CAM research?',
+                a: 'SANA aggregates anonymised outcome data to build the evidence base for complementary medicine. By participating, you contribute to research that could influence policy, insurance coverage, and mainstream medical acceptance of CAM. You can also opt into specific research collaborations with academic institutions.'
+              },
+              {
+                q: 'How do I set up my practitioner profile?',
+                a: 'After verification, you\'ll complete your profile with your bio, specializations, approach, consultation types, pricing, and availability. Add photos, credentials, and any testimonials. The more complete your profile, the higher your SANA Index and the more attractive you\'ll be to potential clients.'
+              },
+              {
+                q: 'What technical support is available?',
+                a: 'All practitioners have access to our help center, email support, and community forums. Professional and Practice tier members get priority support with faster response times. Practice tier includes dedicated account management and phone support.'
+              },
+              {
+                q: 'Can I try before committing to paid plans?',
+                a: 'Yes—our Free Forever plan lets you experience SANA with no time limit. When you\'re ready for more features, you can upgrade to Professional or Practice tier. We also offer demos for practitioners who want a guided tour before signing up.'
               }
             ].map((faq, i) => (
               <div key={i} className="bg-[#FAF9F6] rounded-xl p-5 border border-[#EAE7DC]">

@@ -499,6 +499,109 @@ export default function WellnessPage() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section className="py-12 md:py-20 px-4 bg-white">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-2xl lg:text-3xl font-bold text-[#2C3333] mb-8 text-center">
+            Frequently asked questions
+          </h2>
+
+          <div className="space-y-4">
+            {[
+              {
+                q: 'What is SANA and how does it work?',
+                a: 'SANA is a wellness platform that connects you with verified complementary and alternative medicine practitioners, provides personalized safety checks for supplements and herbs, and helps you track your wellness journey. Download the app, create your profile, and get personalized recommendations.'
+              },
+              {
+                q: 'Is SANA free for clients?',
+                a: 'Yes—SANA is completely free for wellness seekers. You can access the practitioner directory, Product Scanner, health tracking, and educational content at no cost. You only pay when you book consultations with practitioners.'
+              },
+              {
+                q: 'How do I find the right practitioner for my needs?',
+                a: 'SANA\'s smart matching considers your health concerns, location, budget, preferred consultation type (in-person/online), and modality preferences. You can also browse verified practitioners, view their success rates, read reviews, and compare specializations.'
+              },
+              {
+                q: 'What makes SANA practitioners different?',
+                a: 'All SANA practitioners are verified with credential checks, professional body memberships, and insurance verification. They also have transparent success rates through the SANA Index, so you can see actual outcomes—not just marketing claims.'
+              },
+              {
+                q: 'Can I trust the practitioner reviews on SANA?',
+                a: 'Yes—only clients who\'ve completed verified consultations can leave reviews. We don\'t allow purchased reviews or unverified testimonials. Reviews are linked to real treatment outcomes, giving you honest feedback.'
+              },
+              {
+                q: 'How does the Product Scanner work?',
+                a: 'Simply scan a supplement or herbal product barcode using the SANA app. You\'ll instantly see ingredient analysis, quality ratings, potential interactions with your medications or conditions, evidence ratings, and personalized safety alerts.'
+              },
+              {
+                q: 'Is the Product Scanner accurate?',
+                a: 'The Product Scanner draws from peer-reviewed research, traditional medicine databases, and clinical evidence. While no system is perfect, we\'re constantly updating our database and clearly indicate confidence levels for each recommendation.'
+              },
+              {
+                q: 'How do I book a consultation with a practitioner?',
+                a: 'Find a practitioner you like, view their availability, choose your consultation type (video, phone, in-person, or messaging), and book directly through the app. You\'ll receive confirmation and reminders automatically.'
+              },
+              {
+                q: 'What types of consultations are available?',
+                a: 'Depending on the practitioner, you can book video consultations (through our secure platform), phone consultations, in-person appointments at their clinic or your location, and asynchronous messaging consultations.'
+              },
+              {
+                q: 'How do payments work?',
+                a: 'Pay securely through the SANA app when you book. We accept all major cards. Prices are set by individual practitioners and clearly displayed before booking. Receipts are automatically generated for your records.'
+              },
+              {
+                q: 'What if I need to cancel or reschedule?',
+                a: 'Each practitioner sets their own cancellation policy, which you\'ll see before booking. Most allow free cancellation with 24-48 hours notice. Reschedule directly through the app.'
+              },
+              {
+                q: 'Is my health data private and secure?',
+                a: 'Absolutely. SANA uses bank-level encryption, stores data on UK servers compliant with GDPR and healthcare regulations, and never sells your information. You control who sees your health data and can revoke access anytime.'
+              },
+              {
+                q: 'Can I share my health records with practitioners?',
+                a: 'Yes—you can choose to share relevant health information, symptom tracking, and Product Scanner history with practitioners you book with. This helps them provide better, more personalized care. Sharing is always optional and controlled by you.'
+              },
+              {
+                q: 'What modalities/therapies can I find on SANA?',
+                a: 'SANA includes practitioners from herbal medicine, acupuncture & TCM, naturopathy, homeopathy, nutritional therapy, osteopathy, chiropractic, Ayurveda, energy healing, massage therapy, reflexology, aromatherapy, and many more.'
+              },
+              {
+                q: 'How do I know if a therapy is right for me?',
+                a: 'SANA provides educational content about different modalities, evidence summaries, and condition-specific guides. You can also use our AI-powered recommendations or book an initial consultation to discuss your needs with a practitioner.'
+              },
+              {
+                q: 'Does SANA replace medical care?',
+                a: 'No—SANA complements conventional medicine, it doesn\'t replace it. Always consult your GP for medical conditions. SANA helps you safely explore complementary approaches and find qualified practitioners for integrative wellness.'
+              },
+              {
+                q: 'What if I have a bad experience with a practitioner?',
+                a: 'You can report concerns directly through the app. We take complaints seriously, investigate thoroughly, and take action when appropriate—including removing practitioners who violate our standards. Your feedback helps maintain marketplace quality.'
+              },
+              {
+                q: 'How do wellness tracking features work?',
+                a: 'Log symptoms, moods, energy levels, sleep, and other wellness metrics. SANA helps you spot patterns, correlate with treatments, and share progress with practitioners. It\'s your personal wellness journal with smart insights.'
+              },
+              {
+                q: 'Can I use SANA if I\'m taking prescription medications?',
+                a: 'Yes—in fact, the Product Scanner is especially useful if you take medications, as it flags potential herb-drug interactions. Always inform both your GP and complementary practitioner about all treatments you\'re using.'
+              },
+              {
+                q: 'Is SANA available in my area?',
+                a: 'SANA is currently launching across the UK, with practitioner availability varying by location. Enter your postcode in the app to see practitioners near you. We\'re expanding rapidly—join the early access list to be notified when we reach your area.'
+              },
+              {
+                q: 'How do I get the SANA app?',
+                a: 'SANA will be available on both iOS (App Store) and Android (Google Play). Join our early access list to be notified the moment we launch and get priority access to new features.'
+              }
+            ].map((faq, i) => (
+              <div key={i} className="bg-[#FAF9F6] rounded-xl p-5 border border-[#EAE7DC]">
+                <h3 className="font-semibold text-[#2C3333] mb-2">{faq.q}</h3>
+                <p className="text-sm text-[#5F6368]">{faq.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Final CTA */}
       <section className="py-12 md:py-20 px-4 bg-gradient-to-r from-[#4A90A4] to-[#6B9080]">
         <div className="max-w-4xl mx-auto text-center">

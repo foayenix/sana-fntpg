@@ -1458,6 +1458,64 @@ function FinalCTASection() {
   );
 }
 
+// FAQ Section
+function FAQSection() {
+  return (
+    <section className="py-24 bg-white">
+      <div className="max-w-3xl mx-auto px-4">
+        <h2 className="text-3xl lg:text-4xl font-bold text-[#2C3333] mb-4 text-center">
+          Frequently asked questions
+        </h2>
+        <p className="text-lg text-[#5F6368] mb-12 text-center">
+          Everything you need to know about SANA
+        </p>
+
+        <div className="space-y-4">
+          {[
+            {
+              q: 'What is SANA?',
+              a: 'SANA is a comprehensive wellness platform that connects clients with verified complementary and alternative medicine (CAM) practitioners, provides evidence-based tools for practitioners, and offers personalized safety checks and health tracking for wellness seekers. Think of it as the operating system for natural healing.'
+            },
+            {
+              q: 'Who is SANA for?',
+              a: 'SANA serves two groups: Practitioners (herbalists, acupuncturists, naturopaths, homeopaths, nutritional therapists, and other CAM professionals) who want to grow their practice with evidence-based tools; and Clients (wellness seekers) who want to find verified practitioners and make informed decisions about supplements and natural health products.'
+            },
+            {
+              q: 'Is SANA free?',
+              a: 'For wellness seekers, SANA is completely free—access the practitioner directory, Product Scanner, and health tracking at no cost. For practitioners, we offer a Free Forever plan with core features, plus Professional (£19/month) and Practice (£99/month) tiers for those wanting advanced tools.'
+            },
+            {
+              q: 'How is SANA different from other wellness platforms?',
+              a: 'SANA is evidence-first. We verify practitioner credentials, track real treatment outcomes, and provide transparent success rates through the SANA Index. Unlike directories that just list practitioners, we help you understand who actually gets results—backed by data, not marketing.'
+            },
+            {
+              q: 'What modalities/therapies does SANA support?',
+              a: 'SANA supports virtually all CAM modalities including herbal medicine, Traditional Chinese Medicine, naturopathy, homeopathy, nutritional therapy, osteopathy, Ayurveda, energy healing, massage therapy, reflexology, aromatherapy, functional medicine, and many more. If your modality isn\'t listed, contact us—we\'re continuously expanding.'
+            },
+            {
+              q: 'How does SANA verify practitioners?',
+              a: 'All SANA practitioners undergo credential verification including qualification certificates, professional body memberships, and insurance documentation. Our team verifies these with issuing organizations. Verified practitioners receive a trust badge and contribute to the SANA Index outcome data.'
+            },
+            {
+              q: 'Is my data safe with SANA?',
+              a: 'Absolutely. SANA uses bank-level encryption, stores data on UK servers compliant with GDPR and healthcare regulations, and never sells your information. Clients control who sees their health data and can revoke access anytime. Practitioners\' client data is protected to healthcare industry standards.'
+            },
+            {
+              q: 'How do I get started?',
+              a: 'For practitioners: Sign up for a free account, complete verification, and start building your evidence-based profile. For wellness seekers: Download the SANA app (coming soon to iOS and Android), create your profile, and start exploring verified practitioners and scanning products.'
+            }
+          ].map((faq, i) => (
+            <div key={i} className="bg-[#FAF9F6] rounded-xl p-6 border border-[#EAE7DC]">
+              <h3 className="font-semibold text-[#2C3333] mb-2 text-lg">{faq.q}</h3>
+              <p className="text-[#5F6368]">{faq.a}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 // Footer Section
 function Footer() {
   return (
@@ -1597,6 +1655,7 @@ export default function Home() {
       <JoinFreeSection />
       <TestimonialSection />
       <FinalCTASection />
+      <FAQSection />
       <Footer />
       <MobileStickyCTA />
     </main>
