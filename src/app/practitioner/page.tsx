@@ -13,6 +13,23 @@ import {
   Calendar,
   ClipboardList,
   Shield,
+  Sparkles,
+  CheckCircle2,
+  Scan,
+  Users,
+  Globe2,
+  MessageCircle,
+  Crown,
+  Link2,
+  Activity,
+  FileText,
+  BookOpen,
+  Building2,
+  Palette,
+  Code2,
+  Headphones,
+  CreditCard,
+  Award,
 } from 'lucide-react';
 import { FAQAccordion } from '@/components/FAQAccordion';
 
@@ -368,53 +385,63 @@ export default function PractitionerPage() {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-6 lg:gap-8">
+          <div className="grid lg:grid-cols-3 gap-6 lg:gap-8 items-center">
             {/* Free Plan */}
-            <div className="bg-white rounded-2xl shadow-lg p-6 lg:p-8">
+            <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 lg:p-8">
               <div className="inline-block bg-[#EAE7DC] px-3 py-1 rounded-full text-xs font-medium text-[#5F6368] mb-4">
                 Free Forever
               </div>
               <div className="mb-6">
-                <span className="text-4xl lg:text-5xl font-bold text-[#2C3333]">£0</span>
+                <span className="text-5xl lg:text-6xl font-bold text-[#2C3333]">£0</span>
                 <span className="text-[#5F6368]">/month</span>
               </div>
-              <p className="text-sm text-[#5F6368] mb-6">Perfect for getting started with AI-powered practice management</p>
+              <p className="text-sm text-gray-600 mb-6">Perfect for getting started with AI-powered practice management</p>
 
               <div className="space-y-4 mb-8">
                 <div>
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className="text-lg">🤖</span>
-                    <span className="font-semibold text-[#2C3333] text-sm">AI Clinical Assistant (Unlimited)</span>
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-purple-500 via-violet-500 to-indigo-600 flex items-center justify-center flex-shrink-0 shadow-md">
+                      <Sparkles className="w-4 h-4 text-white" />
+                    </div>
+                    <span className="font-semibold text-[#2C3333] text-base">AI Clinical Assistant (Unlimited)</span>
                   </div>
-                  <p className="text-xs text-[#5F6368] ml-7">Voice-to-SOAP notes, treatment recommendations across 8+ traditions</p>
+                  <p className="text-sm text-gray-600 ml-11">Voice-to-SOAP notes, treatment recommendations across 8+ traditions</p>
                 </div>
                 <div>
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className="text-lg">✓</span>
-                    <span className="font-semibold text-[#2C3333] text-sm">SANA Verified Badge</span>
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-emerald-500 via-teal-500 to-cyan-600 flex items-center justify-center flex-shrink-0 shadow-md">
+                      <CheckCircle2 className="w-4 h-4 text-white" />
+                    </div>
+                    <span className="font-semibold text-[#2C3333] text-base">SANA Verified Badge</span>
                   </div>
-                  <p className="text-xs text-[#5F6368] ml-7">Automated credential verification from 40+ UK institutions</p>
+                  <p className="text-sm text-gray-600 ml-11">Automated credential verification from 40+ UK institutions</p>
                 </div>
                 <div>
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className="text-lg">📱</span>
-                    <span className="font-semibold text-[#2C3333] text-sm">Product Scanner (5/month)</span>
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 via-sky-500 to-cyan-600 flex items-center justify-center flex-shrink-0 shadow-md">
+                      <Scan className="w-4 h-4 text-white" />
+                    </div>
+                    <span className="font-semibold text-[#2C3333] text-base">Product Scanner (5/month)</span>
                   </div>
-                  <p className="text-xs text-[#5F6368] ml-7">Herb-drug interaction checks, safety analysis</p>
+                  <p className="text-sm text-gray-600 ml-11">Herb-drug interaction checks, safety analysis</p>
                 </div>
                 <div>
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className="text-lg">👥</span>
-                    <span className="font-semibold text-[#2C3333] text-sm">Client Records (25 clients)</span>
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-slate-500 via-gray-500 to-zinc-600 flex items-center justify-center flex-shrink-0 shadow-md">
+                      <Users className="w-4 h-4 text-white" />
+                    </div>
+                    <span className="font-semibold text-[#2C3333] text-base">Client Records (25 clients)</span>
                   </div>
-                  <p className="text-xs text-[#5F6368] ml-7">GDPR-compliant storage, SOAP templates</p>
+                  <p className="text-sm text-gray-600 ml-11">GDPR-compliant storage, SOAP templates</p>
                 </div>
                 <div>
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className="text-lg">📊</span>
-                    <span className="font-semibold text-[#2C3333] text-sm">Basic Analytics</span>
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-violet-500 via-purple-500 to-fuchsia-600 flex items-center justify-center flex-shrink-0 shadow-md">
+                      <BarChart3 className="w-4 h-4 text-white" />
+                    </div>
+                    <span className="font-semibold text-[#2C3333] text-base">Basic Analytics</span>
                   </div>
-                  <p className="text-xs text-[#5F6368] ml-7">Session tracking, revenue overview</p>
+                  <p className="text-sm text-gray-600 ml-11">Session tracking, revenue overview</p>
                 </div>
               </div>
 
@@ -423,118 +450,112 @@ export default function PractitionerPage() {
               </button>
             </div>
 
-            {/* Professional Plan - Featured */}
-            <div className="relative bg-white rounded-2xl shadow-xl p-6 lg:p-8 ring-2 ring-[#4A90A4] lg:scale-105">
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#4A90A4] text-white px-4 py-1 rounded-full text-sm font-medium flex items-center gap-1 whitespace-nowrap">
-                <span>⭐</span> MOST POPULAR
+            {/* Professional Plan - Featured - IMPOSSIBLE TO IGNORE */}
+            <div className="relative bg-gradient-to-br from-emerald-500 to-teal-600 rounded-2xl shadow-2xl shadow-emerald-500/30 p-6 lg:p-8 lg:scale-110 border-4 border-emerald-400 hover:shadow-3xl transition-all duration-300 z-10">
+              {/* Most Popular Badge with Crown */}
+              <div className="absolute -top-5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-amber-400 to-orange-500 text-white px-5 py-2 rounded-full text-sm font-bold flex items-center gap-2 whitespace-nowrap shadow-lg animate-bounce">
+                <Crown className="w-5 h-5" />
+                MOST POPULAR
               </div>
 
-              <div className="inline-block bg-[#4A90A4]/10 px-3 py-1 rounded-full text-xs font-medium text-[#4A90A4] mb-4">
+              <div className="inline-block bg-white/20 px-3 py-1 rounded-full text-xs font-bold text-white mb-4">
                 Professional
               </div>
               <div className="mb-2">
-                <span className="text-4xl lg:text-5xl font-bold text-[#2C3333]">£19</span>
-                <span className="text-[#5F6368]">/month</span>
+                <span className="text-5xl lg:text-6xl font-bold text-white">£19</span>
+                <span className="text-white/80">/month</span>
               </div>
-              <div className="text-sm text-[#5F6368] mb-2">
+              <div className="text-sm text-white/80 mb-3">
                 <span className="line-through">£49</span>
-                <span className="ml-2 text-[#6B9080] font-medium">Founding Member Pricing</span>
-              </div>
-              <div className="bg-[#6B9080]/10 rounded-lg p-2 text-center text-sm text-[#6B9080] font-medium mb-4">
-                First 1,000 practitioners only
+                <span className="ml-2 text-white font-medium">Founding Member Pricing</span>
               </div>
 
-              <p className="text-xs text-[#5F6368] mb-4">Everything in Free, plus:</p>
+              {/* Progress Bar - NOW AT TOP with pulsing animation */}
+              <div className="mb-6 bg-white/10 rounded-xl p-4">
+                <div className="flex justify-between text-sm text-white mb-2">
+                  <span className="font-bold">487/1,000 claimed</span>
+                  <span className="font-bold text-amber-300">Only 513 spots left!</span>
+                </div>
+                <div className="h-3 bg-white/20 rounded-full overflow-hidden">
+                  <div
+                    className="h-full bg-white rounded-full animate-pulse"
+                    style={{ width: '49%' }}
+                  ></div>
+                </div>
+              </div>
 
-              <div className="space-y-3 mb-6 text-sm">
+              <p className="text-xs text-white/80 mb-4 font-medium">Everything in Free, plus:</p>
+
+              <div className="space-y-3 mb-6">
                 {[
-                  '📅 Unlimited client records',
-                  '🔄 Unlimited product scans',
-                  '📆 Integrated booking system',
-                  '🌐 Marketplace profile & visibility',
-                  '📈 Evidence insights & SANA Health Graph',
-                  '💬 Secure client messaging',
-                  '📊 Advanced analytics dashboard',
-                  '🎯 SANA Index profile & ranking',
-                  '📋 PROMs tracking (WHO-5, DASS-21)',
-                  '🔗 Wearable integration',
-                  '📱 Journal AI for clients'
+                  { icon: <Users className="w-4 h-4" />, text: 'Unlimited client records', gradient: 'from-slate-400 to-slate-500' },
+                  { icon: <Calendar className="w-4 h-4" />, text: 'Integrated booking system', gradient: 'from-pink-400 to-rose-500' },
+                  { icon: <Globe2 className="w-4 h-4" />, text: 'Marketplace profile & visibility', gradient: 'from-amber-400 to-orange-500' },
+                  { icon: <BarChart3 className="w-4 h-4" />, text: 'Evidence insights & SANA Health Graph', gradient: 'from-violet-400 to-purple-500' },
+                  { icon: <MessageCircle className="w-4 h-4" />, text: 'Secure client messaging', gradient: 'from-indigo-400 to-purple-500' },
+                  { icon: <Activity className="w-4 h-4" />, text: 'SANA Index profile & ranking', gradient: 'from-emerald-400 to-teal-500' },
+                  { icon: <FileText className="w-4 h-4" />, text: 'PROMs tracking (WHO-5, DASS-21)', gradient: 'from-blue-400 to-cyan-500' },
+                  { icon: <Link2 className="w-4 h-4" />, text: 'Wearable integration', gradient: 'from-rose-400 to-pink-500' },
+                  { icon: <BookOpen className="w-4 h-4" />, text: 'Journal AI for clients', gradient: 'from-purple-400 to-indigo-500' },
                 ].map((feature, i) => (
-                  <div key={i} className="flex items-center gap-2">
-                    <span>{feature.split(' ')[0]}</span>
-                    <span className="text-[#2C3333]">{feature.split(' ').slice(1).join(' ')}</span>
+                  <div key={i} className="flex items-center gap-3">
+                    <div className={`w-7 h-7 rounded-lg bg-gradient-to-br ${feature.gradient} flex items-center justify-center flex-shrink-0 shadow-md`}>
+                      {feature.icon}
+                    </div>
+                    <span className="text-white text-sm font-medium">{feature.text}</span>
                   </div>
                 ))}
               </div>
 
-              {/* Progress Bar */}
-              <div className="mb-6">
-                <div className="flex justify-between text-xs text-[#5F6368] mb-1">
-                  <span>487/1,000 claimed</span>
-                  <span className="text-[#6B9080] font-medium">51% remaining</span>
-                </div>
-                <div className="h-2 bg-[#EAE7DC] rounded-full overflow-hidden">
-                  <div className="h-full bg-gradient-to-r from-[#6B9080] to-[#4A90A4] rounded-full" style={{ width: '49%' }}></div>
-                </div>
-              </div>
-
               {!submitted ? (
-                <form onSubmit={handleSubmit} className="space-y-3">
-                  <input
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder="Enter your email"
-                    required
-                    className="w-full px-4 py-3 rounded-full border-2 border-[#EAE7DC] focus:border-[#4A90A4] focus:outline-none text-[#2C3333] text-center text-sm"
-                  />
-                  <button
-                    type="submit"
-                    className="w-full bg-[#4A90A4] text-white py-3 rounded-full font-semibold shadow-lg hover:bg-[#357080] transition-all"
-                  >
-                    Join First 1,000
-                  </button>
-                </form>
+                <button
+                  onClick={() => {
+                    setSubmitted(true);
+                  }}
+                  className="w-full bg-white text-emerald-600 py-5 px-8 rounded-full text-xl font-bold shadow-xl hover:bg-emerald-50 hover:scale-105 transition-all"
+                >
+                  Join First 1,000
+                </button>
               ) : (
-                <div className="bg-[#4A90A4]/10 rounded-xl p-4 text-center">
-                  <div className="w-10 h-10 rounded-full bg-[#4A90A4] flex items-center justify-center mx-auto mb-2">
-                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
+                <div className="bg-white/20 rounded-xl p-4 text-center">
+                  <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center mx-auto mb-2">
+                    <CheckCircle2 className="w-6 h-6 text-emerald-600" />
                   </div>
-                  <p className="text-sm text-[#2C3333] font-medium">You&apos;re on the list!</p>
+                  <p className="text-white font-bold">You&apos;re on the list!</p>
                 </div>
               )}
             </div>
 
             {/* Practice Plan */}
-            <div className="bg-white rounded-2xl shadow-lg p-6 lg:p-8">
+            <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 lg:p-8">
               <div className="inline-block bg-[#EAE7DC] px-3 py-1 rounded-full text-xs font-medium text-[#5F6368] mb-4">
                 Practice
               </div>
               <div className="mb-6">
-                <span className="text-4xl lg:text-5xl font-bold text-[#2C3333]">£99</span>
+                <span className="text-5xl lg:text-6xl font-bold text-[#2C3333]">£99</span>
                 <span className="text-[#5F6368]">/month</span>
               </div>
-              <p className="text-sm text-[#5F6368] mb-6">For established practices and multi-practitioner clinics</p>
+              <p className="text-sm text-gray-600 mb-6">For established practices and multi-practitioner clinics</p>
 
-              <p className="text-xs text-[#5F6368] mb-4">Everything in Professional, plus:</p>
+              <p className="text-xs text-gray-600 mb-4 font-medium">Everything in Professional, plus:</p>
 
-              <div className="space-y-3 mb-8 text-sm">
+              <div className="space-y-3 mb-8">
                 {[
-                  '👥 Up to 10 practitioners',
-                  '🏢 Team features & permissions',
-                  '📊 Practice-level analytics',
-                  '🎨 Custom branding & white-label',
-                  '🔗 Embeddable booking widget',
-                  '💼 Priority support (<2hr response)',
-                  '🏥 FHIR-compatible data export',
-                  '💳 Multi-practitioner payment splits',
-                  '📈 Enhanced SANA Index & "Top Practice" badge'
+                  { icon: <Users className="w-4 h-4" />, text: 'Up to 5 practitioners', gradient: 'from-slate-500 to-gray-600' },
+                  { icon: <Building2 className="w-4 h-4" />, text: 'Team features & permissions', gradient: 'from-blue-500 to-indigo-600' },
+                  { icon: <BarChart3 className="w-4 h-4" />, text: 'Practice-level analytics', gradient: 'from-violet-500 to-purple-600' },
+                  { icon: <Palette className="w-4 h-4" />, text: 'Custom branding & white-label', gradient: 'from-pink-500 to-rose-600' },
+                  { icon: <Code2 className="w-4 h-4" />, text: 'Embeddable booking widget', gradient: 'from-cyan-500 to-blue-600' },
+                  { icon: <Headphones className="w-4 h-4" />, text: 'Priority support (<2hr response)', gradient: 'from-emerald-500 to-teal-600' },
+                  { icon: <Shield className="w-4 h-4" />, text: 'FHIR-compatible data export', gradient: 'from-slate-600 to-slate-700' },
+                  { icon: <CreditCard className="w-4 h-4" />, text: 'Multi-practitioner payment splits', gradient: 'from-amber-500 to-orange-600' },
+                  { icon: <Award className="w-4 h-4" />, text: 'Enhanced SANA Index & "Top Practice" badge', gradient: 'from-yellow-500 to-amber-600' },
                 ].map((feature, i) => (
-                  <div key={i} className="flex items-center gap-2">
-                    <span>{feature.split(' ')[0]}</span>
-                    <span className="text-[#2C3333]">{feature.split(' ').slice(1).join(' ')}</span>
+                  <div key={i} className="flex items-center gap-3">
+                    <div className={`w-7 h-7 rounded-lg bg-gradient-to-br ${feature.gradient} flex items-center justify-center flex-shrink-0 shadow-md`}>
+                      {feature.icon}
+                    </div>
+                    <span className="text-[#2C3333] text-sm font-medium">{feature.text}</span>
                   </div>
                 ))}
               </div>
@@ -548,27 +569,19 @@ export default function PractitionerPage() {
           {/* Trust Signals */}
           <div className="flex flex-wrap items-center justify-center gap-6 mt-10 text-white/80 text-sm">
             <div className="flex items-center gap-2">
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-              </svg>
+              <Shield className="w-5 h-5" />
               Secure payments
             </div>
             <div className="flex items-center gap-2">
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-              </svg>
+              <CheckCircle2 className="w-5 h-5" />
               GDPR compliant
             </div>
             <div className="flex items-center gap-2">
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-              </svg>
+              <Building2 className="w-5 h-5" />
               NHS integration ready
             </div>
             <div className="flex items-center gap-2">
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-              </svg>
+              <BadgeCheck className="w-5 h-5" />
               Cancel anytime
             </div>
           </div>
