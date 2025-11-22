@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import Link from 'next/link';
 
 const CheckIcon = () => (
@@ -21,6 +22,26 @@ const ArrowRightIcon = () => (
 );
 
 export default function PractitionerPage() {
+  const [email, setEmail] = useState('');
+  const [submitted, setSubmitted] = useState(false);
+  const [ctaEmail, setCtaEmail] = useState('');
+  const [ctaSubmitted, setCtaSubmitted] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (email) {
+      setSubmitted(true);
+      // In production, this would submit to your backend
+    }
+  };
+
+  const handleCtaSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (ctaEmail) {
+      setCtaSubmitted(true);
+    }
+  };
+
   return (
     <main className="min-h-screen bg-[#FAF9F6] pb-20 md:pb-0">
       {/* Navigation */}
@@ -405,10 +426,35 @@ export default function PractitionerPage() {
                 ))}
               </ul>
 
-              <button className="w-full bg-[#6B9080] text-white py-4 rounded-full text-lg font-semibold shadow-lg hover:bg-[#5A7A6B] transition-all transform hover:scale-[1.02] flex items-center justify-center gap-2">
-                Claim Your Founding Member Spot
-                <ArrowRightIcon />
-              </button>
+              {!submitted ? (
+                <form onSubmit={handleSubmit} className="space-y-3">
+                  <input
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="Enter your email address"
+                    required
+                    className="w-full px-4 py-4 rounded-full border-2 border-[#EAE7DC] focus:border-[#6B9080] focus:outline-none text-[#2C3333] text-center"
+                  />
+                  <button
+                    type="submit"
+                    className="w-full bg-[#6B9080] text-white py-4 rounded-full text-lg font-semibold shadow-lg hover:bg-[#5A7A6B] transition-all transform hover:scale-[1.02] flex items-center justify-center gap-2"
+                  >
+                    Claim Your Founding Member Spot
+                    <ArrowRightIcon />
+                  </button>
+                </form>
+              ) : (
+                <div className="bg-[#6B9080]/10 rounded-2xl p-6 text-center">
+                  <div className="w-12 h-12 rounded-full bg-[#6B9080] flex items-center justify-center mx-auto mb-3">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <h4 className="font-semibold text-[#2C3333] mb-1">You&apos;re on the list!</h4>
+                  <p className="text-sm text-[#5F6368]">We&apos;ll email you when it&apos;s time to set up your practice.</p>
+                </div>
+              )}
 
               <p className="text-center text-sm text-[#5F6368] mt-4">
                 Start free today • Upgrade when ready • Cancel anytime
@@ -427,9 +473,38 @@ export default function PractitionerPage() {
           <p className="text-xl text-white/80 mb-8">
             Join the movement making CAM evidence-based, trustworthy, and scalable.
           </p>
-          <button className="bg-white text-[#2C3333] px-10 py-4 rounded-full text-lg font-semibold shadow-lg hover:bg-white/90 transition-all transform hover:scale-105">
-            Start Free — No Credit Card Required
-          </button>
+
+          {!ctaSubmitted ? (
+            <form onSubmit={handleCtaSubmit} className="max-w-md mx-auto">
+              <div className="flex flex-col sm:flex-row gap-3">
+                <input
+                  type="email"
+                  value={ctaEmail}
+                  onChange={(e) => setCtaEmail(e.target.value)}
+                  placeholder="Enter your email"
+                  required
+                  className="flex-1 px-6 py-4 rounded-full text-[#2C3333] focus:outline-none focus:ring-2 focus:ring-white/50"
+                />
+                <button
+                  type="submit"
+                  className="bg-[#2C3333] text-white px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover:bg-[#1a1a1a] transition-all whitespace-nowrap"
+                >
+                  Get Started Free
+                </button>
+              </div>
+              <p className="text-white/60 text-sm mt-3">No credit card required</p>
+            </form>
+          ) : (
+            <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-6 max-w-md mx-auto">
+              <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center mx-auto mb-3">
+                <svg className="w-6 h-6 text-[#6B9080]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <h4 className="font-semibold text-white mb-1">Welcome to SANA!</h4>
+              <p className="text-sm text-white/80">Check your inbox — we&apos;ve sent you everything you need to get started.</p>
+            </div>
+          )}
         </div>
       </section>
 

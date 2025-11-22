@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 // Icon Components
 const StethoscopeIcon = () => (
@@ -97,9 +98,9 @@ function Navigation() {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <button className="bg-[#4A90A4] text-white px-6 py-2.5 rounded-full text-sm font-semibold shadow-lg hover:bg-[#357080] transition-all btn-elevated">
+            <Link href="/practitioner" className="bg-[#4A90A4] text-white px-6 py-2.5 rounded-full text-sm font-semibold shadow-lg hover:bg-[#357080] transition-all btn-elevated">
               Start Free
-            </button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -121,9 +122,9 @@ function Navigation() {
             <a href="#pricing" className="block text-[#5F6368] hover:text-[#2C3333] text-sm font-medium">Pricing</a>
             <a href="#practitioners" className="block text-[#5F6368] hover:text-[#2C3333] text-sm font-medium">For Practitioners</a>
             <a href="#clients" className="block text-[#5F6368] hover:text-[#2C3333] text-sm font-medium">For Clients</a>
-            <button className="w-full bg-[#4A90A4] text-white px-6 py-2.5 rounded-full text-sm font-semibold">
+            <Link href="/practitioner" className="block w-full bg-[#4A90A4] text-white px-6 py-2.5 rounded-full text-sm font-semibold text-center">
               Start Free
-            </button>
+            </Link>
           </div>
         </div>
       )}
@@ -444,12 +445,12 @@ function HeroSection() {
             Join 1,000+ verified practitioners building the evidence revolution
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
-            <button className="bg-[#4A90A4] text-white px-8 py-4 rounded-full text-lg font-semibold shadow-elevated hover:bg-[#357080] transition-all btn-elevated">
+            <Link href="/practitioner" className="bg-[#4A90A4] text-white px-8 py-4 rounded-full text-lg font-semibold shadow-elevated hover:bg-[#357080] transition-all btn-elevated text-center">
               Start Your Free Practice
-            </button>
-            <button className="border-2 border-[#2C3333] text-[#2C3333] px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#2C3333] hover:text-white transition-all">
+            </Link>
+            <Link href="/wellness" className="border-2 border-[#2C3333] text-[#2C3333] px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#2C3333] hover:text-white transition-all text-center">
               Download SANA App
-            </button>
+            </Link>
           </div>
           <div className="flex items-center justify-center gap-6 text-sm text-[#5F6368]">
             <span className="flex items-center gap-1">
@@ -568,9 +569,9 @@ function ProblemSolutionSection() {
                   <div className="text-sm opacity-80 mb-4">
                     {index + 1}/3 explored
                   </div>
-                  <button className="bg-white text-[#2C3333] px-6 py-2 rounded-full text-sm font-medium hover:bg-white/90 transition-colors">
+                  <Link href="/practitioner" className="bg-white text-[#2C3333] px-6 py-2 rounded-full text-sm font-medium hover:bg-white/90 transition-colors inline-block">
                     Try it free →
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -996,9 +997,9 @@ function AIAssistantSection() {
               <div className="text-white font-bold text-lg mb-4">
                 AI Clinical Assistant included in every plan
               </div>
-              <button className="bg-white text-[#2C3333] px-6 py-3 rounded-full font-semibold hover:bg-white/90 transition-colors w-full">
+              <Link href="/practitioner" className="bg-white text-[#2C3333] px-6 py-3 rounded-full font-semibold hover:bg-white/90 transition-colors w-full block text-center">
                 Get Your AI Assistant
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -1166,37 +1167,40 @@ function DashboardPreviewSection() {
   );
 }
 
-// Pricing Section
-function PricingSection() {
+// Join Free Section (replaces detailed pricing - moved to /practitioner)
+function JoinFreeSection() {
   return (
     <section id="pricing" className="py-24 gradient-sage">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-            Simple, transparent pricing
+            Free for everyone to join
           </h2>
           <p className="text-lg text-white/80">
-            Start free, upgrade when you&apos;re ready
+            Whether you&apos;re a practitioner or seeking wellness, start your journey free
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
-          {/* Free Plan */}
-          <div className="bg-white rounded-2xl shadow-soft p-8 hover:shadow-elevated transition-all">
-            <div className="inline-block bg-[#EAE7DC] px-3 py-1 rounded-full text-xs font-medium text-[#5F6368] mb-4">
-              Free Forever
+        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          {/* Practitioner Card */}
+          <div className="bg-white rounded-2xl shadow-elevated p-8 text-center hover:shadow-glow-sage transition-all">
+            <div className="w-16 h-16 rounded-2xl bg-[#6B9080]/10 flex items-center justify-center mx-auto mb-6">
+              <StethoscopeIcon />
             </div>
-            <div className="mb-6">
-              <span className="text-5xl font-bold text-[#2C3333]">£0</span>
-              <span className="text-[#5F6368]">/month</span>
+            <div className="inline-block bg-[#6B9080]/10 px-3 py-1 rounded-full text-xs font-medium text-[#6B9080] mb-4">
+              For Practitioners
             </div>
+            <h3 className="text-2xl font-bold text-[#2C3333] mb-2">Start Your Practice Free</h3>
+            <p className="text-[#5F6368] mb-6">
+              AI clinical assistant, verified badge, client records, and more. Upgrade to Pro when you&apos;re ready.
+            </p>
 
-            <ul className="space-y-4 mb-8">
+            <ul className="space-y-3 mb-8 text-left">
               {[
-                'AI Clinical Assistant',
-                'SANA Verified Badge',
-                '5 scans/month',
-                '25 client records',
+                'AI-powered SOAP notes',
+                'SANA Verified badge',
+                'Up to 25 client records',
+                'Evidence tracking',
               ].map((feature, i) => (
                 <li key={i} className="flex items-center gap-3">
                   <CheckIcon />
@@ -1205,80 +1209,31 @@ function PricingSection() {
               ))}
             </ul>
 
-            <button className="w-full border-2 border-[#2C3333] text-[#2C3333] py-3 rounded-full font-semibold hover:bg-[#2C3333] hover:text-white transition-all">
-              Start Free
-            </button>
+            <Link href="/practitioner" className="w-full bg-[#6B9080] text-white py-4 rounded-full font-semibold shadow-lg hover:bg-[#5A7A6B] transition-all block text-center">
+              Join as Practitioner
+            </Link>
+            <p className="text-xs text-[#5F6368] mt-3">See founding member pricing →</p>
           </div>
 
-          {/* Professional Plan - Featured */}
-          <div className="relative bg-white rounded-2xl shadow-elevated p-6 lg:p-8 ring-2 ring-[#4A90A4] md:transform md:scale-105 order-first md:order-none">
-            <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#4A90A4] text-white px-4 py-1 rounded-full text-sm font-medium flex items-center gap-1">
-              <span>⭐</span> MOST POPULAR
+          {/* Client Card */}
+          <div className="bg-white rounded-2xl shadow-elevated p-8 text-center hover:shadow-glow-teal transition-all">
+            <div className="w-16 h-16 rounded-2xl bg-[#4A90A4]/10 flex items-center justify-center mx-auto mb-6">
+              <LeafIcon />
             </div>
-
             <div className="inline-block bg-[#4A90A4]/10 px-3 py-1 rounded-full text-xs font-medium text-[#4A90A4] mb-4">
-              Professional
+              For Wellness Seekers
             </div>
-            <div className="mb-2">
-              <span className="text-5xl font-bold text-[#2C3333]">£19</span>
-              <span className="text-[#5F6368]">/month</span>
-            </div>
-            <div className="text-sm text-[#5F6368] mb-4">
-              <span className="line-through">£49</span>
-              <span className="ml-2 text-[#6B9080] font-medium">Founding Member Pricing</span>
-            </div>
-            <div className="bg-[#6B9080]/10 rounded-lg p-2 text-center text-sm text-[#6B9080] font-medium mb-6">
-              First 1,000 practitioners only
-            </div>
+            <h3 className="text-2xl font-bold text-[#2C3333] mb-2">Download the Free App</h3>
+            <p className="text-[#5F6368] mb-6">
+              Scan supplements, find verified practitioners, and take control of your wellness journey.
+            </p>
 
-            <ul className="space-y-4 mb-8">
+            <ul className="space-y-3 mb-8 text-left">
               {[
-                'Everything in Free',
-                'Unlimited records & scans',
-                'Booking system',
-                'Marketplace access',
-                'Evidence insights',
-              ].map((feature, i) => (
-                <li key={i} className="flex items-center gap-3">
-                  <CheckIcon />
-                  <span className="text-[#2C3333] font-medium">{feature}</span>
-                </li>
-              ))}
-            </ul>
-
-            <button className="w-full bg-[#4A90A4] text-white py-3 rounded-full font-semibold shadow-lg hover:bg-[#357080] transition-all btn-elevated">
-              Join First 1,000
-            </button>
-
-            {/* Progress Bar */}
-            <div className="mt-4">
-              <div className="flex justify-between text-xs text-[#5F6368] mb-1">
-                <span>487/1,000 claimed</span>
-                <span>51% remaining</span>
-              </div>
-              <div className="h-2 bg-[#EAE7DC] rounded-full overflow-hidden">
-                <div className="h-full bg-[#4A90A4] rounded-full progress-fill" style={{ width: '49%' }}></div>
-              </div>
-            </div>
-          </div>
-
-          {/* Practice Plan */}
-          <div className="bg-white rounded-2xl shadow-soft p-8 hover:shadow-elevated transition-all">
-            <div className="inline-block bg-[#EAE7DC] px-3 py-1 rounded-full text-xs font-medium text-[#5F6368] mb-4">
-              Practice
-            </div>
-            <div className="mb-6">
-                <span className="text-5xl font-bold text-[#2C3333]">£99</span>
-                <span className="text-[#5F6368]">/month</span>
-              </div>
-
-            <ul className="space-y-4 mb-8">
-              {[
-                'Everything in Professional',
-                'Up to 10 practitioners',
-                'Team features',
-                'Advanced analytics',
-                'Priority support',
+                'Product safety scanner',
+                'Find verified practitioners',
+                'Personalized recommendations',
+                'Track your wellness journey',
               ].map((feature, i) => (
                 <li key={i} className="flex items-center gap-3">
                   <CheckIcon />
@@ -1287,28 +1242,32 @@ function PricingSection() {
               ))}
             </ul>
 
-            <button className="w-full border-2 border-[#2C3333] text-[#2C3333] py-3 rounded-full font-semibold hover:bg-[#2C3333] hover:text-white transition-all">
-              Start Free Trial
-            </button>
+            <Link href="/wellness" className="w-full bg-[#4A90A4] text-white py-4 rounded-full font-semibold shadow-lg hover:bg-[#357080] transition-all block text-center">
+              Download Free App
+            </Link>
+            <p className="text-xs text-[#5F6368] mt-3">Available on iOS & Android</p>
           </div>
         </div>
 
-        <div className="text-center mt-8 space-y-4">
-          <p className="text-white/80 text-sm">
-            All plans include all features • Cancel anytime
-          </p>
-          <div className="flex items-center justify-center gap-6">
+        <div className="text-center mt-12">
+          <div className="flex items-center justify-center gap-6 flex-wrap">
+            <div className="flex items-center gap-2 text-white/60 text-sm">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+              No credit card required
+            </div>
             <div className="flex items-center gap-2 text-white/60 text-sm">
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
               </svg>
-              Secure payments
+              GDPR compliant
             </div>
             <div className="flex items-center gap-2 text-white/60 text-sm">
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
               </svg>
-              GDPR compliant
+              ISO 27001 certified
             </div>
           </div>
         </div>
@@ -1477,12 +1436,12 @@ function FinalCTASection() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-          <button className="bg-white text-[#2C3333] px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover:bg-white/90 transition-all">
+          <Link href="/practitioner" className="bg-white text-[#2C3333] px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover:bg-white/90 transition-all text-center">
             I&apos;m a Practitioner - Start Free
-          </button>
-          <button className="border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/10 transition-all">
+          </Link>
+          <Link href="/wellness" className="border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/10 transition-all text-center">
             I&apos;m Seeking Wellness - Download App
-          </button>
+          </Link>
         </div>
 
         {/* Urgency Badge */}
@@ -1610,12 +1569,12 @@ function MobileStickyCTA() {
   return (
     <div className="fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-lg border-t border-[#EAE7DC] p-3 md:hidden z-50 shadow-[0_-4px_20px_rgba(0,0,0,0.1)]">
       <div className="flex gap-2 max-w-md mx-auto">
-        <button className="flex-1 bg-[#4A90A4] text-white py-4 rounded-2xl font-semibold shadow-lg text-sm min-h-[52px]">
+        <Link href="/practitioner" className="flex-1 bg-[#4A90A4] text-white py-4 rounded-2xl font-semibold shadow-lg text-sm min-h-[52px] flex items-center justify-center">
           Start Free Practice
-        </button>
-        <button className="flex-1 bg-[#6B9080] text-white py-4 rounded-2xl font-semibold shadow-lg text-sm min-h-[52px]">
+        </Link>
+        <Link href="/wellness" className="flex-1 bg-[#6B9080] text-white py-4 rounded-2xl font-semibold shadow-lg text-sm min-h-[52px] flex items-center justify-center">
           Download App
-        </button>
+        </Link>
       </div>
       <div className="text-center mt-2">
         <span className="text-xs text-[#5F6368]">No credit card required</span>
@@ -1635,7 +1594,7 @@ export default function Home() {
       <EvidenceEngineSection />
       <AIAssistantSection />
       <DashboardPreviewSection />
-      <PricingSection />
+      <JoinFreeSection />
       <TestimonialSection />
       <FinalCTASection />
       <Footer />
