@@ -14,6 +14,12 @@ const ArrowLeftIcon = () => (
   </svg>
 );
 
+const ArrowRightIcon = () => (
+  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+  </svg>
+);
+
 export default function PractitionerPage() {
   return (
     <main className="min-h-screen bg-[#FAF9F6]">
@@ -35,18 +41,18 @@ export default function PractitionerPage() {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-32 pb-16 px-4" style={{ background: 'linear-gradient(180deg, #6B9080 0%, #8FB3A3 50%, #FAF9F6 100%)' }}>
+      <section className="pt-32 pb-20 px-4" style={{ background: 'linear-gradient(180deg, #6B9080 0%, #8FB3A3 50%, #FAF9F6 100%)' }}>
         <div className="max-w-4xl mx-auto text-center">
           <div className="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
-            <span className="text-white text-sm font-medium">For Practitioners</span>
+            <span className="text-white text-sm font-medium">For CAM Practitioners</span>
           </div>
 
           <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-            Transform your practice with AI-powered tools
+            You&apos;re not &ldquo;alternative&rdquo;.<br />You&apos;re essential.
           </h1>
 
           <p className="text-xl text-white/90 mb-10 max-w-2xl mx-auto">
-            Join 1,000+ practitioners who have reclaimed 15+ hours every week and built thriving, evidence-based practices.
+            After years of training, you deserve infrastructure that proves your work, grows your practice, and positions CAM as the evidence-based medicine it truly is.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
@@ -59,65 +65,240 @@ export default function PractitionerPage() {
           </div>
 
           <p className="text-white/70 text-sm">
-            No credit card required • Free forever plan available
+            Free forever plan • No credit card required • Setup in 5 minutes
           </p>
         </div>
       </section>
 
-      {/* Value Props */}
-      <section className="py-20 px-4">
+      {/* Pain Points Section */}
+      <section className="py-20 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl lg:text-4xl font-bold text-[#2C3333] text-center mb-4">
-            Everything you need to run a modern practice
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#2C3333] mb-4">
+              We understand your frustrations
+            </h2>
+            <p className="text-lg text-[#5F6368] max-w-2xl mx-auto">
+              80,000+ UK CAM practitioners face these challenges daily. You&apos;re not alone.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                emoji: '💸',
+                title: 'Dismissed as "alternative"',
+                description: 'Despite years of rigorous training, you\'re still seen as lesser than conventional medicine. Your expertise deserves recognition.'
+              },
+              {
+                emoji: '📝',
+                title: 'Drowning in admin',
+                description: 'Paper records, manual booking, handwritten notes. You spend 15+ hours a week on admin instead of healing patients.'
+              },
+              {
+                emoji: '🔬',
+                title: 'Can\'t prove it works',
+                description: 'Zero infrastructure to capture outcomes. You know your treatments work, but you have no data to prove it at scale.'
+              },
+              {
+                emoji: '💰',
+                title: 'Revenue walking out the door',
+                description: 'Clients buy products elsewhere after consultation. You do the work, Amazon gets the sale.'
+              },
+              {
+                emoji: '⚠️',
+                title: 'Unqualified competitors',
+                description: 'No verification system means charlatans damage your credibility. Clients can\'t tell who\'s qualified.'
+              },
+              {
+                emoji: '🏥',
+                title: 'NHS can\'t integrate you',
+                description: 'Social prescribing needs CAM infrastructure. Without it, the referral pathway doesn\'t exist.'
+              }
+            ].map((pain, i) => (
+              <div key={i} className="bg-[#FAF9F6] rounded-2xl p-6 border border-[#EAE7DC]">
+                <div className="text-4xl mb-4">{pain.emoji}</div>
+                <h3 className="text-lg font-semibold text-[#2C3333] mb-2">{pain.title}</h3>
+                <p className="text-[#5F6368] text-sm">{pain.description}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-12 bg-gradient-to-r from-[#6B9080]/10 to-[#4A90A4]/10 rounded-2xl p-8 text-center border border-[#6B9080]/20">
+            <p className="text-2xl text-[#2C3333] font-medium mb-2">
+              £8.7 billion spent on CAM annually
+            </p>
+            <p className="text-[#5F6368]">
+              With ZERO data capture. No evidence infrastructure. No verification. No connected ecosystem.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* The Insight Section */}
+      <section className="py-20 px-4 bg-[#2C3333]">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+            CAM doesn&apos;t need fixing.<br />It needs infrastructure.
           </h2>
-          <p className="text-lg text-[#5F6368] text-center mb-16 max-w-2xl mx-auto">
-            Purpose-built for CAM practitioners who want to spend less time on admin and more time healing
+          <p className="text-xl text-white/80 mb-8">
+            The gap isn&apos;t medical—it&apos;s technological. Complementary medicine works. Millions use it. Billions are spent. But there&apos;s no connected system.
           </p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { icon: '✅', label: 'Verification', desc: 'Who\'s qualified?' },
+              { icon: '📊', label: 'Evidence', desc: 'What actually works?' },
+              { icon: '🛒', label: 'Supply Chain', desc: 'Connected commerce' },
+              { icon: '📱', label: 'Ecosystem', desc: 'All pieces linked' }
+            ].map((item, i) => (
+              <div key={i} className="bg-white/10 backdrop-blur-sm rounded-xl p-5">
+                <div className="text-3xl mb-2">{item.icon}</div>
+                <div className="text-white font-semibold">{item.label}</div>
+                <div className="text-white/60 text-sm">{item.desc}</div>
+              </div>
+            ))}
+          </div>
+          <p className="text-white/60 mt-8 text-lg">
+            SANA is building the rails that natural healing runs on.
+          </p>
+        </div>
+      </section>
+
+      {/* Your Journey Section */}
+      <section className="py-20 px-4 bg-[#FAF9F6]">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#2C3333] mb-4">
+              Your journey with SANA
+            </h2>
+            <p className="text-lg text-[#5F6368]">
+              From sign-up to thriving practice in five steps
+            </p>
+          </div>
+
+          <div className="relative">
+            {/* Connection Line */}
+            <div className="hidden lg:block absolute top-24 left-0 right-0 h-1 bg-gradient-to-r from-[#6B9080] via-[#4A90A4] to-[#6B9080]"></div>
+
+            <div className="grid lg:grid-cols-5 gap-8">
+              {[
+                {
+                  step: '1',
+                  title: 'Sign Up Free',
+                  description: 'Get instant access to your AI clinical assistant. No credit card needed.',
+                  icon: '🚀'
+                },
+                {
+                  step: '2',
+                  title: 'Get Verified',
+                  description: 'Earn your SANA Verified badge. Stand out from unqualified competitors.',
+                  icon: '✅'
+                },
+                {
+                  step: '3',
+                  title: 'See Clients',
+                  description: 'AI writes your SOAP notes in 30 seconds. Focus on healing, not typing.',
+                  icon: '🤖'
+                },
+                {
+                  step: '4',
+                  title: 'Prescribe & Earn',
+                  description: 'Recommend products through SANA. Clients buy, you earn commission.',
+                  icon: '💊'
+                },
+                {
+                  step: '5',
+                  title: 'Build Evidence',
+                  description: 'Track outcomes automatically. Get featured in practitioner rankings.',
+                  icon: '📊'
+                }
+              ].map((journey, i) => (
+                <div key={i} className="relative text-center">
+                  <div className="relative z-10 w-16 h-16 mx-auto rounded-full bg-white shadow-lg flex items-center justify-center text-3xl mb-4 border-4 border-[#6B9080]">
+                    {journey.icon}
+                  </div>
+                  <div className="bg-white rounded-2xl p-5 shadow-sm border border-[#EAE7DC]">
+                    <div className="text-xs font-bold text-[#6B9080] mb-2">STEP {journey.step}</div>
+                    <h3 className="font-semibold text-[#2C3333] mb-2">{journey.title}</h3>
+                    <p className="text-sm text-[#5F6368]">{journey.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-12 text-center">
+            <p className="text-lg text-[#5F6368] mb-4">
+              <span className="font-semibold text-[#6B9080]">The flywheel effect:</span> More practitioners → More data → Better AI → Higher success rates → More clients → More practitioners
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Platform Features */}
+      <section className="py-20 px-4 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#2C3333] mb-4">
+              One platform. Everything you need.
+            </h2>
+            <p className="text-lg text-[#5F6368]">
+              Complete practice management built specifically for CAM practitioners
+            </p>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
                 icon: '🤖',
                 title: 'AI Clinical Assistant',
-                description: 'Generate professional SOAP notes in 30 seconds. Our AI learns your style and terminology.',
-                highlight: 'Save 15+ hours/week'
+                description: 'Generate professional SOAP notes in 30 seconds. Our AI learns your style, your terminology, your approach.',
+                highlight: 'Save 15+ hours/week',
+                color: '#6B9080'
               },
               {
                 icon: '📅',
                 title: 'Smart Booking System',
-                description: 'Online scheduling with automated reminders. Reduce no-shows by 80%.',
-                highlight: '24/7 availability'
+                description: 'Online scheduling with automated reminders, intake forms, and telehealth built in.',
+                highlight: 'Reduce no-shows 80%',
+                color: '#4A90A4'
               },
               {
                 icon: '📊',
-                title: 'Evidence Tracking',
-                description: 'Automatically track client outcomes. Build your evidence base and prove your results.',
-                highlight: 'First in CAM'
+                title: 'Evidence Engine',
+                description: 'Automatically capture every treatment and outcome. Build your personal evidence database.',
+                highlight: 'First in CAM',
+                color: '#6B9080'
               },
               {
                 icon: '💊',
                 title: 'Integrated Dispensary',
-                description: 'Recommend and sell verified supplements directly. Earn commissions on every sale.',
-                highlight: 'New revenue stream'
+                description: 'Prescribe products through SANA. Clients purchase seamlessly. You earn commission on every sale.',
+                highlight: 'New revenue stream',
+                color: '#4A90A4'
+              },
+              {
+                icon: '✅',
+                title: 'SANA Verified Badge',
+                description: 'Credential verification that clients trust. Stand out from unqualified competitors in your area.',
+                highlight: 'Boost credibility',
+                color: '#6B9080'
               },
               {
                 icon: '📋',
-                title: 'Client Records',
-                description: 'Secure, GDPR-compliant record management. Access anywhere, anytime.',
-                highlight: 'ISO 27001 certified'
-              },
-              {
-                icon: '✓',
-                title: 'SANA Verified Badge',
-                description: 'Stand out with our verified practitioner badge. Build trust with potential clients.',
-                highlight: 'Boost credibility'
+                title: 'Secure Records',
+                description: 'GDPR-compliant, ISO 27001 certified client records. Access anywhere, encrypted everywhere.',
+                highlight: 'Enterprise security',
+                color: '#4A90A4'
               }
             ].map((feature, i) => (
-              <div key={i} className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition-all border border-[#EAE7DC]">
+              <div key={i} className="bg-[#FAF9F6] rounded-2xl p-6 border border-[#EAE7DC] hover:shadow-lg transition-all group">
                 <div className="text-4xl mb-4">{feature.icon}</div>
                 <h3 className="text-xl font-semibold text-[#2C3333] mb-2">{feature.title}</h3>
                 <p className="text-[#5F6368] mb-4">{feature.description}</p>
-                <span className="inline-block bg-[#6B9080]/10 text-[#6B9080] px-3 py-1 rounded-full text-sm font-medium">
+                <span
+                  className="inline-block px-3 py-1 rounded-full text-sm font-medium"
+                  style={{ backgroundColor: `${feature.color}15`, color: feature.color }}
+                >
                   {feature.highlight}
                 </span>
               </div>
@@ -132,7 +313,7 @@ export default function PractitionerPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl lg:text-4xl font-bold text-[#2C3333] mb-6">
-                Trusted by practitioners across the UK
+                Join the evidence revolution
               </h2>
 
               <div className="grid grid-cols-3 gap-8 mb-8">
@@ -142,43 +323,63 @@ export default function PractitionerPage() {
                 </div>
                 <div>
                   <div className="text-4xl font-bold text-[#6B9080]">50,000+</div>
-                  <div className="text-[#5F6368]">Consultations</div>
+                  <div className="text-[#5F6368]">Treatments</div>
                 </div>
                 <div>
-                  <div className="text-4xl font-bold text-[#6B9080]">4.9/5</div>
-                  <div className="text-[#5F6368]">Rating</div>
+                  <div className="text-4xl font-bold text-[#6B9080]">73%</div>
+                  <div className="text-[#5F6368]">Avg. Success</div>
                 </div>
               </div>
 
-              <blockquote className="bg-white rounded-2xl p-6 shadow-sm">
-                <p className="text-lg text-[#2C3333] italic mb-4">
-                  &ldquo;SANA has completely transformed how I run my practice. The AI note-taking alone has given me back 3 hours every day. I can finally focus on what matters - my patients.&rdquo;
-                </p>
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#6B9080] to-[#4A90A4] flex items-center justify-center text-white font-bold">
-                    SM
+              <div className="space-y-4">
+                <blockquote className="bg-white rounded-2xl p-6 shadow-sm">
+                  <p className="text-[#2C3333] italic mb-4">
+                    &ldquo;I was spending 3 hours every evening on notes. Now it&apos;s done before the client leaves. SANA gave me my life back.&rdquo;
+                  </p>
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#6B9080] to-[#4A90A4] flex items-center justify-center text-white font-bold text-sm">
+                      SM
+                    </div>
+                    <div>
+                      <div className="font-semibold text-[#2C3333] text-sm">Dr. Sarah Mitchell</div>
+                      <div className="text-xs text-[#5F6368]">Herbalist, London</div>
+                    </div>
                   </div>
-                  <div>
-                    <div className="font-semibold text-[#2C3333]">Dr. Sarah Mitchell</div>
-                    <div className="text-sm text-[#5F6368]">Herbalist, London • Using SANA since 2023</div>
+                </blockquote>
+
+                <blockquote className="bg-white rounded-2xl p-6 shadow-sm">
+                  <p className="text-[#2C3333] italic mb-4">
+                    &ldquo;The dispensary integration alone has added £800/month to my practice. Products I used to recommend, I now sell.&rdquo;
+                  </p>
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#6B9080] to-[#4A90A4] flex items-center justify-center text-white font-bold text-sm">
+                      JC
+                    </div>
+                    <div>
+                      <div className="font-semibold text-[#2C3333] text-sm">James Chen</div>
+                      <div className="text-xs text-[#5F6368]">Acupuncturist, Manchester</div>
+                    </div>
                   </div>
-                </div>
-              </blockquote>
+                </blockquote>
+              </div>
             </div>
 
-            <div className="bg-white rounded-2xl p-8 shadow-lg">
+            {/* Pricing Card */}
+            <div className="bg-white rounded-2xl p-8 shadow-lg border-2 border-[#6B9080]">
               <div className="text-center mb-6">
                 <div className="inline-block bg-[#6B9080] text-white px-4 py-1 rounded-full text-sm font-medium mb-4">
-                  LIMITED OFFER
+                  FOUNDING MEMBER PRICING
                 </div>
-                <h3 className="text-2xl font-bold text-[#2C3333] mb-2">Founding Member Pricing</h3>
-                <p className="text-[#5F6368]">Lock in £19/month for life (normally £49)</p>
+                <h3 className="text-2xl font-bold text-[#2C3333] mb-2">Lock in £19/month for life</h3>
+                <p className="text-[#5F6368]">
+                  <span className="line-through">£49/month</span> — 61% off forever
+                </p>
               </div>
 
               <div className="mb-6">
                 <div className="flex justify-between text-sm text-[#5F6368] mb-2">
                   <span>487 of 1,000 spots claimed</span>
-                  <span>513 remaining</span>
+                  <span className="text-[#6B9080] font-medium">513 remaining</span>
                 </div>
                 <div className="h-3 bg-[#EAE7DC] rounded-full overflow-hidden">
                   <div className="h-full bg-gradient-to-r from-[#6B9080] to-[#4A90A4] rounded-full" style={{ width: '49%' }}></div>
@@ -187,12 +388,12 @@ export default function PractitionerPage() {
 
               <ul className="space-y-3 mb-8">
                 {[
-                  'AI Clinical Assistant',
+                  'AI Clinical Assistant (unlimited)',
+                  'SANA Verified badge',
                   'Unlimited client records',
                   'Smart booking system',
-                  'Evidence tracking',
-                  'Dispensary access',
-                  'SANA Verified badge',
+                  'Evidence tracking & insights',
+                  'Integrated dispensary (earn commissions)',
                   'Priority support'
                 ].map((feature, i) => (
                   <li key={i} className="flex items-center gap-3">
@@ -204,12 +405,13 @@ export default function PractitionerPage() {
                 ))}
               </ul>
 
-              <button className="w-full bg-[#6B9080] text-white py-4 rounded-full text-lg font-semibold shadow-lg hover:bg-[#5A7A6B] transition-all transform hover:scale-[1.02]">
+              <button className="w-full bg-[#6B9080] text-white py-4 rounded-full text-lg font-semibold shadow-lg hover:bg-[#5A7A6B] transition-all transform hover:scale-[1.02] flex items-center justify-center gap-2">
                 Claim Your Founding Member Spot
+                <ArrowRightIcon />
               </button>
 
               <p className="text-center text-sm text-[#5F6368] mt-4">
-                No credit card required to start
+                Start free today • Upgrade when ready • Cancel anytime
               </p>
             </div>
           </div>
@@ -219,21 +421,21 @@ export default function PractitionerPage() {
       {/* Final CTA */}
       <section className="py-20 px-4 bg-gradient-to-r from-[#6B9080] to-[#4A90A4]">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-            Ready to transform your practice?
+          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+            Ready to build the practice you deserve?
           </h2>
           <p className="text-xl text-white/80 mb-8">
-            Join the evidence revolution. Start your free practice today.
+            Join the movement making CAM evidence-based, trustworthy, and scalable.
           </p>
           <button className="bg-white text-[#2C3333] px-10 py-4 rounded-full text-lg font-semibold shadow-lg hover:bg-white/90 transition-all transform hover:scale-105">
-            Start Free - No Credit Card Required
+            Start Free — No Credit Card Required
           </button>
         </div>
       </section>
 
       {/* Footer */}
       <footer className="py-8 px-4 bg-[#2C3333] text-white/60 text-center text-sm">
-        <p>© 2024 SANA Technologies Ltd. Building the future of CAM.</p>
+        <p>© 2024 SANA Technologies Ltd. Building the infrastructure for natural healing.</p>
       </footer>
     </main>
   );
