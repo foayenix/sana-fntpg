@@ -328,103 +328,127 @@ export default function PractitionerPage() {
         </div>
       </section>
 
-      {/* Social Proof */}
-      <section className="py-12 md:py-20 px-4 bg-[#EAE7DC]">
+      {/* Pricing Section */}
+      <section id="pricing" className="py-12 md:py-20 px-4 bg-gradient-to-b from-[#6B9080] to-[#4A7A6B]">
         <div className="max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl lg:text-4xl font-bold text-[#2C3333] mb-6">
-                Join the evidence revolution
-              </h2>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+              Simple, transparent pricing
+            </h2>
+            <p className="text-lg text-white/80">
+              Start free, upgrade when you&apos;re ready
+            </p>
+          </div>
 
-              <div className="grid grid-cols-3 gap-8 mb-8">
+          <div className="grid lg:grid-cols-3 gap-6 lg:gap-8">
+            {/* Free Plan */}
+            <div className="bg-white rounded-2xl shadow-lg p-6 lg:p-8">
+              <div className="inline-block bg-[#EAE7DC] px-3 py-1 rounded-full text-xs font-medium text-[#5F6368] mb-4">
+                Free Forever
+              </div>
+              <div className="mb-6">
+                <span className="text-4xl lg:text-5xl font-bold text-[#2C3333]">£0</span>
+                <span className="text-[#5F6368]">/month</span>
+              </div>
+              <p className="text-sm text-[#5F6368] mb-6">Perfect for getting started with AI-powered practice management</p>
+
+              <div className="space-y-4 mb-8">
                 <div>
-                  <div className="text-4xl font-bold text-[#6B9080]">1,000+</div>
-                  <div className="text-[#5F6368]">Practitioners</div>
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="text-lg">🤖</span>
+                    <span className="font-semibold text-[#2C3333] text-sm">AI Clinical Assistant (Unlimited)</span>
+                  </div>
+                  <p className="text-xs text-[#5F6368] ml-7">Voice-to-SOAP notes, treatment recommendations across 8+ traditions</p>
                 </div>
                 <div>
-                  <div className="text-4xl font-bold text-[#6B9080]">50,000+</div>
-                  <div className="text-[#5F6368]">Treatments</div>
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="text-lg">✓</span>
+                    <span className="font-semibold text-[#2C3333] text-sm">SANA Verified Badge</span>
+                  </div>
+                  <p className="text-xs text-[#5F6368] ml-7">Automated credential verification from 40+ UK institutions</p>
                 </div>
                 <div>
-                  <div className="text-4xl font-bold text-[#6B9080]">73%</div>
-                  <div className="text-[#5F6368]">Avg. Success</div>
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="text-lg">📱</span>
+                    <span className="font-semibold text-[#2C3333] text-sm">Product Scanner (5/month)</span>
+                  </div>
+                  <p className="text-xs text-[#5F6368] ml-7">Herb-drug interaction checks, safety analysis</p>
+                </div>
+                <div>
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="text-lg">👥</span>
+                    <span className="font-semibold text-[#2C3333] text-sm">Client Records (25 clients)</span>
+                  </div>
+                  <p className="text-xs text-[#5F6368] ml-7">GDPR-compliant storage, SOAP templates</p>
+                </div>
+                <div>
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="text-lg">📊</span>
+                    <span className="font-semibold text-[#2C3333] text-sm">Basic Analytics</span>
+                  </div>
+                  <p className="text-xs text-[#5F6368] ml-7">Session tracking, revenue overview</p>
                 </div>
               </div>
 
-              <div className="space-y-4">
-                <blockquote className="bg-white rounded-2xl p-6 shadow-sm">
-                  <p className="text-[#2C3333] italic mb-4">
-                    &ldquo;I was spending 3 hours every evening on notes. Now it&apos;s done before the client leaves. SANA gave me my life back.&rdquo;
-                  </p>
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#6B9080] to-[#4A90A4] flex items-center justify-center text-white font-bold text-sm">
-                      SM
-                    </div>
-                    <div>
-                      <div className="font-semibold text-[#2C3333] text-sm">Dr. Sarah Mitchell</div>
-                      <div className="text-xs text-[#5F6368]">Herbalist, London</div>
-                    </div>
-                  </div>
-                </blockquote>
-
-                <blockquote className="bg-white rounded-2xl p-6 shadow-sm">
-                  <p className="text-[#2C3333] italic mb-4">
-                    &ldquo;The dispensary integration alone has added £800/month to my practice. Products I used to recommend, I now sell.&rdquo;
-                  </p>
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#6B9080] to-[#4A90A4] flex items-center justify-center text-white font-bold text-sm">
-                      JC
-                    </div>
-                    <div>
-                      <div className="font-semibold text-[#2C3333] text-sm">James Chen</div>
-                      <div className="text-xs text-[#5F6368]">Acupuncturist, Manchester</div>
-                    </div>
-                  </div>
-                </blockquote>
-              </div>
+              <button className="w-full border-2 border-[#2C3333] text-[#2C3333] py-3 rounded-full font-semibold hover:bg-[#2C3333] hover:text-white transition-all">
+                Start Free
+              </button>
             </div>
 
-            {/* Pricing Card */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg border-2 border-[#6B9080]">
-              <div className="text-center mb-6">
-                <div className="inline-block bg-[#6B9080] text-white px-4 py-1 rounded-full text-sm font-medium mb-4">
-                  FOUNDING MEMBER PRICING
-                </div>
-                <h3 className="text-2xl font-bold text-[#2C3333] mb-2">Lock in £19/month for life</h3>
-                <p className="text-[#5F6368]">
-                  <span className="line-through">£49/month</span> — 61% off forever
-                </p>
+            {/* Professional Plan - Featured */}
+            <div className="relative bg-white rounded-2xl shadow-xl p-6 lg:p-8 ring-2 ring-[#4A90A4] lg:scale-105">
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#4A90A4] text-white px-4 py-1 rounded-full text-sm font-medium flex items-center gap-1 whitespace-nowrap">
+                <span>⭐</span> MOST POPULAR
               </div>
 
+              <div className="inline-block bg-[#4A90A4]/10 px-3 py-1 rounded-full text-xs font-medium text-[#4A90A4] mb-4">
+                Professional
+              </div>
+              <div className="mb-2">
+                <span className="text-4xl lg:text-5xl font-bold text-[#2C3333]">£19</span>
+                <span className="text-[#5F6368]">/month</span>
+              </div>
+              <div className="text-sm text-[#5F6368] mb-2">
+                <span className="line-through">£49</span>
+                <span className="ml-2 text-[#6B9080] font-medium">Founding Member Pricing</span>
+              </div>
+              <div className="bg-[#6B9080]/10 rounded-lg p-2 text-center text-sm text-[#6B9080] font-medium mb-4">
+                First 1,000 practitioners only
+              </div>
+
+              <p className="text-xs text-[#5F6368] mb-4">Everything in Free, plus:</p>
+
+              <div className="space-y-3 mb-6 text-sm">
+                {[
+                  '📅 Unlimited client records',
+                  '🔄 Unlimited product scans',
+                  '📆 Integrated booking system',
+                  '🌐 Marketplace profile & visibility',
+                  '📈 Evidence insights & SANA Health Graph',
+                  '💬 Secure client messaging',
+                  '📊 Advanced analytics dashboard',
+                  '🎯 SANA Index profile & ranking',
+                  '📋 PROMs tracking (WHO-5, DASS-21)',
+                  '🔗 Wearable integration',
+                  '📱 Journal AI for clients'
+                ].map((feature, i) => (
+                  <div key={i} className="flex items-center gap-2">
+                    <span>{feature.split(' ')[0]}</span>
+                    <span className="text-[#2C3333]">{feature.split(' ').slice(1).join(' ')}</span>
+                  </div>
+                ))}
+              </div>
+
+              {/* Progress Bar */}
               <div className="mb-6">
-                <div className="flex justify-between text-sm text-[#5F6368] mb-2">
-                  <span>487 of 1,000 spots claimed</span>
-                  <span className="text-[#6B9080] font-medium">513 remaining</span>
+                <div className="flex justify-between text-xs text-[#5F6368] mb-1">
+                  <span>487/1,000 claimed</span>
+                  <span className="text-[#6B9080] font-medium">51% remaining</span>
                 </div>
-                <div className="h-3 bg-[#EAE7DC] rounded-full overflow-hidden">
+                <div className="h-2 bg-[#EAE7DC] rounded-full overflow-hidden">
                   <div className="h-full bg-gradient-to-r from-[#6B9080] to-[#4A90A4] rounded-full" style={{ width: '49%' }}></div>
                 </div>
               </div>
-
-              <ul className="space-y-3 mb-8">
-                {[
-                  'AI Clinical Assistant (unlimited)',
-                  'SANA Verified badge',
-                  'Unlimited client records',
-                  'Smart booking system',
-                  'Evidence tracking & insights',
-                  'Integrated dispensary (earn commissions)',
-                  'Priority support'
-                ].map((feature, i) => (
-                  <li key={i} className="flex items-center gap-3">
-                    <div className="w-5 h-5 rounded-full bg-[#6B9080] flex items-center justify-center flex-shrink-0">
-                      <CheckIcon />
-                    </div>
-                    <span className="text-[#2C3333]">{feature}</span>
-                  </li>
-                ))}
-              </ul>
 
               {!submitted ? (
                 <form onSubmit={handleSubmit} className="space-y-3">
@@ -432,34 +456,214 @@ export default function PractitionerPage() {
                     type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    placeholder="Enter your email address"
+                    placeholder="Enter your email"
                     required
-                    className="w-full px-4 py-4 rounded-full border-2 border-[#EAE7DC] focus:border-[#6B9080] focus:outline-none text-[#2C3333] text-center"
+                    className="w-full px-4 py-3 rounded-full border-2 border-[#EAE7DC] focus:border-[#4A90A4] focus:outline-none text-[#2C3333] text-center text-sm"
                   />
                   <button
                     type="submit"
-                    className="w-full bg-[#6B9080] text-white py-4 rounded-full text-lg font-semibold shadow-lg hover:bg-[#5A7A6B] transition-all transform hover:scale-[1.02] flex items-center justify-center gap-2"
+                    className="w-full bg-[#4A90A4] text-white py-3 rounded-full font-semibold shadow-lg hover:bg-[#357080] transition-all"
                   >
-                    Claim Your Founding Member Spot
-                    <ArrowRightIcon />
+                    Join First 1,000
                   </button>
                 </form>
               ) : (
-                <div className="bg-[#6B9080]/10 rounded-2xl p-6 text-center">
-                  <div className="w-12 h-12 rounded-full bg-[#6B9080] flex items-center justify-center mx-auto mb-3">
-                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="bg-[#4A90A4]/10 rounded-xl p-4 text-center">
+                  <div className="w-10 h-10 rounded-full bg-[#4A90A4] flex items-center justify-center mx-auto mb-2">
+                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <h4 className="font-semibold text-[#2C3333] mb-1">You&apos;re on the list!</h4>
-                  <p className="text-sm text-[#5F6368]">We&apos;ll email you when it&apos;s time to set up your practice.</p>
+                  <p className="text-sm text-[#2C3333] font-medium">You&apos;re on the list!</p>
                 </div>
               )}
-
-              <p className="text-center text-sm text-[#5F6368] mt-4">
-                Start free today • Upgrade when ready • Cancel anytime
-              </p>
             </div>
+
+            {/* Practice Plan */}
+            <div className="bg-white rounded-2xl shadow-lg p-6 lg:p-8">
+              <div className="inline-block bg-[#EAE7DC] px-3 py-1 rounded-full text-xs font-medium text-[#5F6368] mb-4">
+                Practice
+              </div>
+              <div className="mb-6">
+                <span className="text-4xl lg:text-5xl font-bold text-[#2C3333]">£99</span>
+                <span className="text-[#5F6368]">/month</span>
+              </div>
+              <p className="text-sm text-[#5F6368] mb-6">For established practices and multi-practitioner clinics</p>
+
+              <p className="text-xs text-[#5F6368] mb-4">Everything in Professional, plus:</p>
+
+              <div className="space-y-3 mb-8 text-sm">
+                {[
+                  '👥 Up to 10 practitioners',
+                  '🏢 Team features & permissions',
+                  '📊 Practice-level analytics',
+                  '🎨 Custom branding & white-label',
+                  '🔗 Embeddable booking widget',
+                  '💼 Priority support (<2hr response)',
+                  '🏥 FHIR-compatible data export',
+                  '💳 Multi-practitioner payment splits',
+                  '📈 Enhanced SANA Index & "Top Practice" badge'
+                ].map((feature, i) => (
+                  <div key={i} className="flex items-center gap-2">
+                    <span>{feature.split(' ')[0]}</span>
+                    <span className="text-[#2C3333]">{feature.split(' ').slice(1).join(' ')}</span>
+                  </div>
+                ))}
+              </div>
+
+              <button className="w-full border-2 border-[#2C3333] text-[#2C3333] py-3 rounded-full font-semibold hover:bg-[#2C3333] hover:text-white transition-all">
+                Start Free Trial
+              </button>
+            </div>
+          </div>
+
+          {/* Trust Signals */}
+          <div className="flex flex-wrap items-center justify-center gap-6 mt-10 text-white/80 text-sm">
+            <div className="flex items-center gap-2">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+              </svg>
+              Secure payments
+            </div>
+            <div className="flex items-center gap-2">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+              GDPR compliant
+            </div>
+            <div className="flex items-center gap-2">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+              </svg>
+              NHS integration ready
+            </div>
+            <div className="flex items-center gap-2">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+              Cancel anytime
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Social Proof Section */}
+      <section className="py-12 md:py-20 px-4 bg-[#FAF9F6]">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#2C3333] mb-4">
+              Join the practitioners building evidence for CAM
+            </h2>
+            <p className="text-lg text-[#5F6368]">
+              <span className="font-bold text-[#6B9080]">487 practitioners</span> have already claimed their founding member pricing
+            </p>
+          </div>
+
+          {/* Impact Stats */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            <div className="bg-white rounded-2xl p-6 text-center shadow-sm border border-[#EAE7DC]">
+              <div className="text-3xl lg:text-4xl font-bold text-[#6B9080] mb-2">8 hrs</div>
+              <div className="text-sm text-[#5F6368]">saved weekly on admin with AI</div>
+            </div>
+            <div className="bg-white rounded-2xl p-6 text-center shadow-sm border border-[#EAE7DC]">
+              <div className="text-3xl lg:text-4xl font-bold text-[#4A90A4] mb-2">73%</div>
+              <div className="text-sm text-[#5F6368]">reduction in no-shows</div>
+            </div>
+            <div className="bg-white rounded-2xl p-6 text-center shadow-sm border border-[#EAE7DC]">
+              <div className="text-3xl lg:text-4xl font-bold text-[#6B9080] mb-2">2.3x</div>
+              <div className="text-sm text-[#5F6368]">higher retention with PROMs</div>
+            </div>
+            <div className="bg-white rounded-2xl p-6 text-center shadow-sm border border-[#EAE7DC]">
+              <div className="text-3xl lg:text-4xl font-bold text-[#4A90A4] mb-2">40%</div>
+              <div className="text-sm text-[#5F6368]">more inquiries via SANA Index</div>
+            </div>
+          </div>
+
+          {/* Testimonials */}
+          <div className="grid md:grid-cols-2 gap-6 mb-12">
+            <blockquote className="bg-white rounded-2xl p-6 shadow-sm border border-[#EAE7DC]">
+              <p className="text-[#2C3333] italic mb-4">
+                &ldquo;I was spending 3 hours every evening on notes. Now it&apos;s done before the client leaves. SANA gave me my life back.&rdquo;
+              </p>
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#6B9080] to-[#4A90A4] flex items-center justify-center text-white font-bold text-sm">
+                  SM
+                </div>
+                <div>
+                  <div className="font-semibold text-[#2C3333] text-sm">Dr. Sarah Mitchell</div>
+                  <div className="text-xs text-[#5F6368]">Herbalist, London</div>
+                </div>
+              </div>
+            </blockquote>
+            <blockquote className="bg-white rounded-2xl p-6 shadow-sm border border-[#EAE7DC]">
+              <p className="text-[#2C3333] italic mb-4">
+                &ldquo;The SANA Index helped me stand out. I went from 2 new clients a month to 8. The evidence tracking sells itself.&rdquo;
+              </p>
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#6B9080] to-[#4A90A4] flex items-center justify-center text-white font-bold text-sm">
+                  JC
+                </div>
+                <div>
+                  <div className="font-semibold text-[#2C3333] text-sm">James Chen</div>
+                  <div className="text-xs text-[#5F6368]">Acupuncturist, Manchester</div>
+                </div>
+              </div>
+            </blockquote>
+          </div>
+
+          {/* Modalities */}
+          <div className="text-center">
+            <p className="text-sm text-[#5F6368] mb-4">Trusted by practitioners in:</p>
+            <div className="flex flex-wrap justify-center gap-3">
+              {['Herbal Medicine', 'Acupuncture & TCM', 'Naturopathy', 'Homeopathy', 'Nutritional Therapy', 'Osteopathy', 'Ayurveda', 'Energy Healing'].map((modality, i) => (
+                <span key={i} className="bg-[#EAE7DC] text-[#5F6368] px-3 py-1 rounded-full text-xs">
+                  {modality}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-12 md:py-20 px-4 bg-white">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-2xl lg:text-3xl font-bold text-[#2C3333] mb-8 text-center">
+            Frequently asked questions
+          </h2>
+
+          <div className="space-y-4">
+            {[
+              {
+                q: 'What happens when 1,000 founding members are claimed?',
+                a: 'Professional tier increases to £49/month for new sign-ups. Your £19/month rate is locked in for life if you claim it now.'
+              },
+              {
+                q: 'Can I upgrade or downgrade anytime?',
+                a: 'Yes, change plans anytime. Upgrades are immediate, downgrades take effect at next billing cycle.'
+              },
+              {
+                q: 'Do I need to enter credit card details for Free plan?',
+                a: 'No, start completely free. Only add payment when you upgrade.'
+              },
+              {
+                q: 'What happens to my data if I cancel?',
+                a: 'Export all your data anytime. We keep it for 90 days after cancellation, then permanently delete per GDPR.'
+              },
+              {
+                q: 'Is SANA suitable for my modality?',
+                a: 'Yes! SANA supports all CAM modalities. Our AI Clinical Assistant knows 8+ traditions, and our evidence base covers herbs, supplements, bodywork, energy medicine, and mind-body practices.'
+              },
+              {
+                q: 'How does the SANA Index work?',
+                a: 'It\'s an algorithmic credibility score: 20% credentials, 20% treatment volume, 40% client outcomes, 10% profile completeness, 10% client satisfaction. Higher scores mean better marketplace visibility.'
+              }
+            ].map((faq, i) => (
+              <div key={i} className="bg-[#FAF9F6] rounded-xl p-5 border border-[#EAE7DC]">
+                <h3 className="font-semibold text-[#2C3333] mb-2">{faq.q}</h3>
+                <p className="text-sm text-[#5F6368]">{faq.a}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
