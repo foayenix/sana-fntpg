@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: "For Practitioners - Build Your Evidence-Based Practice",
-  description: "Join SANA as a CAM practitioner. Access AI Clinical Assistant for SOAP notes, outcome tracking, SANA Index credibility scoring, and connect with wellness seekers. Free Forever plan available. Professional tier £19/month for founding members.",
+  description: "Join SANA as a CAM practitioner. Access AI Clinical Assistant for SOAP notes, outcome tracking, SANA Index credibility scoring, and connect with wellness seekers. Free Forever plan available. Professional tier £29/month for founding members.",
   keywords: [
     "CAM practitioner platform",
     "complementary medicine software",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "SANA for Practitioners | Build Your Evidence-Based Practice",
-    description: "AI Clinical Assistant, outcome tracking, and the SANA Index. Join 1,000+ verified CAM practitioners. Free Forever plan or £19/month Professional tier.",
+    description: "AI Clinical Assistant, outcome tracking, and the SANA Index. Join 1,000+ verified CAM practitioners. Free Forever plan or £29/month Professional tier.",
     url: "https://sana.health/practitioner",
     type: "website",
   },
@@ -104,7 +104,7 @@ const faqSchema = {
       "name": "How much does SANA cost for practitioners?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "SANA offers three tiers: Free Forever (£0) with core features, Professional (£19/month for founding members, normally £49) with full AI Clinical Assistant and outcome tracking, and Practice (£99/month) for multi-practitioner clinics with team management and white-label options."
+        "text": "SANA offers three tiers: Free Forever (£0) with core features, Professional (£29/month for founding members, normally £69) with full AI Clinical Assistant and outcome tracking, and Practice (£149/month + £20 per additional practitioner) for multi-practitioner clinics with team management and white-label options."
       }
     },
     {
@@ -140,18 +140,19 @@ const productSchema = {
     {
       "@type": "Offer",
       "name": "Professional - Founding Member",
-      "price": "19",
+      "price": "29",
       "priceCurrency": "GBP",
       "availability": "https://schema.org/LimitedAvailability",
       "priceValidUntil": "2025-12-31",
-      "description": "Limited to first 1,000 practitioners"
+      "description": "Limited to first 1,000 practitioners. Normally £69/month."
     },
     {
       "@type": "Offer",
       "name": "Practice",
-      "price": "99",
+      "price": "149",
       "priceCurrency": "GBP",
-      "availability": "https://schema.org/InStock"
+      "availability": "https://schema.org/InStock",
+      "description": "Plus £20/month per additional practitioner"
     }
   ],
   "review": {

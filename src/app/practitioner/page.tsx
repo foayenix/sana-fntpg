@@ -492,13 +492,14 @@ export default function PractitionerPage() {
                   Professional
                 </span>
                 <div className="mt-4 flex items-baseline">
-                  <span className="text-5xl font-bold text-gray-900 tracking-tight">£19</span>
+                  <span className="text-5xl font-bold text-gray-900 tracking-tight">£29</span>
                   <span className="ml-1 text-lg text-gray-600">/month</span>
                 </div>
                 <div className="mt-2 text-sm text-gray-600">
-                  <span className="line-through">£49</span>
+                  <span className="line-through">£69</span>
                   <span className="ml-2 text-blue-600 font-medium">Founding Member Pricing</span>
                 </div>
+                <p className="mt-1 text-xs text-emerald-600 font-medium">First 1,000 users only — locks in forever</p>
 
                 {/* Progress Bar */}
                 <div className="mt-4 bg-blue-100 rounded-xl p-4">
@@ -558,10 +559,13 @@ export default function PractitionerPage() {
                 Practice
               </span>
               <div className="mt-4 flex items-baseline">
-                <span className="text-5xl font-bold text-gray-900 tracking-tight">£99</span>
+                <span className="text-5xl font-bold text-gray-900 tracking-tight">£149</span>
                 <span className="ml-1 text-lg text-gray-600">/month</span>
               </div>
-              <p className="mt-4 text-sm text-gray-600 leading-relaxed">
+              <p className="mt-2 text-sm text-purple-600 font-medium">
+                + £20/month per additional practitioner
+              </p>
+              <p className="mt-2 text-sm text-gray-600 leading-relaxed">
                 For established practices and multi-practitioner clinics
               </p>
 

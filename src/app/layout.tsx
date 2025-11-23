@@ -288,7 +288,7 @@ const homepageFaqSchema = {
       "name": "Is SANA free?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "For wellness seekers, SANA is completely free—access the practitioner directory, Product Scanner, and health tracking at no cost. For practitioners, we offer a Free Forever plan with core features, plus Professional (£19/month) and Practice (£99/month) tiers for those wanting advanced tools."
+        "text": "For wellness seekers, SANA is completely free—access the practitioner directory, Product Scanner, and health tracking at no cost. For practitioners, we offer a Free Forever plan with core features, plus Professional (£29/month for founding members, normally £69) and Practice (£149/month + £20 per additional practitioner) tiers for those wanting advanced tools."
       }
     },
     {
