@@ -453,8 +453,8 @@ export default function PractitionerPage() {
                 {[
                   { icon: Brain, gradient: 'from-violet-500 to-indigo-600', title: 'AI Clinical Assistant (Unlimited)', desc: 'Voice-to-SOAP notes, 8+ traditions' },
                   { icon: ShieldCheck, gradient: 'from-emerald-500 to-teal-600', title: 'SANA Verified Badge', desc: '40+ UK registry verification' },
-                  { icon: ScanLine, gradient: 'from-blue-500 to-cyan-600', title: 'Product Scanner (5/month)', desc: 'Herb-drug interaction checks' },
-                  { icon: Users, gradient: 'from-slate-500 to-gray-600', title: 'Client Records (25 clients)', desc: 'GDPR-compliant storage' },
+                  { icon: ScanLine, gradient: 'from-blue-500 to-cyan-600', title: 'Product Scanner (limited)', desc: 'Herb-drug interaction checks' },
+                  { icon: Users, gradient: 'from-slate-500 to-gray-600', title: 'Client Records (limited)', desc: 'GDPR-compliant storage' },
                   { icon: BarChart3, gradient: 'from-purple-500 to-pink-600', title: 'Basic Analytics', desc: 'Session tracking, revenue overview' },
                 ].map((feature, i) => (
                   <div key={i} className="flex items-start gap-3 group">
