@@ -34,3 +34,13 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Design Resources
+
+### Landing Page Inspirations
+- [Top 40 SaaS Landing Pages - Figma](YOUR_FIGMA_LINK_HERE)
+  - Collection of top SaaS landing page designs for inspiration and reference
+  - Use these patterns and layouts to upgrade the SANA landing page
+
+### Design Guidelines
+See [DESIGN.md](./DESIGN.md) for detailed design references and component patterns.

@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import Logo from '@/components/Logo';
 import {
   BadgeCheck,
   BarChart3,
@@ -104,12 +105,9 @@ export default function PractitionerPage() {
             <ArrowLeftIcon />
             <span className="text-sm font-medium hidden sm:inline">Back to Home</span>
           </Link>
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-[#6B9080] flex items-center justify-center">
-              <span className="text-white font-bold text-lg">S</span>
-            </div>
-            <span className="font-bold text-xl text-[#2C3333]">SANA</span>
-          </div>
+          <Link href="/" className="flex items-center gap-2">
+            <Logo compact={false} />
+          </Link>
           <div className="w-24"></div>
         </div>
       </nav>
