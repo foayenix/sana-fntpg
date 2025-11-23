@@ -272,8 +272,8 @@ export default function WellnessPage() {
             {/* Phone Mockup */}
             <div className="relative flex justify-center order-2 lg:order-1">
               <div className="absolute inset-0 bg-gradient-to-r from-[#4A90A4]/20 to-[#6B9080]/20 blur-3xl rounded-full"></div>
-              <div className="relative w-[300px] h-[600px] bg-[#1a1a1a] rounded-[3rem] p-3 shadow-2xl">
-                <div className="w-full h-full bg-white rounded-[2.5rem] overflow-hidden">
+              <div className="relative w-[260px] sm:w-[300px] h-[520px] sm:h-[600px] bg-[#1a1a1a] rounded-[2.5rem] sm:rounded-[3rem] p-2 sm:p-3 shadow-2xl">
+                <div className="w-full h-full bg-white rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden">
                   {/* Status Bar */}
                   <div className="bg-[#FAF9F6] px-6 pt-4 pb-2 flex justify-between items-center text-xs text-[#5F6368]">
                     <span>9:41</span>

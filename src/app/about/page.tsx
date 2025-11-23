@@ -1,30 +1,8 @@
-import { Metadata } from 'next';
+'use client';
+
+import { useState } from 'react';
 import Link from 'next/link';
 
-export const metadata: Metadata = {
-  title: "About SANA Technologies - The Operating System for Natural Healing",
-  description: "Learn about SANA Technologies, the health technology company building the infrastructure for evidence-based complementary and alternative medicine. Founded in the UK, SANA connects wellness seekers with verified CAM practitioners.",
-  keywords: [
-    "about SANA",
-    "SANA Technologies",
-    "natural healing platform",
-    "CAM technology company",
-    "complementary medicine",
-    "evidence-based wellness",
-    "UK health tech startup",
-    "wellness platform",
-    "practitioner verification"
-  ],
-  openGraph: {
-    title: "About SANA Technologies",
-    description: "Building the operating system for natural healing. Learn about our mission to make complementary medicine evidence-based and trustworthy.",
-    url: "https://sana.health/about",
-    type: "website",
-  },
-  alternates: {
-    canonical: "/about",
-  },
-};
 
 // AboutPage Schema
 const aboutSchema = {
@@ -47,6 +25,8 @@ const aboutSchema = {
 };
 
 export default function AboutPage() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
     <main className="min-h-screen bg-[#FAF9F6]">
       <script
@@ -58,42 +38,63 @@ export default function AboutPage() {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-xl border-b border-[#EAE7DC]">
         <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#6B9080] to-[#4A90A4] flex items-center justify-center">
-              <span className="text-white font-bold text-xl">S</span>
+            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-[#6B9080] to-[#4A90A4] flex items-center justify-center">
+              <span className="text-white font-bold text-lg sm:text-xl">S</span>
             </div>
-            <span className="font-bold text-xl text-[#2C3333]">SANA</span>
+            <span className="font-bold text-lg sm:text-xl text-[#2C3333]">SANA</span>
           </Link>
-          <div className="flex items-center gap-4">
-            <Link href="/practitioner" className="text-[#5F6368] hover:text-[#2C3333]">
+
+          {/* Desktop Nav */}
+          <div className="hidden md:flex items-center gap-6">
+            <Link href="/practitioner" className="text-[#5F6368] hover:text-[#2C3333] text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-[#4A90A4] focus:ring-offset-2 rounded-lg px-2 py-1">
               For Practitioners
             </Link>
-            <Link href="/wellness" className="text-[#5F6368] hover:text-[#2C3333]">
+            <Link href="/wellness" className="text-[#5F6368] hover:text-[#2C3333] text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-[#4A90A4] focus:ring-offset-2 rounded-lg px-2 py-1">
               For Wellness Seekers
             </Link>
           </div>
+
+          {/* Mobile menu button */}
+          <button
+            className="md:hidden p-3 min-w-[44px] min-h-[44px] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4A90A4] focus:ring-offset-2 flex items-center justify-center"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
         </div>
+
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden bg-white border-t border-gray-100 px-4 py-2">
+            <Link href="/practitioner" className="block text-gray-600 hover:text-gray-900 text-base font-medium py-3 min-h-[44px] flex items-center">For Practitioners</Link>
+            <Link href="/wellness" className="block text-gray-600 hover:text-gray-900 text-base font-medium py-3 min-h-[44px] flex items-center">For Wellness Seekers</Link>
+          </div>
+        )}
       </nav>
 
       {/* Hero */}
-      <section className="pt-32 pb-16 px-4">
+      <section className="pt-24 sm:pt-32 pb-12 sm:pb-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl lg:text-5xl font-bold text-[#2C3333] mb-6">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#2C3333] mb-4 sm:mb-6">
             About SANA Technologies
           </h1>
-          <p className="text-xl text-[#5F6368] mb-8">
+          <p className="text-lg sm:text-xl text-[#5F6368] mb-6 sm:mb-8">
             Building the operating system for natural healing
           </p>
         </div>
       </section>
 
       {/* Main Content */}
-      <article className="pb-24 px-4">
-        <div className="max-w-3xl mx-auto prose prose-lg">
+      <article className="pb-16 sm:pb-24 px-4">
+        <div className="max-w-3xl mx-auto prose prose-sm sm:prose-lg">
 
           {/* Mission Section */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-[#2C3333] mb-6">Our Mission</h2>
-            <div className="bg-white rounded-2xl p-8 shadow-sm border border-[#EAE7DC]">
+          <section className="mb-10 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#2C3333] mb-4 sm:mb-6">Our Mission</h2>
+            <div className="bg-white rounded-2xl p-5 sm:p-8 shadow-sm border border-[#EAE7DC]">
               <p className="text-[#5F6368] text-lg leading-relaxed mb-4">
                 SANA Technologies is on a mission to make complementary and alternative medicine (CAM) evidence-based, trustworthy, and accessible to everyone. We believe natural healing has immense value, but the industry has long suffered from a lack of transparency, verification, and outcome tracking.
               </p>
@@ -104,12 +105,12 @@ export default function AboutPage() {
           </section>
 
           {/* What We Do Section */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-[#2C3333] mb-6">What We Do</h2>
+          <section className="mb-10 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#2C3333] mb-4 sm:mb-6">What We Do</h2>
 
-            <div className="space-y-6">
-              <div className="bg-white rounded-2xl p-8 shadow-sm border border-[#EAE7DC]">
-                <h3 className="text-xl font-semibold text-[#2C3333] mb-3">For Wellness Seekers</h3>
+            <div className="space-y-4 sm:space-y-6">
+              <div className="bg-white rounded-2xl p-5 sm:p-8 shadow-sm border border-[#EAE7DC]">
+                <h3 className="text-lg sm:text-xl font-semibold text-[#2C3333] mb-3">For Wellness Seekers</h3>
                 <p className="text-[#5F6368] mb-4">
                   SANA helps people find verified complementary medicine practitioners they can trust. Our platform includes:
                 </p>
@@ -122,8 +123,8 @@ export default function AboutPage() {
                 </ul>
               </div>
 
-              <div className="bg-white rounded-2xl p-8 shadow-sm border border-[#EAE7DC]">
-                <h3 className="text-xl font-semibold text-[#2C3333] mb-3">For Practitioners</h3>
+              <div className="bg-white rounded-2xl p-5 sm:p-8 shadow-sm border border-[#EAE7DC]">
+                <h3 className="text-lg sm:text-xl font-semibold text-[#2C3333] mb-3">For Practitioners</h3>
                 <p className="text-[#5F6368] mb-4">
                   SANA provides evidence-based practice management tools that help CAM practitioners build credibility and grow their practice:
                 </p>
@@ -139,15 +140,15 @@ export default function AboutPage() {
           </section>
 
           {/* Modalities Section */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-[#2C3333] mb-6">Modalities We Support</h2>
-            <div className="bg-white rounded-2xl p-8 shadow-sm border border-[#EAE7DC]">
-              <p className="text-[#5F6368] mb-6">
+          <section className="mb-10 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#2C3333] mb-4 sm:mb-6">Modalities We Support</h2>
+            <div className="bg-white rounded-2xl p-5 sm:p-8 shadow-sm border border-[#EAE7DC]">
+              <p className="text-[#5F6368] mb-4 sm:mb-6">
                 SANA supports practitioners across the full spectrum of complementary and alternative medicine, including:
               </p>
-              <div className="grid md:grid-cols-3 gap-4">
+              <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
                 <div>
-                  <h4 className="font-semibold text-[#2C3333] mb-2">Herbal & Plant Medicine</h4>
+                  <h4 className="font-semibold text-[#2C3333] mb-2 text-sm sm:text-base">Herbal & Plant Medicine</h4>
                   <ul className="text-[#5F6368] text-sm space-y-1">
                     <li>• Western Herbal Medicine</li>
                     <li>• Traditional Chinese Medicine</li>
@@ -156,7 +157,7 @@ export default function AboutPage() {
                   </ul>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-[#2C3333] mb-2">Body-Based Therapies</h4>
+                  <h4 className="font-semibold text-[#2C3333] mb-2 text-sm sm:text-base">Body-Based Therapies</h4>
                   <ul className="text-[#5F6368] text-sm space-y-1">
                     <li>• Acupuncture</li>
                     <li>• Osteopathy</li>
@@ -166,7 +167,7 @@ export default function AboutPage() {
                   </ul>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-[#2C3333] mb-2">Holistic & Integrative</h4>
+                  <h4 className="font-semibold text-[#2C3333] mb-2 text-sm sm:text-base">Holistic & Integrative</h4>
                   <ul className="text-[#5F6368] text-sm space-y-1">
                     <li>• Naturopathy</li>
                     <li>• Homeopathy</li>
@@ -180,13 +181,13 @@ export default function AboutPage() {
           </section>
 
           {/* The SANA Index Section */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-[#2C3333] mb-6">The SANA Index</h2>
-            <div className="bg-white rounded-2xl p-8 shadow-sm border border-[#EAE7DC]">
-              <p className="text-[#5F6368] mb-6">
+          <section className="mb-10 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#2C3333] mb-4 sm:mb-6">The SANA Index</h2>
+            <div className="bg-white rounded-2xl p-5 sm:p-8 shadow-sm border border-[#EAE7DC]">
+              <p className="text-[#5F6368] mb-4 sm:mb-6 text-sm sm:text-base">
                 The SANA Index is our proprietary credibility scoring system that brings transparency to complementary medicine. Unlike reviews that can be gamed, the SANA Index is calculated from verifiable data:
               </p>
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-2 md:grid-cols-2 gap-3 sm:gap-6">
                 <div className="bg-[#FAF9F6] rounded-xl p-4">
                   <div className="text-2xl font-bold text-[#6B9080] mb-1">40%</div>
                   <div className="font-semibold text-[#2C3333]">Client Outcomes</div>
@@ -212,9 +213,9 @@ export default function AboutPage() {
           </section>
 
           {/* Privacy & Security Section */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-[#2C3333] mb-6">Privacy & Security</h2>
-            <div className="bg-white rounded-2xl p-8 shadow-sm border border-[#EAE7DC]">
+          <section className="mb-10 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#2C3333] mb-4 sm:mb-6">Privacy & Security</h2>
+            <div className="bg-white rounded-2xl p-5 sm:p-8 shadow-sm border border-[#EAE7DC]">
               <p className="text-[#5F6368] mb-4">
                 SANA is built with privacy at its core. We understand that health data is sensitive and treat it with the highest standards:
               </p>
@@ -230,16 +231,16 @@ export default function AboutPage() {
 
           {/* Contact Section */}
           <section>
-            <h2 className="text-3xl font-bold text-[#2C3333] mb-6">Get in Touch</h2>
-            <div className="bg-gradient-to-br from-[#6B9080] to-[#4A90A4] rounded-2xl p-8 text-white">
-              <p className="text-white/90 mb-6">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#2C3333] mb-4 sm:mb-6">Get in Touch</h2>
+            <div className="bg-gradient-to-br from-[#6B9080] to-[#4A90A4] rounded-2xl p-5 sm:p-8 text-white">
+              <p className="text-white/90 mb-4 sm:mb-6 text-sm sm:text-base">
                 Whether you&apos;re a practitioner looking to join SANA, a wellness seeker with questions, or a potential partner, we&apos;d love to hear from you.
               </p>
-              <div className="flex flex-wrap gap-4">
-                <Link href="/practitioner" className="bg-white text-[#2C3333] px-6 py-3 rounded-full font-semibold hover:bg-white/90 transition-all">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                <Link href="/practitioner" className="bg-white text-[#2C3333] px-6 py-3 rounded-full font-semibold hover:bg-white/90 transition-all text-center min-h-[44px] flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#4A90A4]">
                   Join as Practitioner
                 </Link>
-                <Link href="/wellness" className="border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white/10 transition-all">
+                <Link href="/wellness" className="border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white/10 transition-all text-center min-h-[44px] flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#4A90A4]">
                   Get the App
                 </Link>
               </div>
@@ -251,7 +252,7 @@ export default function AboutPage() {
 
       {/* Footer */}
       <footer className="py-8 px-4 bg-[#2C3333] text-white/60 text-center text-sm">
-        <p>© 2024 SANA Technologies Ltd. Building the infrastructure for natural healing.</p>
+        <p>© {new Date().getFullYear()} SANA Technologies Ltd. Building the infrastructure for natural healing.</p>
       </footer>
     </main>
   );

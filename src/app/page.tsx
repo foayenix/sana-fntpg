@@ -46,7 +46,7 @@ export default function Home() {
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4A90A4] focus:ring-offset-2"
+            className="md:hidden p-3 min-w-[44px] min-h-[44px] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4A90A4] focus:ring-offset-2 flex items-center justify-center"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
           >
@@ -58,10 +58,10 @@ export default function Home() {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden bg-white border-t border-gray-100 px-4 py-4 space-y-3">
-            <Link href="/about" className="block text-gray-600 hover:text-gray-900 text-sm font-medium py-2">About</Link>
-            <Link href="/wellness" className="block text-gray-600 hover:text-gray-900 text-sm font-medium py-2">For Clients</Link>
-            <Link href="/practitioner" className="block text-gray-600 hover:text-gray-900 text-sm font-medium py-2">For Practitioners</Link>
+          <div className="md:hidden bg-white border-t border-gray-100 px-4 py-2">
+            <Link href="/about" className="block text-gray-600 hover:text-gray-900 text-base font-medium py-3 min-h-[44px] flex items-center">About</Link>
+            <Link href="/wellness" className="block text-gray-600 hover:text-gray-900 text-base font-medium py-3 min-h-[44px] flex items-center">For Clients</Link>
+            <Link href="/practitioner" className="block text-gray-600 hover:text-gray-900 text-base font-medium py-3 min-h-[44px] flex items-center">For Practitioners</Link>
           </div>
         )}
       </nav>
