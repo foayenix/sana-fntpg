@@ -122,7 +122,7 @@ const structuredData = {
       "contactPoint": {
         "@type": "ContactPoint",
         "contactType": "customer support",
-        "email": "support@sana.health",
+        "email": "hello@mysana.io",
         "availableLanguage": ["English"]
       },
       "areaServed": {
