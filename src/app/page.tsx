@@ -14,7 +14,6 @@ import {
   Star,
   Quote,
   BadgeCheck,
-  Users,
 } from 'lucide-react';
 
 export default function Home() {
@@ -47,8 +46,9 @@ export default function Home() {
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden p-2"
+            className="md:hidden p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4A90A4] focus:ring-offset-2"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
@@ -100,7 +100,7 @@ export default function Home() {
           {/* Path Selector Cards */}
           <div className="grid sm:grid-cols-2 gap-4 sm:gap-6 max-w-3xl mx-auto mb-12">
             {/* Client Path */}
-            <Link href="/wellness" className="group relative bg-white rounded-3xl p-6 sm:p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 text-left overflow-hidden">
+            <Link href="/wellness" className="group relative bg-white rounded-3xl p-6 sm:p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 text-left overflow-hidden focus:outline-none focus:ring-2 focus:ring-[#4A90A4] focus:ring-offset-2">
               <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-rose-100 to-pink-100 rounded-full -translate-y-1/2 translate-x-1/2 opacity-50" />
               <div className="relative">
                 <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-rose-500 to-pink-600 flex items-center justify-center mb-5 shadow-lg group-hover:scale-110 transition-transform duration-300">
@@ -116,7 +116,7 @@ export default function Home() {
             </Link>
 
             {/* Practitioner Path */}
-            <Link href="/practitioner" className="group relative bg-white rounded-3xl p-6 sm:p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 text-left overflow-hidden">
+            <Link href="/practitioner" className="group relative bg-white rounded-3xl p-6 sm:p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 text-left overflow-hidden focus:outline-none focus:ring-2 focus:ring-[#4A90A4] focus:ring-offset-2">
               <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-teal-100 to-emerald-100 rounded-full -translate-y-1/2 translate-x-1/2 opacity-50" />
               <div className="relative">
                 <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-teal-500 to-emerald-600 flex items-center justify-center mb-5 shadow-lg group-hover:scale-110 transition-transform duration-300">
@@ -235,7 +235,7 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-6 md:gap-8">
             {/* Testimonial 1 - Herbalist */}
             <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
-              <div className="flex items-center gap-1 mb-4">
+              <div className="flex items-center gap-1 mb-4" role="img" aria-label="5 out of 5 stars">
                 {[1,2,3,4,5].map(i => <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />)}
               </div>
               <Quote className="w-8 h-8 text-teal-200 mb-4" />
@@ -260,7 +260,7 @@ export default function Home() {
 
             {/* Testimonial 2 - Acupuncturist */}
             <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
-              <div className="flex items-center gap-1 mb-4">
+              <div className="flex items-center gap-1 mb-4" role="img" aria-label="5 out of 5 stars">
                 {[1,2,3,4,5].map(i => <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />)}
               </div>
               <Quote className="w-8 h-8 text-teal-200 mb-4" />
@@ -285,7 +285,7 @@ export default function Home() {
 
             {/* Testimonial 3 - Naturopath */}
             <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
-              <div className="flex items-center gap-1 mb-4">
+              <div className="flex items-center gap-1 mb-4" role="img" aria-label="5 out of 5 stars">
                 {[1,2,3,4,5].map(i => <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />)}
               </div>
               <Quote className="w-8 h-8 text-teal-200 mb-4" />
@@ -370,7 +370,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
             {/* Client Testimonial 1 */}
             <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-100">
-              <div className="flex items-center gap-1 mb-4">
+              <div className="flex items-center gap-1 mb-4" role="img" aria-label="5 out of 5 stars">
                 {[1,2,3,4,5].map(i => <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />)}
               </div>
               <p className="text-gray-700 mb-6 leading-relaxed">
@@ -394,7 +394,7 @@ export default function Home() {
 
             {/* Client Testimonial 2 */}
             <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-100">
-              <div className="flex items-center gap-1 mb-4">
+              <div className="flex items-center gap-1 mb-4" role="img" aria-label="5 out of 5 stars">
                 {[1,2,3,4,5].map(i => <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />)}
               </div>
               <p className="text-gray-700 mb-6 leading-relaxed">
@@ -434,11 +434,11 @@ export default function Home() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/wellness" className="inline-flex items-center justify-center gap-2 bg-white text-[#4A90A4] px-8 py-4 rounded-full text-lg font-semibold shadow-xl hover:shadow-2xl hover:scale-105 transition-all">
+            <Link href="/wellness" className="inline-flex items-center justify-center gap-2 bg-white text-[#4A90A4] px-8 py-4 rounded-full text-lg font-semibold shadow-xl hover:shadow-2xl hover:scale-105 transition-all focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#4A90A4]">
               <Heart className="w-5 h-5" />
               Find Wellness
             </Link>
-            <Link href="/practitioner" className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm text-white border-2 border-white/30 px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/20 transition-all">
+            <Link href="/practitioner" className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm text-white border-2 border-white/30 px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/20 transition-all focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#4A90A4]">
               <Stethoscope className="w-5 h-5" />
               I&apos;m a Practitioner
             </Link>
@@ -495,7 +495,7 @@ export default function Home() {
           </div>
 
           <div className="border-t border-slate-800 pt-8 text-center text-slate-500 text-sm">
-            © 2024 SANA Technologies Ltd. All rights reserved.
+            © {new Date().getFullYear()} SANA Technologies Ltd. All rights reserved.
           </div>
         </div>
       </footer>

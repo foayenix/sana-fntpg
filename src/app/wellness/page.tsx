@@ -183,13 +183,13 @@ export default function WellnessPage() {
             </div>
           </div>
 
-          {/* Stats Banner */}
-          <div className="mt-10 md:mt-16 bg-gradient-to-r from-slate-900 to-slate-800 rounded-2xl p-6 md:p-10 text-center max-w-3xl mx-auto shadow-xl">
+          {/* Solution Banner */}
+          <div className="mt-10 md:mt-16 bg-gradient-to-r from-[#4A90A4] to-[#6B9080] rounded-2xl p-6 md:p-10 text-center max-w-3xl mx-auto shadow-xl">
             <p className="text-2xl sm:text-3xl md:text-4xl text-white font-bold mb-3 tracking-tight">
-              £8.7 billion spent on CAM annually
+              SANA changes everything.
             </p>
-            <p className="text-slate-300 text-sm sm:text-base md:text-lg px-2">
-              With no safety oversight. No interaction checking. No way to find qualified practitioners.
+            <p className="text-white/80 text-sm sm:text-base md:text-lg px-2">
+              Verified practitioners. Personalized safety checks. Evidence-based guidance. Finally.
             </p>
           </div>
         </div>
@@ -920,7 +920,7 @@ export default function WellnessPage() {
 
       {/* Footer */}
       <footer className="py-8 px-4 bg-[#2C3333] text-white/60 text-center text-sm">
-        <p>© 2024 SANA Technologies Ltd. Building the infrastructure for natural healing.</p>
+        <p>© {new Date().getFullYear()} SANA Technologies Ltd. Building the infrastructure for natural healing.</p>
       </footer>
 
       {/* Mobile Sticky CTA */}
