@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import {
   Smartphone,
   Search,
@@ -82,8 +83,19 @@ export default function WellnessPage() {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-24 md:pt-32 pb-16 md:pb-20 px-4" style={{ background: 'linear-gradient(180deg, #4A90A4 0%, #6AACBE 50%, #FAF9F6 100%)' }}>
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="relative pt-24 md:pt-32 pb-16 md:pb-20 px-4 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1920&q=80"
+            alt="Wellness and meditation"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#4A90A4]/90 via-[#6AACBE]/85 to-[#FAF9F6]" />
+        </div>
+        <div className="relative z-10 max-w-4xl mx-auto text-center">
           <div className="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
             <span className="text-white text-sm font-medium">For Your Wellness Journey</span>
           </div>
@@ -770,6 +782,70 @@ export default function WellnessPage() {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SANA in Everyday Life */}
+      <section className="py-12 md:py-20 px-4 bg-[#FAF9F6]">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#2C3333] mb-4">
+              SANA in everyday life
+            </h2>
+            <p className="text-lg text-[#5F6368]">
+              Your wellness companion, wherever you are
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {/* Card 1 */}
+            <div className="relative group rounded-2xl overflow-hidden shadow-lg">
+              <Image
+                src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=80"
+                alt="Person checking supplements with phone"
+                width={600}
+                height={400}
+                className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                <h3 className="text-white font-semibold text-lg">Shop with confidence</h3>
+                <p className="text-white/80 text-sm">Scan any supplement for personalised safety checks</p>
+              </div>
+            </div>
+
+            {/* Card 2 */}
+            <div className="relative group rounded-2xl overflow-hidden shadow-lg">
+              <Image
+                src="https://images.unsplash.com/photo-1552693673-1bf958298935?w=600&q=80"
+                alt="Morning wellness routine"
+                width={600}
+                height={400}
+                className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                <h3 className="text-white font-semibold text-lg">Track your progress</h3>
+                <p className="text-white/80 text-sm">See your wellness journey with beautiful insights</p>
+              </div>
+            </div>
+
+            {/* Card 3 */}
+            <div className="relative group rounded-2xl overflow-hidden shadow-lg">
+              <Image
+                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&q=80"
+                alt="Video consultation with practitioner"
+                width={600}
+                height={400}
+                className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                <h3 className="text-white font-semibold text-lg">Connect with experts</h3>
+                <p className="text-white/80 text-sm">Book verified practitioners in seconds</p>
+              </div>
             </div>
           </div>
         </div>

@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-
+import Image from 'next/image';
 
 // AboutPage Schema
 const aboutSchema = {
@@ -76,8 +76,19 @@ export default function AboutPage() {
       </nav>
 
       {/* Hero */}
-      <section className="pt-24 sm:pt-32 pb-12 sm:pb-16 px-4">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="relative pt-24 sm:pt-32 pb-12 sm:pb-16 px-4 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=80"
+            alt="Modern wellness workspace"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#FAF9F6]/95 via-[#FAF9F6]/90 to-[#FAF9F6]" />
+        </div>
+        <div className="relative z-10 max-w-4xl mx-auto text-center">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#2C3333] mb-4 sm:mb-6">
             About SANA Technologies
           </h1>
@@ -95,6 +106,24 @@ export default function AboutPage() {
           <section className="mb-10 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl font-bold text-[#2C3333] mb-4 sm:mb-6">Our Mission</h2>
             <div className="bg-white rounded-2xl p-5 sm:p-8 shadow-sm border border-[#EAE7DC]">
+              <div className="grid md:grid-cols-2 gap-6 mb-6">
+                <div className="relative rounded-xl overflow-hidden h-48">
+                  <Image
+                    src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=600&q=80"
+                    alt="Natural medicine and wellness"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="relative rounded-xl overflow-hidden h-48">
+                  <Image
+                    src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=600&q=80"
+                    alt="Healthcare technology"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
               <p className="text-[#5F6368] text-lg leading-relaxed mb-4">
                 SANA Technologies is on a mission to make complementary and alternative medicine (CAM) evidence-based, trustworthy, and accessible to everyone. We believe natural healing has immense value, but the industry has long suffered from a lack of transparency, verification, and outcome tracking.
               </p>

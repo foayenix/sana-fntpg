@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import {
   BadgeCheck,
   BarChart3,
@@ -114,8 +115,19 @@ export default function PractitionerPage() {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-20 md:pt-32 pb-12 md:pb-20 px-4" style={{ background: 'linear-gradient(180deg, #6B9080 0%, #8FB3A3 50%, #FAF9F6 100%)' }}>
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="relative pt-20 md:pt-32 pb-12 md:pb-20 px-4 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1920&q=80"
+            alt="Practitioner consultation"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#6B9080]/90 via-[#8FB3A3]/85 to-[#FAF9F6]" />
+        </div>
+        <div className="relative z-10 max-w-4xl mx-auto text-center">
           <div className="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-4 md:mb-6">
             <span className="text-white text-sm font-medium">For CAM Practitioners</span>
           </div>
@@ -233,7 +245,7 @@ export default function PractitionerPage() {
             CAM doesn&apos;t need fixing.<br />It needs infrastructure.
           </h2>
           <p className="text-xl text-white/80 mb-8">
-            The gap isn&apos;t medical—it&apos;s technological. Complementary medicine works. Millions use it. Billions are spent. But there&apos;s no connected system.
+            The gap isn&apos;t medical—it&apos;s technological. Complementary medicine works. Millions use it. But there&apos;s no connected system.
           </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
@@ -254,6 +266,61 @@ export default function PractitionerPage() {
           <p className="text-white/60 mt-8 text-lg">
             SANA is building the rails that natural healing runs on.
           </p>
+        </div>
+      </section>
+
+      {/* Platform Preview Section */}
+      <section className="py-12 md:py-20 px-4 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Platform Mockup */}
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-[#6B9080]/20 to-[#4A90A4]/20 blur-3xl rounded-full"></div>
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-gray-200">
+                <Image
+                  src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&q=80"
+                  alt="SANA platform dashboard preview"
+                  width={800}
+                  height={500}
+                  className="w-full h-auto"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+              </div>
+            </div>
+
+            {/* Content */}
+            <div>
+              <div className="inline-block bg-[#6B9080]/10 text-[#6B9080] px-4 py-1 rounded-full text-sm font-medium mb-4">
+                PLATFORM PREVIEW
+              </div>
+              <h2 className="text-3xl lg:text-4xl font-bold text-[#2C3333] mb-6">
+                Built for how you actually work
+              </h2>
+              <p className="text-lg text-[#5F6368] mb-6">
+                SANA&apos;s interface is designed by practitioners, for practitioners. Clean, intuitive, and focused on what matters—your clients.
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-[#6B9080]/10 flex items-center justify-center">
+                    <CheckCircle2 className="w-5 h-5 text-[#6B9080]" />
+                  </div>
+                  <span className="text-[#2C3333]">AI-generated SOAP notes in seconds</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-[#6B9080]/10 flex items-center justify-center">
+                    <CheckCircle2 className="w-5 h-5 text-[#6B9080]" />
+                  </div>
+                  <span className="text-[#2C3333]">Client records at your fingertips</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-[#6B9080]/10 flex items-center justify-center">
+                    <CheckCircle2 className="w-5 h-5 text-[#6B9080]" />
+                  </div>
+                  <span className="text-[#2C3333]">Seamless booking and payments</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -650,8 +717,13 @@ export default function PractitionerPage() {
                 &ldquo;I was spending 3 hours every evening on notes. Now it&apos;s done before the client leaves. SANA gave me my life back.&rdquo;
               </p>
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#6B9080] to-[#4A90A4] flex items-center justify-center text-white font-bold text-sm">
-                  SM
+                <div className="relative w-12 h-12 rounded-full overflow-hidden shadow-md">
+                  <Image
+                    src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=200&q=80"
+                    alt="Dr. Sarah Mitchell"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
                 <div>
                   <div className="font-semibold text-[#2C3333] text-sm">Dr. Sarah Mitchell</div>
@@ -664,8 +736,13 @@ export default function PractitionerPage() {
                 &ldquo;The SANA Index helped me stand out. I went from 2 new clients a month to 8. The evidence tracking sells itself.&rdquo;
               </p>
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#6B9080] to-[#4A90A4] flex items-center justify-center text-white font-bold text-sm">
-                  JC
+                <div className="relative w-12 h-12 rounded-full overflow-hidden shadow-md">
+                  <Image
+                    src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=200&q=80"
+                    alt="James Chen"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
                 <div>
                   <div className="font-semibold text-[#2C3333] text-sm">James Chen</div>
