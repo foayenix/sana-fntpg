@@ -223,15 +223,6 @@ export default function PractitionerPage() {
             </div>
           </div>
 
-          {/* Stats Banner */}
-          <div className="mt-16 bg-gradient-to-r from-slate-900 to-slate-800 rounded-2xl p-8 md:p-10 text-center shadow-xl">
-            <p className="text-3xl md:text-4xl text-white font-bold mb-3 tracking-tight">
-              £8.7 billion spent on CAM annually
-            </p>
-            <p className="text-slate-300 text-lg">
-              With ZERO data capture. No evidence infrastructure. No verification. No connected ecosystem.
-            </p>
-          </div>
         </div>
       </section>
 
