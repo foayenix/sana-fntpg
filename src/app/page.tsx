@@ -2,17 +2,19 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import {
   Heart,
   Stethoscope,
   Shield,
   BarChart3,
-  Users,
   Sparkles,
   ArrowRight,
   CheckCircle2,
   Star,
   Quote,
+  BadgeCheck,
+  Users,
 } from 'lucide-react';
 
 export default function Home() {
@@ -64,9 +66,21 @@ export default function Home() {
         )}
       </nav>
 
-      {/* Hero Section with Path Selector */}
-      <section className="pt-28 sm:pt-32 pb-16 md:pb-24 px-4" style={{ background: 'linear-gradient(180deg, #4A90A4 0%, #5BA3B5 40%, #FAF9F6 100%)' }}>
-        <div className="max-w-5xl mx-auto text-center">
+      {/* Hero Section with Background Image */}
+      <section className="relative pt-28 sm:pt-32 pb-16 md:pb-24 px-4 overflow-hidden">
+        {/* Background Image with Overlay */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=1920&q=80"
+            alt="Wellness consultation"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#4A90A4]/90 via-[#5BA3B5]/85 to-[#FAF9F6]" />
+        </div>
+
+        <div className="relative z-10 max-w-5xl mx-auto text-center">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full mb-8">
             <Sparkles className="w-4 h-4 text-white" />
@@ -74,12 +88,12 @@ export default function Home() {
           </div>
 
           {/* Headline */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight tracking-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight tracking-tight drop-shadow-lg">
             Natural health,<br />finally navigable.
           </h1>
 
           {/* Subheadline */}
-          <p className="text-lg sm:text-xl text-white/90 mb-12 max-w-2xl mx-auto leading-relaxed px-4">
+          <p className="text-lg sm:text-xl text-white/95 mb-12 max-w-2xl mx-auto leading-relaxed px-4 drop-shadow-md">
             SANA connects wellness seekers with verified practitioners, powered by evidence and AI. Choose your path below.
           </p>
 
@@ -119,58 +133,85 @@ export default function Home() {
           </div>
 
           {/* Trust indicators */}
-          <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-white/80 text-sm">
+          <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-white/90 text-sm">
             <div className="flex items-center gap-2">
-              <CheckCircle2 className="w-5 h-5 text-white/90" />
+              <CheckCircle2 className="w-5 h-5" />
               <span>500+ verified practitioners</span>
             </div>
             <div className="flex items-center gap-2">
-              <CheckCircle2 className="w-5 h-5 text-white/90" />
+              <CheckCircle2 className="w-5 h-5" />
               <span>50,000+ users</span>
             </div>
             <div className="flex items-center gap-2">
-              <CheckCircle2 className="w-5 h-5 text-white/90" />
+              <CheckCircle2 className="w-5 h-5" />
               <span>4.8★ app rating</span>
             </div>
           </div>
         </div>
       </section>
 
-      {/* What is SANA - Brief */}
+      {/* What is SANA - With Human Imagery */}
       <section className="py-16 md:py-24 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 tracking-tight mb-4">
-              The infrastructure natural health deserves
+              Built for practitioners, by practitioners
             </h2>
             <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
               SANA brings verification, evidence, and trust to complementary medicine—for the first time ever.
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid sm:grid-cols-3 gap-8 md:gap-10">
             {/* Verification */}
-            <div className="text-center p-6">
-              <div className="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center mb-5 shadow-lg">
-                <Shield className="w-8 h-8 text-white" />
+            <div className="text-center group">
+              <div className="relative w-28 h-28 mx-auto mb-6 rounded-full overflow-hidden shadow-xl group-hover:scale-105 transition-transform duration-300">
+                <Image
+                  src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=400&q=80"
+                  alt="Verified practitioner with credentials"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-emerald-600/40 to-transparent" />
+                <div className="absolute bottom-2 right-2 w-8 h-8 rounded-full bg-emerald-500 flex items-center justify-center shadow-lg">
+                  <Shield className="w-4 h-4 text-white" />
+                </div>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Verification</h3>
               <p className="text-gray-600">Every practitioner credential-checked against 40+ official UK registries. No charlatans.</p>
             </div>
 
             {/* Evidence */}
-            <div className="text-center p-6">
-              <div className="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-purple-500 to-indigo-600 flex items-center justify-center mb-5 shadow-lg">
-                <BarChart3 className="w-8 h-8 text-white" />
+            <div className="text-center group">
+              <div className="relative w-28 h-28 mx-auto mb-6 rounded-full overflow-hidden shadow-xl group-hover:scale-105 transition-transform duration-300">
+                <Image
+                  src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&q=80"
+                  alt="Practitioner reviewing patient data"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-purple-600/40 to-transparent" />
+                <div className="absolute bottom-2 right-2 w-8 h-8 rounded-full bg-purple-500 flex items-center justify-center shadow-lg">
+                  <BarChart3 className="w-4 h-4 text-white" />
+                </div>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Evidence</h3>
               <p className="text-gray-600">Outcomes-based rankings. See what actually works, backed by real client data.</p>
             </div>
 
             {/* AI-Powered */}
-            <div className="text-center p-6">
-              <div className="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center mb-5 shadow-lg">
-                <Sparkles className="w-8 h-8 text-white" />
+            <div className="text-center group">
+              <div className="relative w-28 h-28 mx-auto mb-6 rounded-full overflow-hidden shadow-xl group-hover:scale-105 transition-transform duration-300">
+                <Image
+                  src="https://images.unsplash.com/photo-1551076805-e1869033e561?w=400&q=80"
+                  alt="Practitioner using technology"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-blue-600/40 to-transparent" />
+                <div className="absolute bottom-2 right-2 w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center shadow-lg">
+                  <Sparkles className="w-4 h-4 text-white" />
+                </div>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">AI-Powered</h3>
               <p className="text-gray-600">Clinical tools, supplement safety checks, and personalized wellness insights.</p>
@@ -179,56 +220,170 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-12 md:py-16 px-4 bg-gradient-to-r from-slate-900 to-slate-800">
+      {/* Practitioner Testimonials with Photos */}
+      <section className="py-16 md:py-24 px-4 bg-gradient-to-b from-[#FAF9F6] to-white">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 text-center">
-            <div>
-              <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2">£8.7B</div>
-              <div className="text-slate-400 text-sm sm:text-base">UK CAM market</div>
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 tracking-tight mb-4">
+              Hear from practitioners like you
+            </h2>
+            <p className="text-base sm:text-lg text-gray-600">
+              Real practitioners sharing how SANA transformed their practice
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6 md:gap-8">
+            {/* Testimonial 1 - Herbalist */}
+            <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
+              <div className="flex items-center gap-1 mb-4">
+                {[1,2,3,4,5].map(i => <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />)}
+              </div>
+              <Quote className="w-8 h-8 text-teal-200 mb-4" />
+              <p className="text-gray-700 mb-6 leading-relaxed">
+                &ldquo;SANA helps me show my patients the evidence behind natural medicine. The AI notes save me hours every week.&rdquo;
+              </p>
+              <div className="flex items-center gap-4">
+                <div className="relative w-14 h-14 rounded-full overflow-hidden shadow-md">
+                  <Image
+                    src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=200&q=80"
+                    alt="Dr. Sarah Mitchell"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div>
+                  <div className="font-semibold text-gray-900">Dr. Sarah Mitchell</div>
+                  <div className="text-sm text-gray-500">Medical Herbalist, London</div>
+                </div>
+              </div>
             </div>
-            <div>
-              <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2">0%</div>
-              <div className="text-slate-400 text-sm sm:text-base">Current oversight</div>
+
+            {/* Testimonial 2 - Acupuncturist */}
+            <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
+              <div className="flex items-center gap-1 mb-4">
+                {[1,2,3,4,5].map(i => <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />)}
+              </div>
+              <Quote className="w-8 h-8 text-teal-200 mb-4" />
+              <p className="text-gray-700 mb-6 leading-relaxed">
+                &ldquo;Finally, practice management built for acupuncturists, not just GPs. My clients love seeing their progress tracked.&rdquo;
+              </p>
+              <div className="flex items-center gap-4">
+                <div className="relative w-14 h-14 rounded-full overflow-hidden shadow-md">
+                  <Image
+                    src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=200&q=80"
+                    alt="James Chen"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div>
+                  <div className="font-semibold text-gray-900">James Chen</div>
+                  <div className="text-sm text-gray-500">Acupuncturist, Manchester</div>
+                </div>
+              </div>
             </div>
-            <div>
-              <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2">87%</div>
-              <div className="text-slate-400 text-sm sm:text-base">Interactions avoided</div>
-            </div>
-            <div>
-              <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2">73%</div>
-              <div className="text-slate-400 text-sm sm:text-base">Avg. success rate</div>
+
+            {/* Testimonial 3 - Naturopath */}
+            <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
+              <div className="flex items-center gap-1 mb-4">
+                {[1,2,3,4,5].map(i => <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />)}
+              </div>
+              <Quote className="w-8 h-8 text-teal-200 mb-4" />
+              <p className="text-gray-700 mb-6 leading-relaxed">
+                &ldquo;The verification badge gives my clients instant confidence. I&apos;ve grown my practice 40% since joining SANA.&rdquo;
+              </p>
+              <div className="flex items-center gap-4">
+                <div className="relative w-14 h-14 rounded-full overflow-hidden shadow-md">
+                  <Image
+                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&q=80"
+                    alt="Dr. Emma Roberts"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div>
+                  <div className="font-semibold text-gray-900">Dr. Emma Roberts</div>
+                  <div className="text-sm text-gray-500">Naturopath, Bristol</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Testimonials with Human Photos */}
+      {/* Trust Badges Section - Replacing investor stats */}
+      <section className="py-12 md:py-16 px-4 bg-white border-y border-gray-100">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-10">
+            <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
+              Trusted by Practitioners Across the UK
+            </h3>
+            <p className="text-gray-600">
+              Join the waitlist — 500+ practitioners already signed up
+            </p>
+          </div>
+
+          {/* Trust Badges */}
+          <div className="flex flex-wrap items-center justify-center gap-6 md:gap-10 mb-8">
+            <div className="flex items-center gap-2 px-4 py-2 bg-gray-50 rounded-full border border-gray-200">
+              <BadgeCheck className="w-5 h-5 text-emerald-600" />
+              <span className="text-sm font-medium text-gray-700">CPP Registered</span>
+            </div>
+            <div className="flex items-center gap-2 px-4 py-2 bg-gray-50 rounded-full border border-gray-200">
+              <BadgeCheck className="w-5 h-5 text-emerald-600" />
+              <span className="text-sm font-medium text-gray-700">RCHM Approved</span>
+            </div>
+            <div className="flex items-center gap-2 px-4 py-2 bg-gray-50 rounded-full border border-gray-200">
+              <BadgeCheck className="w-5 h-5 text-emerald-600" />
+              <span className="text-sm font-medium text-gray-700">CNHC Verified</span>
+            </div>
+            <div className="flex items-center gap-2 px-4 py-2 bg-gray-50 rounded-full border border-gray-200">
+              <Shield className="w-5 h-5 text-blue-600" />
+              <span className="text-sm font-medium text-gray-700">Professional Indemnity Ready</span>
+            </div>
+          </div>
+
+          {/* Registry Logos */}
+          <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12 opacity-50">
+            <div className="text-xl font-bold text-gray-400">CNHC</div>
+            <div className="text-xl font-bold text-gray-400">NIMH</div>
+            <div className="text-xl font-bold text-gray-400">UKCP</div>
+            <div className="text-xl font-bold text-gray-400">CPP</div>
+            <div className="text-xl font-bold text-gray-400">BACP</div>
+            <div className="text-xl font-bold text-gray-400">RCHM</div>
+          </div>
+        </div>
+      </section>
+
+      {/* Client Stories Section */}
       <section className="py-16 md:py-24 px-4 bg-[#FAF9F6]">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 tracking-tight mb-4">
-              Trusted by thousands
+              Wellness seekers love SANA too
             </h2>
             <p className="text-base sm:text-lg text-gray-600">
-              Real stories from real people finding their path to wellness
+              Real stories from real people finding their path to healing
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 md:gap-8">
-            {/* Testimonial 1 - Client */}
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
+            {/* Client Testimonial 1 */}
             <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-100">
               <div className="flex items-center gap-1 mb-4">
                 {[1,2,3,4,5].map(i => <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />)}
               </div>
-              <Quote className="w-8 h-8 text-gray-200 mb-4" />
               <p className="text-gray-700 mb-6 leading-relaxed">
-                &ldquo;Finally found a herbalist who actually helped my chronic fatigue. The verification gave me confidence I wasn&apos;t wasting money on another charlatan.&rdquo;
+                &ldquo;Finally found a herbalist who actually helped my chronic fatigue. The verification gave me confidence I wasn&apos;t wasting money.&rdquo;
               </p>
               <div className="flex items-center gap-4">
-                {/* Placeholder avatar */}
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-rose-400 to-pink-500 flex items-center justify-center text-white font-semibold text-lg">
-                  SE
+                <div className="relative w-12 h-12 rounded-full overflow-hidden shadow-md">
+                  <Image
+                    src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&q=80"
+                    alt="Sarah E."
+                    fill
+                    className="object-cover"
+                  />
                 </div>
                 <div>
                   <div className="font-semibold text-gray-900">Sarah E.</div>
@@ -237,38 +392,22 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Testimonial 2 - Practitioner */}
+            {/* Client Testimonial 2 */}
             <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-100">
               <div className="flex items-center gap-1 mb-4">
                 {[1,2,3,4,5].map(i => <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />)}
               </div>
-              <Quote className="w-8 h-8 text-gray-200 mb-4" />
               <p className="text-gray-700 mb-6 leading-relaxed">
-                &ldquo;The AI clinical assistant saves me 2 hours daily on notes. My clients love the outcome tracking—it shows them CAM actually works.&rdquo;
+                &ldquo;The supplement scanner flagged an interaction my GP missed. This app genuinely cares about safety.&rdquo;
               </p>
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-teal-400 to-emerald-500 flex items-center justify-center text-white font-semibold text-lg">
-                  JC
-                </div>
-                <div>
-                  <div className="font-semibold text-gray-900">Dr. James C.</div>
-                  <div className="text-sm text-gray-500">Acupuncturist, Manchester</div>
-                </div>
-              </div>
-            </div>
-
-            {/* Testimonial 3 - Client */}
-            <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-100">
-              <div className="flex items-center gap-1 mb-4">
-                {[1,2,3,4,5].map(i => <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />)}
-              </div>
-              <Quote className="w-8 h-8 text-gray-200 mb-4" />
-              <p className="text-gray-700 mb-6 leading-relaxed">
-                &ldquo;The supplement scanner probably saved my life—flagged an interaction with my blood pressure meds that my GP missed.&rdquo;
-              </p>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-purple-400 to-indigo-500 flex items-center justify-center text-white font-semibold text-lg">
-                  MR
+                <div className="relative w-12 h-12 rounded-full overflow-hidden shadow-md">
+                  <Image
+                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80"
+                    alt="Michael R."
+                    fill
+                    className="object-cover"
+                  />
                 </div>
                 <div>
                   <div className="font-semibold text-gray-900">Michael R.</div>
@@ -280,24 +419,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured In / Trust Logos */}
-      <section className="py-12 md:py-16 px-4 bg-white border-y border-gray-100">
-        <div className="max-w-6xl mx-auto">
-          <p className="text-center text-gray-500 text-sm font-medium mb-8">TRUSTED BY PRACTITIONERS FROM</p>
-          <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12 opacity-60">
-            {/* Placeholder logos - these would be real logos */}
-            <div className="text-2xl font-bold text-gray-400">CNHC</div>
-            <div className="text-2xl font-bold text-gray-400">NIMH</div>
-            <div className="text-2xl font-bold text-gray-400">UKCP</div>
-            <div className="text-2xl font-bold text-gray-400">CPP</div>
-            <div className="text-2xl font-bold text-gray-400">BACP</div>
-          </div>
-        </div>
-      </section>
-
       {/* Final CTA */}
-      <section className="py-16 md:py-24 px-4 bg-gradient-to-br from-[#4A90A4] to-[#6B9080]">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="py-16 md:py-24 px-4 bg-gradient-to-br from-[#4A90A4] to-[#6B9080] relative overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute top-0 left-0 w-64 h-64 bg-white/5 rounded-full -translate-x-1/2 -translate-y-1/2" />
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-white/5 rounded-full translate-x-1/3 translate-y-1/3" />
+
+        <div className="relative z-10 max-w-4xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
             Ready to start your journey?
           </h2>
