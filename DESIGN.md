@@ -3,7 +3,7 @@
 ## Landing Page Inspirations
 
 ### Top 40 SaaS Landing Pages
-**Figma Link:** [YOUR_FIGMA_LINK_HERE]
+**Figma Link:** [https://www.figma.com/design/hHhB5CI87mNRxtnsmhx5Zl/40-TOP-SaaS-Landing-Page-Inspirations?node-id=0-1&t=gg2mI2XJaxV3nUu1-1]
 
 This Figma file contains curated examples of top-performing SaaS landing pages. Use these as inspiration for:
 
