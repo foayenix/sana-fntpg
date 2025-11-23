@@ -872,7 +872,7 @@ export default function PractitionerPage() {
           <a href="#pricing" className="flex-1 bg-[#6B9080] text-white py-4 rounded-2xl font-semibold shadow-lg text-sm min-h-[52px] flex items-center justify-center">
             Start Free Practice
           </a>
-          <a href="mailto:hello@sana.health?subject=Demo%20Request" className="flex-1 bg-[#4A90A4] text-white py-4 rounded-2xl font-semibold shadow-lg text-sm min-h-[52px] flex items-center justify-center">
+          <a href="mailto:hello@mysana.io?subject=Demo%20Request" className="flex-1 bg-[#4A90A4] text-white py-4 rounded-2xl font-semibold shadow-lg text-sm min-h-[52px] flex items-center justify-center">
             Book a Demo
           </a>
         </div>
