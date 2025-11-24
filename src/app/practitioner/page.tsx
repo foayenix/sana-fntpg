@@ -54,6 +54,15 @@ import {
   FileSpreadsheet,
   Heart,
   Clock,
+  // New icons for pricing update
+  Info,
+  Leaf,
+  Apple,
+  Dumbbell,
+  Smile,
+  Zap,
+  Bell,
+  LayoutDashboard,
 } from 'lucide-react';
 import { FAQAccordion } from '@/components/FAQAccordion';
 
@@ -491,102 +500,118 @@ export default function PractitionerPage() {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-6 lg:gap-8 items-start">
-            {/* Free Plan - Clean white with subtle border */}
-            <div className="bg-white border-2 border-gray-200 rounded-2xl p-8 hover:border-gray-300 hover:shadow-lg transition-all duration-300">
+          <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-6 items-start">
+            {/* Free Plan */}
+            <div className="bg-white border-2 border-gray-200 rounded-2xl p-6 hover:border-gray-300 hover:shadow-lg transition-all duration-300">
               <span className="text-xs font-medium text-gray-600 uppercase tracking-wide">
                 Free Forever
               </span>
               <div className="mt-4 flex items-baseline">
-                <span className="text-5xl font-bold text-gray-900 tracking-tight">£0</span>
+                <span className="text-4xl font-bold text-gray-900 tracking-tight">£0</span>
                 <span className="ml-1 text-lg text-gray-600">/month</span>
               </div>
-              <p className="mt-4 text-sm text-gray-600 leading-relaxed">
-                Perfect for getting started with AI-powered practice management
+              <p className="mt-3 text-sm text-gray-600 leading-relaxed">
+                Try AI-powered practice management
               </p>
 
-              <div className="mt-8 space-y-4">
+              {/* AI Credits */}
+              <div className="mt-4 bg-violet-50 rounded-xl p-3 border border-violet-100">
+                <div className="flex items-center gap-2">
+                  <Sparkles className="w-4 h-4 text-violet-600" />
+                  <span className="text-sm font-semibold text-violet-700">1,000 AI credits/month</span>
+                </div>
+                <p className="text-xs text-violet-600 mt-1">~8 basic interactions</p>
+              </div>
+
+              <div className="mt-6 space-y-3">
                 {[
-                  { icon: Brain, gradient: 'from-violet-500 to-indigo-600', title: 'AI Clinical Assistant (Unlimited)', desc: 'Voice-to-SOAP notes, 8+ traditions' },
-                  { icon: ShieldCheck, gradient: 'from-emerald-500 to-teal-600', title: 'SANA Verified Badge', desc: '40+ UK registry verification' },
-                  { icon: ScanLine, gradient: 'from-blue-500 to-cyan-600', title: 'Product Scanner (limited)', desc: 'Herb-drug interaction checks' },
-                  { icon: Users, gradient: 'from-slate-500 to-gray-600', title: 'Client Records (limited)', desc: 'GDPR-compliant storage' },
-                  { icon: BarChart3, gradient: 'from-purple-500 to-pink-600', title: 'Basic Analytics', desc: 'Session tracking, revenue overview' },
+                  { icon: Brain, gradient: 'from-violet-500 to-indigo-600', title: 'AI Clinical Assistant', desc: '10 queries/month' },
+                  { icon: ShieldCheck, gradient: 'from-emerald-500 to-teal-600', title: 'SANA Verified Badge', desc: '40+ UK registries' },
+                  { icon: ScanLine, gradient: 'from-blue-500 to-cyan-600', title: 'Product Scanner', desc: '5 scans/month' },
+                  { icon: Users, gradient: 'from-slate-500 to-gray-600', title: 'Client Records', desc: '10 clients max' },
+                  { icon: BarChart3, gradient: 'from-purple-500 to-pink-600', title: 'Basic Analytics', desc: 'Session tracking' },
                 ].map((feature, i) => (
-                  <div key={i} className="flex items-start gap-3 group">
-                    <div className={`flex-shrink-0 w-10 h-10 rounded-lg bg-gradient-to-br ${feature.gradient} flex items-center justify-center shadow-sm transition-all duration-300 group-hover:shadow-md group-hover:scale-105`}>
-                      <feature.icon className="w-5 h-5 text-white" strokeWidth={2} />
+                  <div key={i} className="flex items-start gap-2.5 group">
+                    <div className={`flex-shrink-0 w-8 h-8 rounded-lg bg-gradient-to-br ${feature.gradient} flex items-center justify-center shadow-sm`}>
+                      <feature.icon className="w-4 h-4 text-white" strokeWidth={2} />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <h4 className="text-sm font-medium text-gray-900 mb-0.5">{feature.title}</h4>
-                      <p className="text-xs text-gray-600 leading-relaxed">{feature.desc}</p>
+                      <h4 className="text-xs font-medium text-gray-900">{feature.title}</h4>
+                      <p className="text-xs text-gray-500">{feature.desc}</p>
                     </div>
                   </div>
                 ))}
               </div>
 
-              <button className="mt-8 w-full px-6 py-3 rounded-xl font-semibold text-sm bg-white border-2 border-gray-300 text-gray-900 hover:border-gray-400 hover:shadow-md transition-all duration-200">
+              <p className="mt-4 text-xs text-amber-600 font-medium">30-day data retention</p>
+
+              <button className="mt-6 w-full px-4 py-2.5 rounded-xl font-semibold text-sm bg-white border-2 border-gray-300 text-gray-900 hover:border-gray-400 hover:shadow-md transition-all duration-200">
                 Start Free
               </button>
             </div>
 
-            {/* Professional Plan - Premium subtle gradient */}
-            <div className="relative bg-gradient-to-br from-slate-50 to-blue-50 border-2 border-blue-200 rounded-2xl p-8 shadow-xl">
-              {/* Subtle animated gradient overlay */}
+            {/* Professional Plan - Featured */}
+            <div className="relative bg-gradient-to-br from-slate-50 to-blue-50 border-2 border-blue-200 rounded-2xl p-6 shadow-xl md:scale-105 z-10">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-teal-500/5 rounded-2xl" />
 
-              {/* Limited Time Badge - Sophisticated */}
+              {/* Limited Time Badge */}
               <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
-                <div className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-gradient-to-r from-blue-600 to-teal-600 text-white text-xs font-semibold shadow-lg shadow-blue-500/25">
-                  <Clock className="w-3.5 h-3.5" />
-                  Limited Time Offer
+                <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-gradient-to-r from-blue-600 to-teal-600 text-white text-xs font-semibold shadow-lg shadow-blue-500/25 animate-pulse">
+                  <Clock className="w-3 h-3" />
+                  Limited Time
                 </div>
               </div>
 
-              <div className="relative pt-4">
+              <div className="relative pt-3">
                 <span className="text-xs font-medium text-blue-600 uppercase tracking-wide">
                   Professional
                 </span>
-                <div className="mt-4 flex items-baseline">
-                  <span className="text-5xl font-bold text-gray-900 tracking-tight">£29</span>
+                <div className="mt-3 flex items-baseline">
+                  <span className="text-4xl font-bold text-gray-900 tracking-tight">£29</span>
                   <span className="ml-1 text-lg text-gray-600">/month</span>
                 </div>
-                <div className="mt-2 text-sm text-gray-600">
+                <div className="mt-1 text-sm text-gray-600">
                   <span className="line-through">£69</span>
-                  <span className="ml-2 text-blue-600 font-medium">Founding Member Pricing</span>
+                  <span className="ml-2 text-blue-600 font-medium">Founding Member</span>
                 </div>
-                <p className="mt-1 text-xs text-emerald-600 font-medium">First 1,000 users only — locks in forever</p>
+
+                {/* AI Credits */}
+                <div className="mt-3 bg-blue-100 rounded-xl p-3 border border-blue-200">
+                  <div className="flex items-center gap-2">
+                    <Sparkles className="w-4 h-4 text-blue-600" />
+                    <span className="text-sm font-semibold text-blue-700">25,000 AI credits/month</span>
+                  </div>
+                  <p className="text-xs text-blue-600 mt-1">~150 interactions or 20 AI-scribed sessions</p>
+                </div>
 
                 {/* Progress Bar */}
-                <div className="mt-4 bg-blue-100 rounded-xl p-4">
-                  <div className="flex justify-between text-sm mb-2">
-                    <span className="font-semibold text-gray-900">487/1,000 claimed</span>
-                    <span className="font-semibold text-blue-600">513 spots left</span>
+                <div className="mt-3 bg-white/60 rounded-lg p-2.5">
+                  <div className="flex justify-between text-xs mb-1.5">
+                    <span className="font-semibold text-gray-900">487/1,000</span>
+                    <span className="font-semibold text-blue-600">513 left</span>
                   </div>
-                  <div className="h-2 bg-blue-200 rounded-full overflow-hidden">
+                  <div className="h-1.5 bg-blue-200 rounded-full overflow-hidden">
                     <div className="h-full bg-gradient-to-r from-blue-500 to-teal-500 rounded-full" style={{ width: '49%' }} />
                   </div>
                 </div>
 
-                <p className="mt-6 text-xs text-gray-600 font-medium">Everything in Free, plus:</p>
+                <p className="mt-4 text-xs text-gray-600 font-medium">Everything in Free, plus:</p>
 
-                <div className="mt-4 space-y-3">
+                <div className="mt-3 space-y-2">
                   {[
-                    { icon: Database, gradient: 'from-slate-500 to-gray-600', text: 'Unlimited client records' },
-                    { icon: CalendarCheck, gradient: 'from-blue-500 to-indigo-600', text: 'Integrated booking system' },
-                    { icon: Globe2, gradient: 'from-cyan-500 to-blue-600', text: 'Marketplace profile & visibility' },
-                    { icon: TrendingUp, gradient: 'from-purple-500 to-pink-600', text: 'Evidence insights & Health Graph' },
-                    { icon: Lock, gradient: 'from-indigo-500 to-purple-600', text: 'Secure client messaging' },
-                    { icon: Activity, gradient: 'from-emerald-500 to-teal-600', text: 'SANA Index profile & ranking' },
-                    { icon: Heart, gradient: 'from-rose-500 to-orange-500', text: 'PROMs tracking (WHO-5, DASS-21)' },
-                    { icon: Watch, gradient: 'from-pink-500 to-rose-600', text: 'Wearable integration' },
-                    { icon: PenTool, gradient: 'from-violet-500 to-indigo-600', text: 'Journal AI for clients' },
+                    { icon: Database, gradient: 'from-slate-500 to-gray-600', text: 'Unlimited clients' },
+                    { icon: CalendarCheck, gradient: 'from-blue-500 to-indigo-600', text: 'Booking system' },
+                    { icon: Globe2, gradient: 'from-cyan-500 to-blue-600', text: 'Marketplace profile' },
+                    { icon: TrendingUp, gradient: 'from-purple-500 to-pink-600', text: 'Evidence insights' },
+                    { icon: Lock, gradient: 'from-indigo-500 to-purple-600', text: 'Secure messaging' },
+                    { icon: Activity, gradient: 'from-emerald-500 to-teal-600', text: 'SANA Index ranking' },
+                    { icon: Heart, gradient: 'from-rose-500 to-orange-500', text: 'PROMs tracking' },
                   ].map((feature, i) => (
-                    <div key={i} className="flex items-center gap-3 group">
-                      <div className={`flex-shrink-0 w-8 h-8 rounded-lg bg-gradient-to-br ${feature.gradient} flex items-center justify-center shadow-sm transition-all duration-300 group-hover:shadow-md group-hover:scale-105`}>
-                        <feature.icon className="w-4 h-4 text-white" strokeWidth={2} />
+                    <div key={i} className="flex items-center gap-2">
+                      <div className={`flex-shrink-0 w-6 h-6 rounded-md bg-gradient-to-br ${feature.gradient} flex items-center justify-center`}>
+                        <feature.icon className="w-3.5 h-3.5 text-white" strokeWidth={2} />
                       </div>
-                      <span className="text-sm font-medium text-gray-900">{feature.text}</span>
+                      <span className="text-xs font-medium text-gray-900">{feature.text}</span>
                     </div>
                   ))}
                 </div>
@@ -594,68 +619,129 @@ export default function PractitionerPage() {
                 {!submitted ? (
                   <button
                     onClick={() => setSubmitted(true)}
-                    className="mt-8 w-full px-6 py-4 rounded-xl font-semibold text-base bg-gradient-to-r from-blue-600 to-teal-600 text-white shadow-lg shadow-blue-500/25 hover:shadow-xl hover:scale-105 transition-all duration-200"
+                    className="mt-6 w-full px-4 py-3 rounded-xl font-semibold text-sm bg-gradient-to-r from-blue-600 to-teal-600 text-white shadow-lg shadow-blue-500/25 hover:shadow-xl hover:scale-105 transition-all duration-200"
                   >
                     Join First 1,000
                   </button>
                 ) : (
-                  <div className="mt-8 bg-emerald-50 border border-emerald-200 rounded-xl p-4 text-center">
-                    <div className="w-10 h-10 rounded-full bg-emerald-500 flex items-center justify-center mx-auto mb-2">
-                      <CheckCircle2 className="w-5 h-5 text-white" />
-                    </div>
-                    <p className="text-sm font-semibold text-emerald-700">You&apos;re on the list!</p>
+                  <div className="mt-6 bg-emerald-50 border border-emerald-200 rounded-xl p-3 text-center">
+                    <CheckCircle2 className="w-5 h-5 text-emerald-500 mx-auto mb-1" />
+                    <p className="text-xs font-semibold text-emerald-700">You&apos;re on the list!</p>
                   </div>
                 )}
               </div>
             </div>
 
-            {/* Practice Plan - Clean white with premium accent */}
-            <div className="bg-white border-2 border-purple-200 rounded-2xl p-8 hover:border-purple-300 hover:shadow-lg transition-all duration-300">
-              <span className="text-xs font-medium text-gray-600 uppercase tracking-wide">
-                Practice
+            {/* Growth Plan - NEW */}
+            <div className="bg-white border-2 border-teal-200 rounded-2xl p-6 hover:border-teal-300 hover:shadow-lg transition-all duration-300">
+              <span className="text-xs font-medium text-teal-600 uppercase tracking-wide">
+                Growth
               </span>
               <div className="mt-4 flex items-baseline">
-                <span className="text-5xl font-bold text-gray-900 tracking-tight">£149</span>
+                <span className="text-4xl font-bold text-gray-900 tracking-tight">£59</span>
                 <span className="ml-1 text-lg text-gray-600">/month</span>
               </div>
-              <p className="mt-2 text-sm text-purple-600 font-medium">
-                + £20/month per additional practitioner
-              </p>
+              <div className="mt-1 text-sm text-gray-600">
+                <span className="line-through">£99</span>
+                <span className="ml-2 text-teal-600 font-medium">Founding Rate</span>
+              </div>
               <p className="mt-2 text-sm text-gray-600 leading-relaxed">
-                For established practices and multi-practitioner clinics
+                For busy practitioners scaling impact
               </p>
 
-              <p className="mt-8 text-xs text-gray-600 font-medium">Everything in Professional, plus:</p>
+              {/* AI Credits */}
+              <div className="mt-3 bg-teal-50 rounded-xl p-3 border border-teal-100">
+                <div className="flex items-center gap-2">
+                  <Sparkles className="w-4 h-4 text-teal-600" />
+                  <span className="text-sm font-semibold text-teal-700">50,000 AI credits/month</span>
+                </div>
+                <p className="text-xs text-teal-600 mt-1">~300 interactions</p>
+              </div>
 
-              <div className="mt-4 space-y-3">
+              <p className="mt-4 text-xs text-gray-600 font-medium">Everything in Professional, plus:</p>
+
+              <div className="mt-3 space-y-2">
                 {[
-                  { icon: Users, gradient: 'from-slate-500 to-gray-600', text: 'Up to 5 practitioners' },
-                  { icon: UserCog, gradient: 'from-blue-500 to-indigo-600', text: 'Team features & permissions' },
-                  { icon: LineChart, gradient: 'from-purple-500 to-pink-600', text: 'Practice-level analytics' },
-                  { icon: Palette, gradient: 'from-pink-500 to-rose-600', text: 'Custom branding & white-label' },
-                  { icon: Code2, gradient: 'from-cyan-500 to-blue-600', text: 'Embeddable booking widget' },
+                  { icon: FileText, gradient: 'from-blue-500 to-indigo-600', text: 'AI Scribe (unlimited)' },
+                  { icon: Bell, gradient: 'from-teal-500 to-cyan-600', text: 'AI Follow-Up Bot' },
+                  { icon: LayoutDashboard, gradient: 'from-purple-500 to-pink-600', text: 'Advanced analytics' },
                   { icon: Headphones, gradient: 'from-emerald-500 to-teal-600', text: 'Priority support (<2hr)' },
-                  { icon: FileSpreadsheet, gradient: 'from-slate-600 to-slate-700', text: 'FHIR-compatible data export' },
-                  { icon: CreditCard, gradient: 'from-amber-500 to-orange-600', text: 'Multi-practitioner payment splits' },
-                  { icon: Award, gradient: 'from-yellow-500 to-amber-600', text: '"Top Practice" badge' },
+                  { icon: Palette, gradient: 'from-pink-500 to-rose-600', text: 'Custom branding' },
+                  { icon: Database, gradient: 'from-slate-500 to-gray-600', text: '1-year data retention' },
                 ].map((feature, i) => (
-                  <div key={i} className="flex items-center gap-3 group">
-                    <div className={`flex-shrink-0 w-8 h-8 rounded-lg bg-gradient-to-br ${feature.gradient} flex items-center justify-center shadow-sm transition-all duration-300 group-hover:shadow-md group-hover:scale-105`}>
-                      <feature.icon className="w-4 h-4 text-white" strokeWidth={2} />
+                  <div key={i} className="flex items-center gap-2">
+                    <div className={`flex-shrink-0 w-6 h-6 rounded-md bg-gradient-to-br ${feature.gradient} flex items-center justify-center`}>
+                      <feature.icon className="w-3.5 h-3.5 text-white" strokeWidth={2} />
                     </div>
-                    <span className="text-sm font-medium text-gray-900">{feature.text}</span>
+                    <span className="text-xs font-medium text-gray-900">{feature.text}</span>
                   </div>
                 ))}
               </div>
 
-              <button className="mt-8 w-full px-6 py-3 rounded-xl font-semibold text-sm bg-white border-2 border-gray-300 text-gray-900 hover:border-gray-400 hover:shadow-md transition-all duration-200">
+              <button className="mt-6 w-full px-4 py-2.5 rounded-xl font-semibold text-sm bg-white border-2 border-teal-300 text-teal-700 hover:bg-teal-50 hover:shadow-md transition-all duration-200">
+                Start Free Trial
+              </button>
+            </div>
+
+            {/* Practice Plan */}
+            <div className="bg-white border-2 border-purple-200 rounded-2xl p-6 hover:border-purple-300 hover:shadow-lg transition-all duration-300">
+              <span className="text-xs font-medium text-purple-600 uppercase tracking-wide">
+                Practice
+              </span>
+              <div className="mt-4 flex items-baseline">
+                <span className="text-4xl font-bold text-gray-900 tracking-tight">£149</span>
+                <span className="ml-1 text-lg text-gray-600">/month</span>
+              </div>
+              <p className="mt-1 text-sm text-purple-600 font-medium">
+                + £40/month per extra seat
+              </p>
+              <p className="mt-2 text-sm text-gray-600 leading-relaxed">
+                Includes 1 primary + 2 team seats
+              </p>
+
+              {/* AI Credits */}
+              <div className="mt-3 bg-purple-50 rounded-xl p-3 border border-purple-100">
+                <div className="flex items-center gap-2">
+                  <Sparkles className="w-4 h-4 text-purple-600" />
+                  <span className="text-sm font-semibold text-purple-700">100,000 AI credits/month</span>
+                </div>
+                <p className="text-xs text-purple-600 mt-1">~600 interactions, pooled across team</p>
+              </div>
+
+              <p className="mt-4 text-xs text-gray-600 font-medium">Everything in Growth, plus:</p>
+
+              <div className="mt-3 space-y-2">
+                {[
+                  { icon: Users, gradient: 'from-slate-500 to-gray-600', text: 'Team dashboard' },
+                  { icon: UserCog, gradient: 'from-blue-500 to-indigo-600', text: 'Role permissions' },
+                  { icon: LineChart, gradient: 'from-purple-500 to-pink-600', text: 'Practice analytics' },
+                  { icon: Code2, gradient: 'from-cyan-500 to-blue-600', text: 'Booking widget' },
+                  { icon: FileSpreadsheet, gradient: 'from-slate-600 to-slate-700', text: 'FHIR data export' },
+                  { icon: Award, gradient: 'from-yellow-500 to-amber-600', text: '"Top Practice" badge' },
+                ].map((feature, i) => (
+                  <div key={i} className="flex items-center gap-2">
+                    <div className={`flex-shrink-0 w-6 h-6 rounded-md bg-gradient-to-br ${feature.gradient} flex items-center justify-center`}>
+                      <feature.icon className="w-3.5 h-3.5 text-white" strokeWidth={2} />
+                    </div>
+                    <span className="text-xs font-medium text-gray-900">{feature.text}</span>
+                  </div>
+                ))}
+              </div>
+
+              <button className="mt-6 w-full px-4 py-2.5 rounded-xl font-semibold text-sm bg-white border-2 border-purple-300 text-purple-700 hover:bg-purple-50 hover:shadow-md transition-all duration-200">
                 Start Free Trial
               </button>
             </div>
           </div>
 
-          {/* Trust Signals - Premium styling */}
-          <div className="flex flex-wrap items-center justify-center gap-8 mt-16 text-gray-600 text-sm">
+          {/* Founding Member Fine Print */}
+          <p className="mt-8 text-center text-xs text-gray-500 max-w-3xl mx-auto leading-relaxed">
+            *Founding member pricing available to first 1,000 practitioners only. Rate locks in forever while subscription remains active.
+            Cancelling or pausing for more than 30 days forfeits founding rate. Upgrading between tiers maintains founding discount.
+          </p>
+
+          {/* Trust Signals */}
+          <div className="flex flex-wrap items-center justify-center gap-6 mt-12 text-gray-600 text-sm">
             <div className="flex items-center gap-2">
               <Shield className="w-5 h-5 text-gray-400" />
               Secure payments
@@ -671,6 +757,120 @@ export default function PractitionerPage() {
             <div className="flex items-center gap-2">
               <BadgeCheck className="w-5 h-5 text-gray-400" />
               Cancel anytime
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Specialist Add-Ons Section */}
+      <section className="py-16 md:py-24 px-4 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 tracking-tight mb-3">
+              Specialist Add-Ons
+            </h2>
+            <p className="text-lg text-gray-600">
+              Extend your toolkit with discipline-specific features
+            </p>
+            <p className="text-sm text-gray-500 mt-2">
+              Available for Professional, Growth, and Practice tiers
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+            {/* Herbalist Suite */}
+            <div className="bg-gradient-to-br from-emerald-50 to-green-50 border border-emerald-200 rounded-2xl p-5 hover:shadow-lg transition-all duration-300">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-green-600 flex items-center justify-center mb-4 shadow-lg">
+                <Leaf className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="font-semibold text-gray-900 mb-1">Herbalist Suite</h3>
+              <p className="text-emerald-600 font-bold mb-3">£29/month</p>
+              <ul className="text-xs text-gray-600 space-y-1.5">
+                <li>• Digital herbal pharmacy</li>
+                <li>• Prescription generator</li>
+                <li>• Contraindication checker</li>
+                <li>• Supplier integration</li>
+                <li>• Client herbal history</li>
+              </ul>
+              <button className="mt-4 w-full px-3 py-2 rounded-lg text-xs font-semibold border-2 border-emerald-300 text-emerald-700 hover:bg-emerald-100 transition-all">
+                Add to Plan
+              </button>
+            </div>
+
+            {/* Physiotherapy Suite */}
+            <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border border-blue-200 rounded-2xl p-5 hover:shadow-lg transition-all duration-300">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center mb-4 shadow-lg">
+                <Dumbbell className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="font-semibold text-gray-900 mb-1">Physiotherapy Suite</h3>
+              <p className="text-blue-600 font-bold mb-3">£29/month</p>
+              <ul className="text-xs text-gray-600 space-y-1.5">
+                <li>• Exercise library (500+)</li>
+                <li>• Rehab plan generator</li>
+                <li>• ROM measurements</li>
+                <li>• Home exercise builder</li>
+                <li>• Progress tracking</li>
+              </ul>
+              <button className="mt-4 w-full px-3 py-2 rounded-lg text-xs font-semibold border-2 border-blue-300 text-blue-700 hover:bg-blue-100 transition-all">
+                Add to Plan
+              </button>
+            </div>
+
+            {/* Nutrition Suite */}
+            <div className="bg-gradient-to-br from-orange-50 to-amber-50 border border-orange-200 rounded-2xl p-5 hover:shadow-lg transition-all duration-300">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-500 to-amber-600 flex items-center justify-center mb-4 shadow-lg">
+                <Apple className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="font-semibold text-gray-900 mb-1">Nutrition Suite</h3>
+              <p className="text-orange-600 font-bold mb-3">£29/month</p>
+              <ul className="text-xs text-gray-600 space-y-1.5">
+                <li>• Meal plan builder</li>
+                <li>• Macro tracking</li>
+                <li>• Recipe database (5K+)</li>
+                <li>• Supplement protocols</li>
+                <li>• Food diary integration</li>
+              </ul>
+              <button className="mt-4 w-full px-3 py-2 rounded-lg text-xs font-semibold border-2 border-orange-300 text-orange-700 hover:bg-orange-100 transition-all">
+                Add to Plan
+              </button>
+            </div>
+
+            {/* Mental Wellness Suite */}
+            <div className="bg-gradient-to-br from-purple-50 to-violet-50 border border-purple-200 rounded-2xl p-5 hover:shadow-lg transition-all duration-300">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-violet-600 flex items-center justify-center mb-4 shadow-lg">
+                <Smile className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="font-semibold text-gray-900 mb-1">Mental Wellness</h3>
+              <p className="text-purple-600 font-bold mb-3">£29/month</p>
+              <ul className="text-xs text-gray-600 space-y-1.5">
+                <li>• Guided meditations</li>
+                <li>• Mood tracking</li>
+                <li>• CBT worksheets</li>
+                <li>• Progress templates</li>
+                <li>• Symptom tracking</li>
+              </ul>
+              <button className="mt-4 w-full px-3 py-2 rounded-lg text-xs font-semibold border-2 border-purple-300 text-purple-700 hover:bg-purple-100 transition-all">
+                Add to Plan
+              </button>
+            </div>
+
+            {/* Acupuncture Suite */}
+            <div className="bg-gradient-to-br from-red-50 to-rose-50 border border-red-200 rounded-2xl p-5 hover:shadow-lg transition-all duration-300">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-red-500 to-rose-600 flex items-center justify-center mb-4 shadow-lg">
+                <Zap className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="font-semibold text-gray-900 mb-1">Acupuncture Suite</h3>
+              <p className="text-red-600 font-bold mb-3">£29/month</p>
+              <ul className="text-xs text-gray-600 space-y-1.5">
+                <li>• Point location ref</li>
+                <li>• Protocol builder</li>
+                <li>• TCM diagnostic tools</li>
+                <li>• Efficacy tracking</li>
+                <li>• Meridian charts</li>
+              </ul>
+              <button className="mt-4 w-full px-3 py-2 rounded-lg text-xs font-semibold border-2 border-red-300 text-red-700 hover:bg-red-100 transition-all">
+                Add to Plan
+              </button>
             </div>
           </div>
         </div>
