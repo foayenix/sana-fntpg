@@ -424,48 +424,48 @@ export default function PractitionerPage() {
               {
                 icon: <Bot className="w-7 h-7" />,
                 title: 'AI Clinical Assistant',
-                description: 'Generate professional SOAP notes in 30 seconds. Our AI learns your style, your terminology, your approach.',
+                description: 'Auto-generates SOAP notes, extracts treatments & prescriptions, identifies red flags, and provides evidence-based protocol suggestions—all in real-time.',
                 highlight: 'Save 15+ hours/week',
                 color: '#6B9080',
                 gradient: 'from-[#6B9080] to-[#4A90A4]'
               },
               {
-                icon: <Calendar className="w-7 h-7" />,
-                title: 'Smart Booking System',
-                description: 'Online scheduling with automated reminders, intake forms, and telehealth built in.',
-                highlight: 'Reduce no-shows 80%',
-                color: '#4A90A4',
-                gradient: 'from-[#4A90A4] to-blue-600'
+                icon: <BadgeCheck className="w-7 h-7" />,
+                title: 'SANA Index Score (0-100)',
+                description: 'Public credibility score based 40% on measured client outcomes, 20% credentials, 20% volume. Drives 3x more client inquiries.',
+                highlight: 'Evidence-based ranking',
+                color: '#6B9080',
+                gradient: 'from-emerald-500 to-teal-600'
               },
               {
                 icon: <BarChart3 className="w-7 h-7" />,
-                title: 'Evidence Engine',
-                description: 'Automatically capture every treatment and outcome. Build your personal evidence database.',
-                highlight: 'First in CAM',
+                title: 'SANA Health Graph',
+                description: '360° wellness data combining your clinical notes + client PROMs + wearables + AI journal analysis + environmental factors.',
+                highlight: 'Industry-first',
                 color: '#6B9080',
                 gradient: 'from-purple-500 to-indigo-600'
               },
               {
+                icon: <Calendar className="w-7 h-7" />,
+                title: 'Complete Practice Management',
+                description: 'Booking, payments (10% commission), telehealth, client CRM, automated reminders, intake forms, and embeddable widget for your website.',
+                highlight: 'All-in-one system',
+                color: '#4A90A4',
+                gradient: 'from-[#4A90A4] to-blue-600'
+              },
+              {
                 icon: <Pill className="w-7 h-7" />,
-                title: 'Integrated Dispensary',
-                description: 'Prescribe products through SANA. Clients purchase seamlessly. You earn commission on every sale.',
+                title: 'Product Dispensary',
+                description: 'Prescribe herbs & supplements with automatic contraindication checking. Clients buy through SANA—you earn commission without inventory.',
                 highlight: 'New revenue stream',
                 color: '#4A90A4',
                 gradient: 'from-rose-500 to-pink-600'
               },
               {
-                icon: <BadgeCheck className="w-7 h-7" />,
-                title: 'SANA Verified Badge',
-                description: 'Credential verification that clients trust. Stand out from unqualified competitors in your area.',
-                highlight: 'Boost credibility',
-                color: '#6B9080',
-                gradient: 'from-emerald-500 to-teal-600'
-              },
-              {
                 icon: <Shield className="w-7 h-7" />,
-                title: 'Secure Records',
-                description: 'GDPR-compliant, ISO 27001 certified client records. Access anywhere, encrypted everywhere.',
-                highlight: 'Enterprise security',
+                title: 'SCVM Credential Verification',
+                description: '99% accurate automated verification across 40+ UK registries (CNHC, GHR, FHT, etc.). Earn your verified badge in 2-5 days.',
+                highlight: 'Auto-verified',
                 color: '#4A90A4',
                 gradient: 'from-slate-600 to-slate-700'
               }
