@@ -571,7 +571,7 @@ export default function PractitionerPage() {
                   <span className="ml-1 text-lg text-gray-600">/month</span>
                 </div>
                 <div className="mt-1 text-sm text-gray-600">
-                  <span className="line-through">£69</span>
+                  <span className="line-through">£59</span>
                   <span className="ml-2 text-blue-600 font-medium">Founding Member</span>
                 </div>
 
@@ -599,13 +599,13 @@ export default function PractitionerPage() {
 
                 <div className="mt-3 space-y-2">
                   {[
+                    { icon: Brain, gradient: 'from-violet-500 to-indigo-600', text: '1 AI agent' },
                     { icon: Database, gradient: 'from-slate-500 to-gray-600', text: 'Unlimited clients' },
-                    { icon: CalendarCheck, gradient: 'from-blue-500 to-indigo-600', text: 'Booking system' },
+                    { icon: CalendarCheck, gradient: 'from-blue-500 to-indigo-600', text: 'Booking + payments' },
                     { icon: Globe2, gradient: 'from-cyan-500 to-blue-600', text: 'Marketplace profile' },
                     { icon: TrendingUp, gradient: 'from-purple-500 to-pink-600', text: 'Evidence insights' },
-                    { icon: Lock, gradient: 'from-indigo-500 to-purple-600', text: 'Secure messaging' },
-                    { icon: Activity, gradient: 'from-emerald-500 to-teal-600', text: 'SANA Index ranking' },
                     { icon: Heart, gradient: 'from-rose-500 to-orange-500', text: 'PROMs tracking' },
+                    { icon: Watch, gradient: 'from-pink-500 to-rose-600', text: 'Wearable integration' },
                   ].map((feature, i) => (
                     <div key={i} className="flex items-center gap-2">
                       <div className={`flex-shrink-0 w-6 h-6 rounded-md bg-gradient-to-br ${feature.gradient} flex items-center justify-center`}>
@@ -638,13 +638,10 @@ export default function PractitionerPage() {
                 Growth
               </span>
               <div className="mt-4 flex items-baseline">
-                <span className="text-4xl font-bold text-gray-900 tracking-tight">£59</span>
+                <span className="text-4xl font-bold text-gray-900 tracking-tight">£79</span>
                 <span className="ml-1 text-lg text-gray-600">/month</span>
               </div>
-              <div className="mt-1 text-sm text-gray-600">
-                <span className="line-through">£99</span>
-                <span className="ml-2 text-teal-600 font-medium">Founding Rate</span>
-              </div>
+              <p className="mt-1 text-xs text-teal-600 font-medium">Launch price (£99 Year 2+)</p>
               <p className="mt-2 text-sm text-gray-600 leading-relaxed">
                 For busy practitioners scaling impact
               </p>
@@ -662,12 +659,12 @@ export default function PractitionerPage() {
 
               <div className="mt-3 space-y-2">
                 {[
+                  { icon: Brain, gradient: 'from-violet-500 to-indigo-600', text: '3 AI agents' },
                   { icon: FileText, gradient: 'from-blue-500 to-indigo-600', text: 'AI Scribe (unlimited)' },
                   { icon: Bell, gradient: 'from-teal-500 to-cyan-600', text: 'AI Follow-Up Bot' },
                   { icon: LayoutDashboard, gradient: 'from-purple-500 to-pink-600', text: 'Advanced analytics' },
                   { icon: Headphones, gradient: 'from-emerald-500 to-teal-600', text: 'Priority support (<2hr)' },
                   { icon: Palette, gradient: 'from-pink-500 to-rose-600', text: 'Custom branding' },
-                  { icon: Database, gradient: 'from-slate-500 to-gray-600', text: '1-year data retention' },
                 ].map((feature, i) => (
                   <div key={i} className="flex items-center gap-2">
                     <div className={`flex-shrink-0 w-6 h-6 rounded-md bg-gradient-to-br ${feature.gradient} flex items-center justify-center`}>
@@ -689,14 +686,14 @@ export default function PractitionerPage() {
                 Practice
               </span>
               <div className="mt-4 flex items-baseline">
-                <span className="text-4xl font-bold text-gray-900 tracking-tight">£149</span>
+                <span className="text-4xl font-bold text-gray-900 tracking-tight">£199</span>
                 <span className="ml-1 text-lg text-gray-600">/month</span>
               </div>
               <p className="mt-1 text-sm text-purple-600 font-medium">
-                + £40/month per extra seat
+                + £35/month per extra seat
               </p>
               <p className="mt-2 text-sm text-gray-600 leading-relaxed">
-                Includes 1 primary + 2 team seats
+                Includes 3 practitioners (£66 each)
               </p>
 
               {/* AI Credits */}
@@ -712,11 +709,11 @@ export default function PractitionerPage() {
 
               <div className="mt-3 space-y-2">
                 {[
-                  { icon: Users, gradient: 'from-slate-500 to-gray-600', text: 'Team dashboard' },
-                  { icon: UserCog, gradient: 'from-blue-500 to-indigo-600', text: 'Role permissions' },
+                  { icon: Brain, gradient: 'from-violet-500 to-indigo-600', text: 'All 8 AI agents' },
+                  { icon: Users, gradient: 'from-slate-500 to-gray-600', text: 'Team management' },
                   { icon: LineChart, gradient: 'from-purple-500 to-pink-600', text: 'Practice analytics' },
-                  { icon: Code2, gradient: 'from-cyan-500 to-blue-600', text: 'Booking widget' },
-                  { icon: FileSpreadsheet, gradient: 'from-slate-600 to-slate-700', text: 'FHIR data export' },
+                  { icon: Shield, gradient: 'from-emerald-500 to-teal-600', text: 'Advanced compliance' },
+                  { icon: Code2, gradient: 'from-cyan-500 to-blue-600', text: 'API + integrations' },
                   { icon: Award, gradient: 'from-yellow-500 to-amber-600', text: '"Top Practice" badge' },
                 ].map((feature, i) => (
                   <div key={i} className="flex items-center gap-2">
