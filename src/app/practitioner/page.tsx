@@ -56,11 +56,6 @@ import {
   Clock,
   // New icons for pricing update
   Info,
-  Leaf,
-  Apple,
-  Dumbbell,
-  Smile,
-  Zap,
   Bell,
   LayoutDashboard,
 } from 'lucide-react';
@@ -448,7 +443,7 @@ export default function PractitionerPage() {
               {
                 icon: <Calendar className="w-7 h-7" />,
                 title: 'Complete Practice Management',
-                description: 'Booking, payments (10% commission), telehealth, client CRM, automated reminders, intake forms, and embeddable widget for your website.',
+                description: 'Booking, payments, telehealth, client CRM, automated reminders, intake forms, and embeddable widget for your website.',
                 highlight: 'All-in-one system',
                 color: '#4A90A4',
                 gradient: 'from-[#4A90A4] to-blue-600'
@@ -464,7 +459,7 @@ export default function PractitionerPage() {
               {
                 icon: <Shield className="w-7 h-7" />,
                 title: 'SCVM Credential Verification',
-                description: '99% accurate automated verification across 40+ UK registries (CNHC, GHR, FHT, etc.). Earn your verified badge in 2-5 days.',
+                description: 'Automated verification across UK registries (CNHC, GHR, FHT, etc.). Earn your verified badge in 2-5 days.',
                 highlight: 'Auto-verified',
                 color: '#4A90A4',
                 gradient: 'from-slate-600 to-slate-700'
@@ -754,120 +749,6 @@ export default function PractitionerPage() {
             <div className="flex items-center gap-2">
               <BadgeCheck className="w-5 h-5 text-gray-400" />
               Cancel anytime
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Specialist Add-Ons Section */}
-      <section className="py-16 md:py-24 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 tracking-tight mb-3">
-              Specialist Add-Ons
-            </h2>
-            <p className="text-lg text-gray-600">
-              Extend your toolkit with discipline-specific features
-            </p>
-            <p className="text-sm text-gray-500 mt-2">
-              Available for Professional, Growth, and Practice tiers
-            </p>
-          </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
-            {/* Herbalist Suite */}
-            <div className="bg-gradient-to-br from-emerald-50 to-green-50 border border-emerald-200 rounded-2xl p-5 hover:shadow-lg transition-all duration-300">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-green-600 flex items-center justify-center mb-4 shadow-lg">
-                <Leaf className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="font-semibold text-gray-900 mb-1">Herbalist Suite</h3>
-              <p className="text-emerald-600 font-bold mb-3">£29/month</p>
-              <ul className="text-xs text-gray-600 space-y-1.5">
-                <li>• Digital herbal pharmacy</li>
-                <li>• Prescription generator</li>
-                <li>• Contraindication checker</li>
-                <li>• Supplier integration</li>
-                <li>• Client herbal history</li>
-              </ul>
-              <button className="mt-4 w-full px-3 py-2 rounded-lg text-xs font-semibold border-2 border-emerald-300 text-emerald-700 hover:bg-emerald-100 transition-all">
-                Add to Plan
-              </button>
-            </div>
-
-            {/* Physiotherapy Suite */}
-            <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border border-blue-200 rounded-2xl p-5 hover:shadow-lg transition-all duration-300">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center mb-4 shadow-lg">
-                <Dumbbell className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="font-semibold text-gray-900 mb-1">Physiotherapy Suite</h3>
-              <p className="text-blue-600 font-bold mb-3">£29/month</p>
-              <ul className="text-xs text-gray-600 space-y-1.5">
-                <li>• Exercise library (500+)</li>
-                <li>• Rehab plan generator</li>
-                <li>• ROM measurements</li>
-                <li>• Home exercise builder</li>
-                <li>• Progress tracking</li>
-              </ul>
-              <button className="mt-4 w-full px-3 py-2 rounded-lg text-xs font-semibold border-2 border-blue-300 text-blue-700 hover:bg-blue-100 transition-all">
-                Add to Plan
-              </button>
-            </div>
-
-            {/* Nutrition Suite */}
-            <div className="bg-gradient-to-br from-orange-50 to-amber-50 border border-orange-200 rounded-2xl p-5 hover:shadow-lg transition-all duration-300">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-500 to-amber-600 flex items-center justify-center mb-4 shadow-lg">
-                <Apple className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="font-semibold text-gray-900 mb-1">Nutrition Suite</h3>
-              <p className="text-orange-600 font-bold mb-3">£29/month</p>
-              <ul className="text-xs text-gray-600 space-y-1.5">
-                <li>• Meal plan builder</li>
-                <li>• Macro tracking</li>
-                <li>• Recipe database (5K+)</li>
-                <li>• Supplement protocols</li>
-                <li>• Food diary integration</li>
-              </ul>
-              <button className="mt-4 w-full px-3 py-2 rounded-lg text-xs font-semibold border-2 border-orange-300 text-orange-700 hover:bg-orange-100 transition-all">
-                Add to Plan
-              </button>
-            </div>
-
-            {/* Mental Wellness Suite */}
-            <div className="bg-gradient-to-br from-purple-50 to-violet-50 border border-purple-200 rounded-2xl p-5 hover:shadow-lg transition-all duration-300">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-violet-600 flex items-center justify-center mb-4 shadow-lg">
-                <Smile className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="font-semibold text-gray-900 mb-1">Mental Wellness</h3>
-              <p className="text-purple-600 font-bold mb-3">£29/month</p>
-              <ul className="text-xs text-gray-600 space-y-1.5">
-                <li>• Guided meditations</li>
-                <li>• Mood tracking</li>
-                <li>• CBT worksheets</li>
-                <li>• Progress templates</li>
-                <li>• Symptom tracking</li>
-              </ul>
-              <button className="mt-4 w-full px-3 py-2 rounded-lg text-xs font-semibold border-2 border-purple-300 text-purple-700 hover:bg-purple-100 transition-all">
-                Add to Plan
-              </button>
-            </div>
-
-            {/* Acupuncture Suite */}
-            <div className="bg-gradient-to-br from-red-50 to-rose-50 border border-red-200 rounded-2xl p-5 hover:shadow-lg transition-all duration-300">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-red-500 to-rose-600 flex items-center justify-center mb-4 shadow-lg">
-                <Zap className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="font-semibold text-gray-900 mb-1">Acupuncture Suite</h3>
-              <p className="text-red-600 font-bold mb-3">£29/month</p>
-              <ul className="text-xs text-gray-600 space-y-1.5">
-                <li>• Point location ref</li>
-                <li>• Protocol builder</li>
-                <li>• TCM diagnostic tools</li>
-                <li>• Efficacy tracking</li>
-                <li>• Meridian charts</li>
-              </ul>
-              <button className="mt-4 w-full px-3 py-2 rounded-lg text-xs font-semibold border-2 border-red-300 text-red-700 hover:bg-red-100 transition-all">
-                Add to Plan
-              </button>
             </div>
           </div>
         </div>

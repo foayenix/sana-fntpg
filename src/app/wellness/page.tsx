@@ -469,7 +469,7 @@ export default function WellnessPage() {
               <p className="text-gray-600 mb-6 leading-relaxed">500+ SANA-verified practitioners—finally know who's actually qualified</p>
               <ul className="space-y-3">
                 {[
-                  'SCVM verification: 99% accurate across 40+ UK registries (CNHC, GHR, FHT, ARoH, BAcC)',
+                  'SCVM verification: Accurate automated checks across UK registries (CNHC, GHR, FHT, ARoH, BAcC)',
                   'SANA Index (0-100): 40% outcomes, 20% credentials, 20% volume, 10% completion, 10% satisfaction',
                   'AI-powered matching (SPRM): 40% health need, 25% SANA Index, 20% cultural fit, 15% evidence + preference',
                   'Enhanced DBS checks + professional indemnity insurance verified',
@@ -622,7 +622,7 @@ export default function WellnessPage() {
                 SCVM Credential Verification
               </h3>
               <p className="text-gray-600 leading-relaxed">
-                99% accurate automated verification across 40+ UK registries (CNHC, GHR, FHT, ARoH, BAcC, NNA, etc.).
+                Accurate automated verification across UK registries (CNHC, GHR, FHT, ARoH, BAcC, NNA, etc.).
                 Every practitioner has verified credentials, DBS checks, and professional indemnity insurance. No charlatans, ever.
               </p>
             </div>
