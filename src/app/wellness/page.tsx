@@ -619,11 +619,10 @@ export default function WellnessPage() {
                 <ShieldCheck className="w-7 h-7 text-white" strokeWidth={2} />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                SCVM Credential Verification
+                Only Verified Practitioners
               </h3>
               <p className="text-gray-600 leading-relaxed">
-                Accurate automated verification across UK registries (CNHC, GHR, FHT, ARoH, BAcC, NNA, etc.).
-                Every practitioner has verified credentials, DBS checks, and professional indemnity insurance. No charlatans, ever.
+                Every practitioner on SANA has been credential-verified by our SCVM algorithm against official registries (CPP, NIMH, UKCP, CNHC). No fake qualifications, ever.
               </p>
             </div>
 
@@ -632,11 +631,10 @@ export default function WellnessPage() {
                 <BarChart3 className="w-7 h-7 text-white" strokeWidth={2} />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                SANA Health Graph (360° Data)
+                Outcomes-Based Rankings
               </h3>
               <p className="text-gray-600 leading-relaxed">
-                Combines 5 data streams: practitioner clinical data, your self-reports (PROMs), wearable biometrics,
-                AI journal analysis (SIRM), and environmental factors. See what actually moves the needle on YOUR health.
+                Our SANA Index scores practitioners primarily on client outcomes (40% weight), not marketing spend. Find practitioners who actually deliver results.
               </p>
             </div>
 
@@ -645,11 +643,10 @@ export default function WellnessPage() {
                 <Heart className="w-7 h-7 text-white" strokeWidth={2} />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                Product Safety Intelligence
+                Holistic Health Tracking
               </h3>
               <p className="text-gray-600 leading-relaxed">
-                "Vivino for supplements" with personalized safety checks. Scan any product—get instant analysis
-                for YOUR conditions, medications, allergies. 87% of users avoided harmful interactions.
+                SISM health score tracks physical, mental, energetic, digestive, sleep, and social dimensions—because healing is more than just symptom relief.
               </p>
             </div>
 
@@ -658,11 +655,10 @@ export default function WellnessPage() {
                 <Brain className="w-7 h-7 text-white" strokeWidth={2} />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                8 AI Wellness Agents
+                AI Wellness Companion
               </h3>
               <p className="text-gray-600 leading-relaxed">
-                SIRM Journal with 8 specialized personas (Therapist, Scientist, Coach, Poet, Philosopher, Friend, Analyst, Visionary).
-                Plus AI-powered Top 3 Levers showing highest-impact actions for YOUR wellness.
+                Journal with 8 AI personas, scan supplements for safety, track wearable data, and get personalized insights—all free, forever.
               </p>
             </div>
           </div>
